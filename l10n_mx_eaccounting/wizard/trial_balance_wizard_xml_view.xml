@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <openerp>
+        <data>
+
+            <record id="trial_balance_xml" model="ir.ui.view">
+                <field name="name">trial.balance.xml</field>
+                <field name="model">trial.balance.webkit</field>
+                <field name="type">form</field>
+                <field name="arch" type="xml">
+                    <form string="Trial Balance Report" version="7.0">
+                        <group string="Trial Balance" colspan="4">
+                            <label nolabel="1" colspan="4" string="This allows you to generate a xml of your trial balance in zip format to upload into SAT website."/>
+                            <field name="chart_account_id" widget="selection"/>
+                            <field name="target_move"/>
+                            <group colspan="4">
+                                <group>
+                                    <field name="fiscalyear_id" attrs="{'required': 'true'}" on_change="change_fiscalyear_id(fiscalyear_id)" />
+                                </group>
+                                <group>
+                                    <field name="period_to" string="Period" attrs="{'required': 'true'}" modifiers="{'required': 'true'}" domain="[('fiscalyear_id', '=', fiscalyear_id),('special', '=', False)]" on_change="get_last_journal_entrie(period_to, type_send)"/>
+                                </group>
+                            </group>
+                            <group colspan="4">
+                                <label nolabel="1" colspan="4" string="Select the declaration type you are doing and update the 'Las Modification' field in case you need."/>
+                                <group>
+                                    <field name="type_send" on_change="get_last_journal_entrie(period_to, type_send)"/>
+                                </group>
+                                <group>
+                                    <field name="last_modification" attrs="{'invisible':[('type_send','=','N')], 'required':[('type_send','=','C')]}"/>
+                                </group>
+                            </group>
+                        </group>
+                        <footer>
+                            <button name="xml_export" string="Export XML" type="object" context="{'xml_export':1}" class="oe_highlight"/>
+                            or
+                            <button string="Cancel" class="oe_link" special="cancel" />
+                        </footer>
+                    </form>
+                </field>
+            </record>
+
+        </data>
+    </openerp>

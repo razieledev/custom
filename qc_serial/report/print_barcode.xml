@@ -1,0 +1,98 @@
+<openerp>
+    <data>
+        <report
+                id="barcode_smc"
+                model="stock.production.lot"
+                string="Print Serial Barcode"
+                report_type="qweb-pdf"
+                name="qc_serial.report_print_barcode"
+                file="qc_serial.report_print_barcode"
+                attachment_use="True"
+                attachment="(object.name +'.pdf')"/>
+        <template id="report_print_barcode">
+            <t t-call="report.html_container">
+                <t t-foreach="docs" t-as="o">
+                    <t>
+                        <div class="page" >
+                            <div class="header">
+                                <!--<table width='100%'>-->
+                                <!--<img t-if="o.inspector.company_id.logo" align="right" t-att-src="'data:image/png;base64,%s' % o.inspector.company_id.logo" style="max-height:20px;margin-left:2.5%"/>-->
+                                <!--</table>-->
+                            </div>
+
+                            <div class="oe_structure"/>
+                            <div class="row" >
+                                <!--<h2><div class="col-md-12 text-center">PRODUCTO EN PROCESO </div></h2>
+                                <h2><div class="col-md-12 text-center">APROBADO </div></h2>-->
+                                <h2>
+                                    <div class="col-md-12 text-center">
+                                        <span t-field="o.header"/>
+                                    </div>
+
+                                </h2>
+                                <table width='100%'>
+                                <img t-if="o.inspector.company_id.logo" align="right" t-att-src="'data:image/png;base64,%s' % o.inspector.company_id.logo" style="max-height:20px;margin-left:2.5%"/>
+                                </table>
+                                <div style="font-size:12px" class="col-md-12 text-right">
+                                    CAL-F-10
+                                </div>
+                                <h4><font size="20px">
+                                    <div class="col-md-12 mt8 text-center">
+                                        <span>Product ID: </span><span t-field="o.product_id.default_code"/>
+                                    </div>
+                                    <div class="col-md-12 mt8 text-center">
+                                        <span>MATERIAL: </span><span t-field="o.product_id.name"/>
+                                    </div>
+                                    <div class="col-md-12 mt8 text-center">
+                                        <span>LOTE: </span><span t-field="o.supplier_ref"/></div>
+                                    <div class="col-md-12 mt8 text-center">
+                                        <span>FECHA: </span><span t-field="o.date" t-field-options='{"format": "d / MM / y"}'/></div>
+                                    <div class="col-md-12 mt8 text-center">
+                                        <span>Obs: </span><span t-field="o.obs"/></div>
+                                    <div class="col-md-12 mt8 text-center">
+                                        <span>NAME OF QC INSPECTOR: </span><span t-field="o.inspector"/></div>
+                                    <div class="col-md-12 mt8 text-center">
+                                        <span>USO ECLUSIVO DE MATERIAL: </span><span t-field="o.de_material"/></div>
+                                </font></h4>
+                            </div>
+                            <div class="row text-center mt64" >
+                                <img t-att-src="'/report/barcode/?type=%s&amp;value=%s&amp;width=%s&amp;height=%s&amp;humanreadable=%s'%('Code128', o.name, 600, 200, 1)"/><br/>
+                            </div>
+
+                            <div class="row text-center">
+                                <div class="col-md-12 mb64 mt64"/>
+                                <div class="col-md-12 mb64 mt64"/>
+                                <div class="mt64"><center>
+                                    <hr style="border: 1px solid" width="80%" align="center"/></center>
+                                    <div style="font-size: 20px" class="col-md-12 text-center"><span>Firma by Sello</span></div>
+                                    <div style="font-size: 20px" class="col-md-12 text-right"><span>REV.</span><span t-esc="o.serial_revision()[0]"/></div>
+                                </div>
+                            </div>
+                        </div>
+                    </t>
+                </t>
+            </t>
+        </template>
+
+
+        <record id="paperformat_barcode_printer" model="report.paperformat">
+            <field name="name">Barcode Print Paper</field>
+            <field name="default" eval="True"/>
+            <field name="format">custom</field>
+            <field name="page_height">101</field>
+            <field name="page_width">152</field>
+            <field name="orientation">Landscape</field>
+            <field name="margin_top">5</field>
+            <field name="margin_bottom">1</field>
+            <field name="margin_left">1</field>
+            <field name="margin_right">1</field>
+            <field name="header_line" eval="False"/>
+            <field name="header_spacing">2</field>
+            <field name="dpi">80</field>
+        </record>
+
+        <record id="barcode_smc" model="ir.actions.report.xml">
+            <field name="paperformat_id" ref="paperformat_barcode_printer"/>
+        </record>
+    </data>
+</openerp>

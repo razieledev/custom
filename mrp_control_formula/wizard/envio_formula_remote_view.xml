@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+ 
+<openerp>
+    <data>
+       <record id="view_envio_formula_remote_wizard" model="ir.ui.view">
+            <field name="name">Envio_de_formula </field>
+            <field name="model">envio.formula.remote</field>
+            <field name="arch" type="xml">
+                
+                <form string="Presione Confirmar para enviarlo" version="7.0"> 
+                    <group string="Presione Confirmar para enviar Formula">
+                        <h1>
+                            <label for="count" string="Fecha" invisible="True"/>
+                            <div> 
+                            <field name="cod_formula" class="oe_inline" nolabel="1"/>
+                            <label string="  " class="oe_inline"/>                      
+                            <field name="name" readonly="1" invisible="True" nolabel="1" class="oe_inline"/>
+                            <field name="idformula" readonly="1" nolabel="1" class="oe_inline"/>
+                             <label string="=====>" class="oe_inline"/>
+                            <label string="RV00" class="oe_inline"/>
+                            <field name="count" class="oe_inline" nolabel="1"/>
+                            </div>
+                        </h1>
+                    </group>    
+                    <footer>
+                        <button name="action_envioxmlrpc" type="object" string="Confirmar" class="oe_highlight"/>
+                        or
+                        <button string="Cancelar" class="oe_link" special="cancel" />
+                    </footer>
+                </form>
+            </field>
+        </record> 
+
+        <record id="act_formula_envio_remoto" model="ir.actions.act_window">
+            <field name="name">Envio Formula Remotamente</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">envio.formula.remote</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">form</field>
+            <field name="target">new</field>
+        </record> 
+       
+    </data>
+</openerp>

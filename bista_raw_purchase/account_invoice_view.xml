@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+    <data>
+
+        <record id="invoice_supplier_form_inherit_smc" model="ir.ui.view">
+            <field name="name">invoice.supplier.form.inherit.smc</field>
+            <field name="model">account.invoice</field>
+            <field name="inherit_id" ref="account.invoice_supplier_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="/form/sheet/notebook/page[1]/field/tree/field[@name='quantity']" position="after">
+                    <field name="lot_id" string="Lot" readonly="1"/>
+                    <field name="pedimentos_id" string="Pedimentos" readonly="1"/>
+                </xpath>
+                
+                <xpath expr="/form/sheet/notebook/page[1]/field/tree/field[@name='quantity']" position="attributes">
+                    <attribute name="sum">Total Quantity</attribute>
+                </xpath>
+                
+                <xpath expr="/form/sheet/notebook/page[1]" position="after">
+                    <page string="Stock">
+                        <field name="stock_move_ids">
+                            <tree string="Stock Moves">
+                                <field name="product_id"/>
+                                <field name="product_uom_qty" sum = "Total Quantity"/>
+                                <field name="product_uom" string="Unit of Measure" />
+                                <field name="product_uos"/>
+                                <field name="picking_id" invisible="1" />
+                                <field name="create_date" invisible="1" />
+                                <field name="date_expected" invisible="1" />
+<!--                                <button name="%(stock.move_scrap)d"
+                                   string="Scrap Products" type="action"
+                                   icon="terp-gtk-jump-to-ltr" context="{'scrap': True}"
+                                   states="draft,waiting,confirmed,assigned"
+                                   groups="base.group_user"/>-->
+                                <field name="scrapped" invisible="1"/>
+                                <field name="location_id"/>
+                                <field name="location_dest_id"/>
+                                <field name="state"/>
+                            </tree>
+                        </field>
+                    </page>
+                </xpath>
+                        
+            </field>
+        </record>
+        
+        <record id="invoice_customer_form_inherit_smc" model="ir.ui.view">
+            <field name="name">invoice.customer.form.inherit.smc</field>
+            <field name="model">account.invoice</field>
+            <field name="inherit_id" ref="account.invoice_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="/form/sheet/notebook/page[1]/field/tree/field[@name='quantity']" position="after">
+                    <field name="lot_id" string="Lot" readonly="1"/>
+                    <field name="pedimentos_id" string="Pedimentos" readonly="1"/>
+                </xpath>
+                
+                <xpath expr="/form/sheet/notebook/page[1]/field/tree/field[@name='quantity']" position="attributes">
+                    <attribute name="sum">Total Quantity</attribute>
+                </xpath>
+                
+                <xpath expr="/form/sheet/notebook/page[1]" position="after">
+                    <page string="Stock">
+                        <field name="stock_move_ids">
+                            <tree string="Stock Moves">
+                                <field name="product_id"/>
+                                <field name="product_uom_qty" sum = "Total Quantity"/>
+                                <field name="product_uom" string="Unit of Measure" />
+                                <field name="product_uos"/>
+                                <field name="picking_id" invisible="1" />
+                                <field name="create_date" invisible="1" />
+                                <field name="date_expected" invisible="1" />
+<!--                                <button name="%(stock.move_scrap)d"
+                                   string="Scrap Products" type="action"
+                                   icon="terp-gtk-jump-to-ltr" context="{'scrap': True}"
+                                   states="draft,waiting,confirmed,assigned"
+                                   groups="base.group_user"/>-->
+                                <field name="scrapped" invisible="1"/>
+                                <field name="location_id"/>
+                                <field name="location_dest_id"/>
+                                <field name="state"/>
+                            </tree>
+                        </field>
+                    </page>
+                </xpath>
+            </field>
+        </record>
+
+        <menuitem id="menu_immex_invoice_00"
+                  name="IMMEX Invoices"
+                  parent="account.menu_finance"
+                  sequence="3"/>
+
+        <!--<record id="invoice_form_action_demo" model="ir.actions.act_window">-->
+            <!--<field name="name">SMC Inc to Plasco</field>-->
+            <!--<field name="type">ir.actions.act_window</field>-->
+            <!--<field name="res_model">account.invoice</field>-->
+            <!--<field name="view_mode">tree,form</field>-->
+            <!--<field name="view_type">form</field>-->
+            <!--<field name="view_id" ref="account.invoice_tree"/>-->
+            <!--&lt;!&ndash;<field name="context">{'smc' : True}</field>&ndash;&gt;-->
+            <!--<field name="domain">[('company_id.name','=', 'SMC Comp Inc (USA)'),('partner_id.name', '=', 'Productos Plasco SA de CV')]</field>-->
+        <!--</record>-->
+
+        <!--<menuitem action="invoice_form_action_demo"-->
+                  <!--id="menu_invoice_action_inherit_smc"-->
+                  <!--parent="menu_immex_invoice_00"-->
+                  <!--sequence="8" />-->
+
+        <!--<record id="invoice_form_action_demo1" model="ir.actions.act_window">-->
+            <!--<field name="name">Compuestos to Plasco</field>-->
+            <!--<field name="type">ir.actions.act_window</field>-->
+            <!--<field name="res_model">account.invoice</field>-->
+            <!--<field name="view_mode">tree,form</field>-->
+            <!--<field name="view_type">form</field>-->
+            <!--<field name="view_id" ref="account.invoice_tree"/>-->
+            <!--&lt;!&ndash;<field name="context">{'smc' : True}</field>&ndash;&gt;-->
+            <!--<field name="domain">[('company_id.name','=', 'Compuestos SMC Mexico SA de CV'),-->
+                                  <!--('partner_id.name', '=', 'Productos Plasco SA de CV')]</field>-->
+        <!--</record>-->
+
+        <!--<menuitem action="invoice_form_action_demo1"-->
+                  <!--id="menu_invoice_action_inherit_smc1"-->
+                  <!--parent="menu_immex_invoice_00"-->
+                  <!--sequence="8" />-->
+
+        <!--<record id="invoice_form_action_demo2" model="ir.actions.act_window">-->
+            <!--<field name="name">Plasco to Compuestos</field>-->
+            <!--<field name="type">ir.actions.act_window</field>-->
+            <!--<field name="res_model">account.invoice</field>-->
+            <!--<field name="view_mode">tree,form</field>-->
+            <!--<field name="view_type">form</field>-->
+            <!--<field name="view_id" ref="account.invoice_tree"/>-->
+            <!--&lt;!&ndash;<field name="context">{'smc' : True}</field>&ndash;&gt;-->
+            <!--<field name="domain">[('company_id.name','=', 'Productos Plasco SA de CV'),-->
+                                  <!--('partner_id.name', '=', 'Compuestos SMC Mexico SA de CV')]</field>-->
+        <!--</record>-->
+
+        <!--<menuitem action="invoice_form_action_demo2"-->
+                  <!--id="menu_invoice_action_inherit_smc2"-->
+                  <!--parent="menu_immex_invoice_00"-->
+                  <!--sequence="8" />-->
+
+        <record id="invoice_tree_modified_smc" model="ir.ui.view">
+            <field name="name">account.invoice.tree.modified</field>
+            <field name="model">account.invoice</field>
+            <field name="inherit_id" ref="account.invoice_tree"/>
+            <field name="arch" type="xml">
+                <field name='state' position="after">
+                    <field name="inv_sent"/>
+                    <field name="inv_sent_date"/>
+                </field>
+            </field>
+        </record>
+
+        <record id="invoice_form_modified_smc" model="ir.ui.view">
+            <field name="name">account.invoice.form</field>
+            <field name="model">account.invoice</field>
+            <field name="inherit_id" ref="account.invoice_form"/>
+            <field name="arch" type="xml">
+                <field name="date_invoice" position="after">
+                    <field name="inv_sent"/>
+                    <field name="inv_sent_date"/>
+                </field>
+            </field>
+        </record>
+
+
+
+    </data>
+</openerp>

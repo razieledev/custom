@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+		<!-- report quality ricardo.gutierrez#mikrointeracciones.com.mx Oct 11, 2014 -->    	
+		<report id="report_laboratory_order"
+		 	  model="laboratory.order"
+			  name="laboratory_order" 	
+    	  auto="True"
+        header="False" 
+      	rml="laboratory/report/laboratory_order.rml" 
+      	string="Order Laboratory"
+			  report_type="pdf"/>
+
+		<!-- report quality ricardo.gutierrez#mikrointeracciones.com.mx Oct 11, 2014 	
+		<report id="report_corrugado_quality"
+		 	model="corrugado.quality"
+			name="corrugado.report" 	
+        	auto="False" 
+        	rml="quality/report/corrugado_report.rml" 
+        	string="Corrugado Report"
+			report_type="pdf"/>-->
+
+			<!-- report quality ricardo.gutierrez#mikrointeracciones.com.mx Oct 11, 2014 	
+		<report id="report_moldeable_quality"
+		 	model="moldeable.quality"
+			name="moldeable.report" 	
+        	auto="False" 
+        	rml="quality/report/moldeable_report.rml" 
+        	string="Moldeable Report"
+			report_type="pdf"/> -->
+    </data> 
+</openerp>

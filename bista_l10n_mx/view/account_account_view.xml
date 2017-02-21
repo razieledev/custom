@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+    <openerp>
+        <data>
+            <record model='ir.ui.view' id='view_account_eaccounting_form'>
+                <field name='name'>view.eaccounting.form</field>
+                <field name='model'>account.account</field>
+                <field name='inherit_id' ref='account.view_account_form'/>
+                <field name='type'>form</field>
+                <field name='arch' type='xml'>
+                    <field name="balance" position="after">
+                        <field name="nature"/>
+                        <field name="sat_group_id"/>
+    		        </field>
+    	        </field>
+           </record>
+
+           <record model='ir.ui.view' id='view_account_template_eaccounting_form'>
+                <field name='name'>view.account.template.eaccounting.form</field>
+                <field name='model'>account.account.template</field>
+                <field name='inherit_id' ref='account.view_account_template_form'/>
+                <field name='type'>form</field>
+                <field name='arch' type='xml'>
+                    <field name="user_type" position="after">
+                        <field name="nature"/>
+                        <field name="sat_group_id"/>
+                    </field>
+                </field>
+            </record>
+        </data>
+    </openerp>

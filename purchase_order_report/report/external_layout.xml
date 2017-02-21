@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+    <data>
+<!--external layout for header and footer for while printing the report-->
+        <template id="extend_custom_layout">
+            <t t-if="o and 'company_id' in o">
+            <t t-set="company" t-value="o.company_id"></t>
+            </t>
+            <t t-if="not o or not 'company_id' in o">
+                <t t-set="company" t-value="res_company">
+                </t>
+            </t>
+            <t t-call="purchase_order_report.custom_header" />
+            <t t-raw="0" />
+            <t t-call="purchase_order_report.custom_footer" />
+        </template>
+        
+        <template id="custom_header">
+            <div class="header">
+                <table>
+                <img t-if="company.logo" align="left" t-att-src="'data:image/png;base64,%s' % company.logo" style="max-height:40px;margin-left:2.5%"/>
+                </table>
+            </div>
+        </template>
+
+
+        <template id="custom_footer">
+            <div class="footer" >
+                <hr/>
+                <div class="text-center" style="font-size:12px;color:#505050;">
+                    <t t-if="not company.custom_footer" style="list-style-type:none">
+                        Email: diana.rosales@smccomposites.com | http://www.smccomposites.com
+                        <!--<t t-if="company.name"><span t-field="company.name"/></t>-->
+                        <!--<t t-if="company.street"> | <span t-field="company.street"/></t>-->
+                        <!--<t t-if="company.street2"><span t-field="company.street2"/></t>-->
+                        <!--<t t-if="company.city"> | <span t-field="company.city"/></t>-->
+                        <!--<br/>-->
+                        <!--<t t-if="company.phone">Ph:<span t-field="company.phone"/></t>-->
+                        <!--<t t-if="company.fax"> | Fx: <span t-field="company.fax"/></t>-->
+                    </t>
+
+                    <t t-if="company.custom_footer">
+                        <span t-field="company.rml_footer"/>
+                    </t>
+                </div>
+            </div>
+
+        </template>
+    </data>
+</openerp>

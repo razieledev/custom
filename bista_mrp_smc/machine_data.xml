@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--Do not change the code as it is required for sequences as well as it is format for weigh machine-->
+<openerp>
+    <data noupdate="1"> 
+        <record id="b1_id" model="machine">
+            <field name="name">B1</field>
+            <field name="code">B01</field>
+            <field name="product_type">bmc</field>
+            
+        </record>
+        
+        <record id="b2_id" model="machine">
+            <field name="name">B2</field>
+            <field name="code">B02</field>
+            <field name="product_type">bmc</field>
+            
+        </record>
+        <record id="b3_id" model="machine">
+            <field name="name">B3</field>
+            <field name="code">B03</field>
+            <field name="product_type">bmc</field>
+            
+        </record>
+        <record id="b4_id" model="machine">
+            <field name="name">B4</field>
+            <field name="code">B04</field>
+            <field name="product_type">bmc</field>
+            
+        </record>
+        <record id="b5_id" model="machine">
+            <field name="name">B5</field>
+            <field name="code">B05</field>
+            <field name="product_type">bmc</field>
+            
+        </record>
+         <record id="s1_id" model="machine">
+            <field name="name">S1</field>
+            <field name="code">S01</field>
+            <field name="product_type">smc</field>
+            
+        </record>
+         <record id="s2_id" model="machine">
+            <field name="name">S2</field>
+            <field name="code">S02</field>
+            <field name="product_type">smc</field>
+            
+        </record>
+         <record id="lp_id" model="machine">
+            <field name="name">LP</field>
+            <field name="code">LP</field>
+            <field name="product_type"></field>
+
+        </record>
+
+        
+         <record id="d1_id" model="machine">
+            <field name="name">D1</field>
+            <field name="code">d1</field>
+            <field name="product_type">premix</field>
+            
+        </record>
+        <record id="d2_id" model="machine">
+            <field name="name">D2</field>
+            <field name="code">d2</field>
+            <field name="product_type">premix</field>
+            
+        </record>
+         <record id="d3_id" model="machine">
+            <field name="name">D3</field>
+            <field name="code">d3</field>
+            <field name="product_type">premix</field>
+            
+        </record>
+         <record id="d4_id" model="machine">
+            <field name="name">D4</field>
+            <field name="code">d4</field>
+            <field name="product_type">premix</field>
+            
+        </record>
+
+        <record id="internal_id" model="machine">
+            <field name="name">NA</field>
+            <field name="code">na</field>
+            <field name="product_type">internal</field>
+
+        </record>
+       
+    </data>
+
+</openerp>

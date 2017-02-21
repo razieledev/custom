@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+	<openerp>
+		<data>
+			<menuitem name="Sat Group" id="sat_group_menu" sequence="90"/>
+
+			<record model="ir.ui.view" id="sat_group_tree">
+				<field name="name">account.account.sat_group.tree</field>
+				<field name="model">account.account.sat_group</field>
+				<field name="type">tree</field>
+				<field name="arch" type="xml">
+					<tree string="Sat Group">
+						<field name="code"/>
+						<field name="name"/>
+                        <field name="level"/>
+						<field name="sat_group_parent_id"/>
+					</tree>
+				</field>
+			</record>
+
+			<record model="ir.ui.view" id="sat_group_form">
+				<field name="name">account.account.sat_group.form</field>
+				<field name="model">account.account.sat_group</field>
+				<field name="type">form</field>
+				<field name="arch" type="xml">
+					<form string="Sat Group">
+						<group>
+							<field name="code"/>
+							<field name="name"/>
+							<field name="sat_group_parent_id"/>
+                        	<field name="level"/>
+						</group>
+					</form>
+				</field>
+			</record>
+
+			<record id="sat_group_action" model="ir.actions.act_window">
+				<field name="name">Sat Group</field>
+			    <field name="res_model">account.account.sat_group</field>
+	            <field name="view_type">form</field>
+	            <field name="view_mode">tree,form</field>
+	       	</record>
+
+			<menuitem action="sat_group_action" id="sat_group_menu" sequence="1" parent="account.account_account_menu"/>
+
+		</data>
+	</openerp>

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+    <data>
+        <record id="master_mrp_view_form_inherit_weigh" model="ir.ui.view">
+            <field name="name">master.mrp.form.inherit.weigh</field>
+            <field name="model">master.mrp</field>
+            <field name="inherit_id" ref="bista_mrp_batch.view_master_mrp_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//button[@name='create_batches']" position="after">
+                    <button name="export_mo" type="object" states="confirmed" string="Send"/>
+                </xpath>
+                <!--<xpath expr="//button[@name='create_batches']" position="before">
+                    <button name="confirm_check_batches" type="object" states="confirmed" string="Confirm/Check Availabilitys"/>
+                </xpath>-->
+                
+            </field>
+        </record>
+        <!--Adding button for Manual MO process form too-->
+        <record id="manual_mo_view_form_inherit_weigh" model="ir.ui.view">
+            <field name="name">manual.mo.form.inherit.weigh</field>
+            <field name="model">master.mrp</field>
+            <field name="inherit_id" ref="bista_mrp_smc.extra_manual_mrp_view_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//button[@name='create_batches']" position="after">
+                    <button name="export_mo" type="object" context="{'manual_mo_flow': True}" states="confirmed" string="Send"/>
+                </xpath>
+                <xpath expr="//button[@name='create_batches']" position="after">
+                    <button name="produce" type="object" string="Produce"/>
+                </xpath>
+                <!--<xpath expr="//button[@name='create_batches']" position="before">
+                    <button name="confirm_check_batches" type="object" states="confirmed" string="Confirm/Check Availabilitys"/>
+                </xpath>-->
+
+            </field>
+        </record>
+        <!---->
+
+        <record id="mrp_production_form_view_plasco_product" model="ir.ui.view">
+            <field name="name">mrp.production.form.plasco.product</field>
+            <field name="model">mrp.production</field>
+            <field name="inherit_id" ref="mrp.mrp_production_form_view"/>
+            <field name="arch" type="xml">
+                <xpath expr="//page[@string='Consumed Products']/group/group[@string='Products to Consume']/field/tree/field[@name='product_id']" position="before">
+                    <field name="is_international"/>
+                </xpath>
+                <xpath expr="//page[@string='Consumed Products']/group/group[@string='Consumed Products']/field/tree/field[@name='product_id']" position="before">
+                    <field name="is_international"/>
+                </xpath>
+                <xpath expr="//page[@string='Extra Information']" position="after">
+                    <page string="Consume Requests">
+                            <field name="wc_request_ids" nolabel="1"/>
+                        </page>
+                </xpath>
+            </field>
+        </record>
+        
+        
+    </data>
+</openerp>

@@ -1,0 +1,53 @@
+<openerp>
+    <data>
+
+        <menuitem name="SMC Reports" id="smc_reports_details"/>
+        <menuitem name="SMC Reports" id="all_smc_reports"
+                parent="smc_reports_details" sequence="2"/>
+
+        <menuitem action="stock_account.action_history_tree"
+            id="menu_action_history_tree_smc"
+            parent="all_smc_reports"
+            groups="stock.group_locations"
+            sequence="20"/>
+
+            <!--payable-->
+        <!--<menuitem action="account_move_report.view_account_list_payable"
+                  id="menu_view_account_list_payable_smc"
+                  parent="all_smc_reports"
+                  sequence="20" />
+
+        receivable account
+        <menuitem action="account_move_report.view_account_list_receivable"
+                  id="menu_view_account_list_receivable_smc"
+                  parent="all_smc_reports"
+                  sequence="22" />-->
+
+
+         <menuitem icon="STOCK_PRINT"
+            name="Aged Partner Balance"
+            action="account.action_account_aged_balance_view"
+            id="menu_aged_trial_balance_smc"
+            parent="all_smc_reports"/>
+
+
+
+        <record id="view_account_list_liquidity" model="ir.actions.act_window">
+            <field name="name">Accounts Liquidity</field>
+            <field name="res_model">account.account</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_type">form</field>
+            <field name="view_id" ref="account.view_account_list"/>
+            <field name="domain">[('type', '=', 'liquidity')]</field>
+        </record>
+
+        <menuitem action="view_account_list_liquidity"
+                  id="menu_view_account_list_payable"
+                  parent="all_smc_reports"
+                  sequence="20" />
+
+
+    </data>
+</openerp>
+
+

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+        <!--Do not change the code as it is required for sequences as well as it is format for weigh machine-->
+<openerp>
+    <data noupdate="1">
+        <record id="d1_id" model="disperser">
+            <field name="name">D1</field>
+            <field name="code">D01</field>
+            <field name="product_type">premix</field>
+            
+        </record>
+        
+        <record id="d2_id" model="disperser">
+            <field name="name">D2</field>
+            <field name="code">D02</field>
+            <field name="product_type">premix</field>
+            
+        </record>
+        <record id="d3_id" model="disperser">
+            <field name="name">D3</field>
+            <field name="code">D03</field>
+            <field name="product_type">premix</field>
+            
+        </record>
+        <record id="d4_id" model="disperser">
+            <field name="name">D4</field>
+            <field name="code">D04</field>
+            <field name="product_type">premix</field>
+        </record>
+    </data>
+</openerp>

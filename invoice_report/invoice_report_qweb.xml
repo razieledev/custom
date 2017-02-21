@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+        <!--creating new report for Purchase Order SMC-->
+        <report 
+            id="invoice_report_qweb_smc"
+            model="account.invoice"
+            string="Invoice SMC"
+            report_type="qweb-pdf"
+            name="invoice_report.invoice_report_smc"
+            file="invoice_report.invoice_report_smc"
+            attachment_use="False"
+            attachment="((object.state in ('open','paid')) and ((object.internal_number or '')).replace('/','').replace(' ','')  +'.pdf')"
+        />
+         <record id="invoice_report_qweb_smc" model="ir.actions.report.xml">
+            <field name="paperformat_id" ref="invoice_report.paperformat_invoice_smc"/>
+        </record>
+
+       
+
+    </data>
+</openerp>

@@ -1,0 +1,21 @@
+<?xml version="1.0" ?>
+<openerp>
+    <data>
+        <record id="company_wise_stock_accounts" model="ir.ui.view">
+            <field name="name">company.wise.stock.accounts</field>
+            <field name="model">res.company</field>
+            <field name="priority">24</field>
+            <field name="inherit_id" ref="base.view_company_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//group[@name='logistics_grp']" position="inside">
+                    <field name="property_stock_account_input"/>
+                    <field name="property_stock_account_output"/>
+                    <field name="property_stock_valuation_account_id"/>
+                    <field name="property_stock_journal"/>
+                    <field name="property_account_income"/>
+                    <field name="property_account_expense"/>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</openerp>

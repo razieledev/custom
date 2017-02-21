@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+        <record id="view_wc_request_tree" model="ir.ui.view">
+            <field name="name">view.wc.request.tree</field>
+            <field name="type">tree</field>
+            <field name="priority">1</field>
+            <field name="model">wc.request</field>
+            <field name="arch" type="xml">
+                <tree colors="red:state == 'exception'" string="Weight Center Requests">
+                    <field name="wc_id"/>
+                    <field name="batch_id"/>
+                    <field name="shared_product_id"/>
+                    <field name="product_qty"/>
+                    <field name="lot_name"/>
+                    <field name="state"/>
+                    <button name="run" type="object" states="new,exception" context = "{'run_manual': True}" string="Run"/>
+
+                </tree>
+            </field>
+        </record>
+
+        <record id="view_wc_request_form" model="ir.ui.view">
+            <field name="name">view.wc.request.form</field>
+            <field name="type">form</field>
+            <field name="priority">2</field>
+            <field name="model">wc.request</field>
+            <field name="arch" type="xml">
+                <form string="WC Request">
+                    <header>
+                        <button name="run" type="object" states="new,exception" context = "{'run_manual': True}" string="Run"/>
+                        <button name="cancel_request" type="object" states="new,exception" string="Cancel"/>
+                        <field name="state" widget="statusbar" statusbar_colors='{"exception":"red"}'/>
+                    </header>
+                    <group colspan="4">
+                        <group>
+                            <field name="wc_id"/>
+                            <field name="batch_id"/>
+                            <field name="shared_product_id"/>
+                        </group>
+                        <group>
+                            <field name="product_qty"/>
+                            <field name="lot_name"/>
+                        </group>
+
+                    </group>
+                    <div class="oe_chatter">
+                        <field name="message_follower_ids" widget="mail_followers"/>
+                        <field name="message_ids" widget="mail_thread"/>
+                     </div>
+                </form>
+            </field>
+        </record>
+
+
+
+
+        <record id="action_wc_request" model="ir.actions.act_window">
+            <field name="name">WC Request</field>
+            <field name="res_model">wc.request</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="view_mode">tree, form</field>
+            <field name="view_type">form</field>
+            <field name="view_id" ref="view_wc_request_form"/>
+        </record>
+
+        <menuitem name="WC Request"
+            action="action_wc_request"
+            id="menu_wc_request"
+            parent="mrp.menu_mrp_manufacturing"
+            sequence="50"/>
+
+    </data>
+</openerp>

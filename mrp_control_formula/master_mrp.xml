@@ -1,0 +1,56 @@
+<openerp>
+    <data>
+        <record id="master_mrp_view_form_inherit_formula" model="ir.ui.view">
+            <field name="name">master.mrp.form.inherit.formula</field>
+            <field name="model">master.mrp</field>
+            <field name="inherit_id" ref="bista_mrp_batch.view_master_mrp_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='sale_id']" position="after">
+                    <field name="formula_id" readonly="1"/>
+                </xpath>
+
+            </field>
+        </record>
+
+        
+        <record id="bista_mrp_batch.action_master_mrp" model="ir.actions.act_window">
+            <field name="name">Manufacturing Orders</field>
+            <field name="res_model">master.mrp</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="view_mode">tree,form</field>
+            <field name="domain">[('formula_id','=', False)]</field>
+            <field name="view_type">form</field>
+            <field name="view_id" ref="bista_mrp_batch.view_master_mrp_tree"/>
+        </record>
+
+         <record id="action_lp_orders" model="ir.actions.act_window">
+            <field name="name">Manufacturing Orders</field>
+            <field name="res_model">master.mrp</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="view_mode">tree,form</field>
+            <field name="domain">[('formula_id','!=', False)]</field>
+            <field name="view_type">form</field>
+            <field name="view_id" ref="bista_mrp_batch.view_master_mrp_tree"/>
+        </record>
+
+        <record id="action_lp_orders_tree" model="ir.actions.act_window.view">
+            <field eval="1" name="sequence"/>
+            <field name="view_mode">tree</field>
+            <field name="view_id" ref="bista_mrp_batch.view_master_mrp_tree"/>
+            <field name="act_window_id" ref="action_lp_orders"/>
+        </record>
+
+        <record id="action_lp_orders_form" model="ir.actions.act_window.view">
+            <field eval="2" name="sequence"/>
+            <field name="view_mode">form</field>
+            <field name="view_id" ref="bista_mrp_batch.view_master_mrp_form"/>
+            <field name="act_window_id" ref="action_lp_orders"/>
+        </record>
+
+        <menuitem name="LP Orders"
+            action="action_lp_orders"
+            id="menu_master_mrp_order"
+            parent="mrp.menu_mrp_manufacturing"
+            sequence="11"/>
+    </data>
+</openerp>

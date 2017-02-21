@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+	<data>
+	    <record id="view_account_report_journal_entries_wizard_xml" model="ir.ui.view">
+	        <field name="name">journal.entries.wizard.xml</field>
+	        <field name="model">journal.entries.wizard.xml</field>
+	        <field name="type">form</field>        
+	        <field name="arch" type="xml">
+				<form string="Journal Entries Report" version="7.0">
+					<group string="Journal Entries" colspan="4">
+                        <label nolabel="1" colspan="4" string="This report allows you to print or generate a pdf of your trial balance allowing you to quickly check the balance of each of your accounts in a single report"/>
+                        <field name="chart_account_id" widget='selection' on_change="onchange_chart_id(chart_account_id, context)"/>
+						<field name="company_id" on_change="change_company_id(company_id, context)" invisible="1"/>
+                        <field name="target_move" />
+						<field name="fiscalyear_id" on_change="change_fiscalyear_id(fiscalyear_id)" domain="[('company_id', '=', company_id)]"/>
+				      	<field name="period_id" domain="[('fiscalyear_id', '=', fiscalyear_id),('special', '=', False)]"/>
+                        <group colspan="4">
+                            <label nolabel="1" colspan="4" string="Select the declaration type you are doing and type the number given to you by SAT"/>
+                            <group>
+                                <field name="type_request" />
+                            </group>
+                            <group>
+                                <field name="order_num" attrs="{'required':[('type_request','in',['AF','FC'])], 'invisible':[('type_request','not in',['AF','FC'])]}" />
+                                <field name="pro_num" attrs="{'required':[('type_request','in',['DE','CO'])], 'invisible':[('type_request','not in',['DE','CO'])]}" />
+                            </group>
+                        </group>
+					</group>
+			        <footer>                
+			        	<button name="generate_xml_report" string="Export XML" type="object" class="oe_highlight"/>
+                        or 
+                        <button string="Cancel" class="oe_link" special="cancel" />
+			        </footer>
+				</form>
+	        </field>
+	    </record>
+	</data>
+</openerp>

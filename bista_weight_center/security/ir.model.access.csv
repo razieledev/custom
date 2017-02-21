@@ -1,0 +1,4 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_weigh_center_manager,access.weigh.center.manager,model_weigh_center,mrp.group_mrp_manager,1,1,0,0
+access_weigh_request_manager,access.weigh.request.manager,model_wc_request,mrp.group_mrp_manager,1,1,0,0
+access_weigh_center_user,access.weigh.center.user,model_weigh_center,mrp.group_mrp_user,1,0,0,0

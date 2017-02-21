@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+    <data>
+
+        <record id="view_transfer_spread" model="ir.ui.view">
+            <field name="name">view.transfer.spread</field>
+            <field name="model">stock.transfer_details</field>
+            <field name="inherit_id" ref="stock.view_stock_enter_transfer_details"/>
+            <field name="arch" type="xml">
+                <xpath expr="//group[1]" position="after">
+                    <group name="prodlot_wizard">
+                        <field name="product_id"/>
+                        <field name="split_number"/>
+                        <button name="split_tranfer_quantities" string="Update" type="object"/>
+                    </group>
+                </xpath>
+                <xpath expr="//field[@name='item_ids']/tree/field[@name='lot_id']" position="attributes">
+                    <attribute name="invisible">1</attribute>
+                </xpath>
+                <xpath expr="//field[@name='item_ids']/tree/field[@name='lot_id']" position="before">
+                    <field name="supplier_ref"/>
+                </xpath>
+            </field>
+        </record>
+
+    </data>
+</openerp>

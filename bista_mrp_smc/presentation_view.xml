@@ -1,0 +1,61 @@
+<?xml version="1.0"?>
+
+<openerp>
+    <data>
+
+        <!--Desing tree view for presentation class-->
+        
+        <record id="view_presentation_tree" model="ir.ui.view">
+            <field name="name">view.presentation.tree</field>
+            <field name="model">presentation</field>
+            <field name="arch" type="xml">
+                <tree string="Presentation Tree">
+                    <field name="type"/>
+                    <field name="code"/>
+                    <field name="product_type"/>
+                    
+                </tree>
+            </field>
+        </record>
+        
+        
+
+        <!--Desing form view for Presentation class-->
+        
+        <record id="view_presentation_form" model="ir.ui.view">
+            <field name="name">view.presentation.form</field>
+            <field name="model">presentation</field>
+            <field name="arch" type="xml">
+                <form string="presentation Details" version="7.0">
+                    <sheet>
+                        <group>
+                            <group><field name="type"/></group>
+                            <group><field name="code"/></group>
+                            <group><field name="product_type"/></group>
+                            
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+        
+        
+        
+        <!--     Design action for presentation-->
+        <record id="action_presentation" model="ir.actions.act_window">
+            <field name="name">action.presentation</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">presentation</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_id" ref="view_presentation_tree"/>
+        </record>
+
+
+        <menuitem name="Presentation"
+                     id="presentation_menu" parent="mrp.menu_mrp_configuration" action="action_presentation"
+        />
+        
+    </data>
+</openerp>   
+

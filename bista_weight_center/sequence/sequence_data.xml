@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data noupdate="1">
+
+        <!-- Sequences for Batches -->
+        <!--Do not change the code as sequences are searched by code -->
+        <record id="formula_product_id_code" model="ir.sequence.type">
+            <field name="name">Formula Product ID</field>
+            <field name="code">formula.shared.id</field>
+        </record>
+
+        <record id="formula_product_id_sequence" model="ir.sequence">
+            <field name="name">Formula Product ID</field>
+            <field name="code">formula.shared.id</field>
+            <field name="prefix"></field>
+            <field name="padding">6</field>
+            <field name="implementation">no_gap</field>
+            <field name="company_id" eval="False"/>
+        </record>
+
+
+        <record id="final_product_id_code" model="ir.sequence.type">
+            <field name="name">Final Product ID</field>
+            <field name="code">final.shared.id</field>
+        </record>
+
+        <record id="final_product_id_sequence" model="ir.sequence">
+            <field name="name">Final Product ID</field>
+            <field name="code">final.shared.id</field>
+            <field name="prefix"></field>
+            <field name="padding">6</field>
+            <field name="implementation">no_gap</field>
+            <field name="company_id" eval="False"/>
+        </record>
+
+
+        <record id="internal_product_id_code" model="ir.sequence.type">
+            <field name="name">Internal Product ID</field>
+            <field name="code">internal.shared.id</field>
+        </record>
+
+        <record id="internal_product_id_sequence" model="ir.sequence">
+            <field name="name">Internal Product ID</field>
+            <field name="code">internal.shared.id</field>
+            <field name="prefix"></field>
+            <field name="padding">6</field>
+            <field name="implementation">no_gap</field>
+            <field name="company_id" eval="False"/>
+        </record>
+
+       <record id="resinas_product_id_code" model="ir.sequence.type">
+    <field name="name">resinas Product ID</field>
+    <field name="code">resinas.shared.id</field>
+</record>
+<record id="resinas_product_id_sequence" model="ir.sequence">
+    <field name="name">resinas Product ID</field>
+    <field name="code">resinas.shared.id</field>
+    <field name="prefix"></field>
+    <field name="padding">6</field>
+    <field name="implementation">no_gap</field>
+    <field name="company_id" eval="False"/>
+</record>
+
+
+        <record id="aditivos_product_id_code" model="ir.sequence.type">
+    <field name="name">aditivos Product ID</field>
+    <field name="code">aditivos.shared.id</field>
+</record>
+<record id="aditivos_product_id_sequence" model="ir.sequence">
+    <field name="name">aditivos Product ID</field>
+    <field name="code">aditivos.shared.id</field>
+    <field name="prefix"></field>
+    <field name="padding">6</field>
+    <field name="implementation">no_gap</field>
+    <field name="company_id" eval="False"/>
+</record>
+
+
+        <record id="catalizadores_product_id_code" model="ir.sequence.type">
+    <field name="name">catalizadores Product ID</field>
+    <field name="code">catalizadores.shared.id</field>
+</record>
+<record id="catalizadores_product_id_sequence" model="ir.sequence">
+    <field name="name">catalizadores Product ID</field>
+    <field name="code">catalizadores.shared.id</field>
+    <field name="prefix"></field>
+    <field name="padding">6</field>
+    <field name="implementation">no_gap</field>
+    <field name="company_id" eval="False"/>
+</record>
+
+
+<record id="inhibidores_product_id_code" model="ir.sequence.type">
+    <field name="name">inhibidores Product ID</field>
+    <field name="code">inhibidores.shared.id</field>
+</record>
+<record id="inhibidores_product_id_sequence" model="ir.sequence">
+    <field name="name">inhibidores Product ID</field>
+    <field name="code">inhibidores.shared.id</field>
+    <field name="prefix"></field>
+    <field name="padding">6</field>
+    <field name="implementation">no_gap</field>
+    <field name="company_id" eval="False"/>
+</record>
+
+
+        <record id="desmoldantes_product_id_code" model="ir.sequence.type">
+    <field name="name">desmoldantes Product ID</field>
+    <field name="code">desmoldantes.shared.id</field>
+</record>
+<record id="desmoldantes_product_id_sequence" model="ir.sequence">
+    <field name="name">desmoldantes Product ID</field>
+    <field name="code">desmoldantes.shared.id</field>
+    <field name="prefix"></field>
+    <field name="padding">6</field>
+    <field name="implementation">no_gap</field>
+    <field name="company_id" eval="False"/>
+</record>
+
+
+<record id="pigmentos_product_id_code" model="ir.sequence.type">
+    <field name="name">pigmentos Product ID</field>
+    <field name="code">pigmentos.shared.id</field>
+</record>
+<record id="pigmentos_product_id_sequence" model="ir.sequence">
+    <field name="name">pigmentos Product ID</field>
+    <field name="code">pigmentos.shared.id</field>
+    <field name="prefix"></field>
+    <field name="padding">6</field>
+    <field name="implementation">no_gap</field>
+    <field name="company_id" eval="False"/>
+</record>
+
+
+<record id="cargas_minerales_product_id_code" model="ir.sequence.type">
+    <field name="name">cargas.minerales Product ID</field>
+    <field name="code">cargas_minerales.shared.id</field>
+</record>
+<record id="cargas_minerales_product_id_sequence" model="ir.sequence">
+    <field name="name">cargas.minerales Product ID</field>
+    <field name="code">cargas_minerales.shared.id</field>
+    <field name="prefix"></field>
+    <field name="padding">6</field>
+    <field name="implementation">no_gap</field>
+    <field name="company_id" eval="False"/>
+</record>
+
+
+<record id="aditivos_especiales_product_id_code" model="ir.sequence.type">
+    <field name="name">aditivos.especiales Product ID</field>
+    <field name="code">aditivos_especiales.shared.id</field>
+</record>
+<record id="aditivos_especiales_product_id_sequence" model="ir.sequence">
+    <field name="name">aditivos.especiales Product ID</field>
+    <field name="code">aditivos_especiales.shared.id</field>
+    <field name="prefix"></field>
+    <field name="padding">6</field>
+    <field name="implementation">no_gap</field>
+    <field name="company_id" eval="False"/>
+</record>
+
+
+<record id="refuerzos_product_id_code" model="ir.sequence.type">
+    <field name="name">refuerzos Product ID</field>
+    <field name="code">refuerzos.shared.id</field>
+</record>
+<record id="refuerzos_product_id_sequence" model="ir.sequence">
+    <field name="name">refuerzos Product ID</field>
+    <field name="code">refuerzos.shared.id</field>
+    <field name="prefix"></field>
+    <field name="padding">6</field>
+    <field name="implementation">no_gap</field>
+    <field name="company_id" eval="False"/>
+</record>
+
+
+<record id="otros_empaque_product_id_code" model="ir.sequence.type">
+    <field name="name">otros.empaque Product ID</field>
+    <field name="code">otros.empaque.shared.id</field>
+</record>
+<record id="otros_empaque_product_id_sequence" model="ir.sequence">
+    <field name="name">otros.empaque Product ID</field>
+    <field name="code">otros.empaque.shared.id</field>
+    <field name="prefix"></field>
+    <field name="padding">6</field>
+    <field name="implementation">no_gap</field>
+    <field name="company_id" eval="False"/>
+</record>
+
+
+
+
+
+
+
+    </data>
+</openerp>

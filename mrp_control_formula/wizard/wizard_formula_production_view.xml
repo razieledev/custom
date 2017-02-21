@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+ 
+<openerp>
+    <data>
+       <record id="view_envio_formula_production_wizard" model="ir.ui.view">
+            <field name="name">Envio_de_formula_production</field>
+            <field name="model">envio.production</field>
+            <field name="arch" type="xml">
+                <form string="Presione Confirmar para enviarlo" version="7.0"> 
+                    <group string="Presione Confirmar para enviar Resultado">
+                        <field name="idformula" readonly="1"/>  
+                        <field name="name" readonly="1" invisible="True" />
+                        <field name="nombre_enviar"/>
+                        <field name="uom" options="{'create': False, 'create_edit': False}"/>                       
+                    </group>   
+                    <footer>
+                        <button name="action_envioxmlrpc_production" type="object" string="Confirmar" class="oe_highlight"/>
+                        or
+                        <button string="Cancelar" class="oe_link" special="cancel" />
+                    </footer>
+                </form>
+            </field>
+        </record> 
+
+        <record id="act_formula_envio_production" model="ir.actions.act_window">
+            <field name="name">Enviar a Produccion</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">envio.production</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">form</field>
+            <field name="target">new</field>
+        </record> 
+       
+    </data>
+</openerp>

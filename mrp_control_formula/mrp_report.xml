@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+
+        <report auto="True" header="False" id="report_bom_structure" model="formula.c1" name="bom.formula" rml="mrp_control_formula/report/bom_structure_formula.rml" string="BOM Formula"/>
+
+    </data>
+</openerp>

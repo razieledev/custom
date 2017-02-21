@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data noupdate="1">
+
+        <record id="product_category_raw_materials" model="product.category">
+            <field name="parent_id" ref="product.product_category_all"/>
+            <field name="name">Raw Materials</field>
+        </record>
+
+        <record id="product_category_resinas" model="product.category">
+            <field name="parent_id" ref="bista_raw_purchase.product_category_raw_materials"/>
+            <field name="name">Resinas</field>
+        </record>
+
+        <record id="product_category_aditivos" model="product.category">
+            <field name="parent_id" ref="bista_raw_purchase.product_category_raw_materials"/>
+            <field name="name">Aditivos</field>
+        </record>
+
+        <record id="product_category_catalizadores" model="product.category">
+            <field name="parent_id" ref="bista_raw_purchase.product_category_raw_materials"/>
+            <field name="name">Catalizadores</field>
+        </record>
+
+        <record id="product_category_inhibidores" model="product.category">
+            <field name="parent_id" ref="bista_raw_purchase.product_category_raw_materials"/>
+            <field name="name">Inhibidores</field>
+        </record>
+
+        <record id="product_category_desmoldantes" model="product.category">
+            <field name="parent_id" ref="bista_raw_purchase.product_category_raw_materials"/>
+            <field name="name">Desmoldantes</field>
+        </record>
+
+        <record id="product_category_pigmentos" model="product.category">
+            <field name="parent_id" ref="bista_raw_purchase.product_category_raw_materials"/>
+            <field name="name">Pigmentos</field>
+        </record>
+
+        <record id="product_category_cargas_minerales" model="product.category">
+            <field name="parent_id" ref="bista_raw_purchase.product_category_raw_materials"/>
+            <field name="name">Cargas Minerales</field>
+        </record>
+
+        <record id="product_category_aditivos_especiales" model="product.category">
+            <field name="parent_id" ref="bista_raw_purchase.product_category_raw_materials"/>
+            <field name="name">Aditivos Especiales</field>
+        </record>
+
+        <record id="product_category_refuerzos" model="product.category">
+            <field name="parent_id" ref="bista_raw_purchase.product_category_raw_materials"/>
+            <field name="name">Refuerzos</field>
+        </record>
+
+        <record id="product_category_otros" model="product.category">
+            <field name="parent_id" ref="bista_raw_purchase.product_category_raw_materials"/>
+            <field name="name">Otros</field>
+        </record>
+
+        <record id="product_category_premix" model="product.category">
+            <field name="parent_id" ref="product.product_category_all"/>
+            <field name="name">All Premix</field>
+        </record>
+
+        <record id="product_category_bmc_pr" model="product.category">
+            <field name="parent_id" ref="bista_raw_purchase.product_category_premix"/>
+            <field name="name">BMC-PR</field>
+        </record>
+
+        <record id="product_category_bmc" model="product.category">
+            <field name="parent_id" ref="product.product_category_1"/>
+            <field name="name">BMC</field>
+        </record>
+
+        <record id="product_category_smc" model="product.category">
+            <field name="parent_id" ref="product.product_category_1"/>
+            <field name="name">SMC</field>
+        </record>
+
+    </data>
+</openerp>

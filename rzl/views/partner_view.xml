@@ -1,0 +1,17 @@
+<openerp>
+    <data>
+        <record id="view_partner_form_inh_rzl" model="ir.ui.view">
+            <field name="name">view.partner.form.inh.rzl</field>
+            <field name="model">res.partner</field>
+            <field name="inherit_id" ref="base.view_partner_form"/>
+            <field name="arch" type="xml">
+                <data>
+                    <field name="title" position="after">
+                        <field name="product_code"/>
+
+                    </field>
+                </data>
+            </field>
+        </record>
+    </data>
+</openerp>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+    <data>
+        <record id="product_product_form_view_inherit" model="ir.ui.view">
+            <field name="name">product.product.form.view.inherit</field>
+            <field name="model">product.product</field>
+            <field name="inherit_id" ref="product.product_normal_form_view"/>
+            <field name="arch" type="xml">
+                <field name="active" position="after">
+                    <field name="shared_product_id" readonly="1" required = "1"/>
+                    <field name="is_international" />
+                </field>
+                <field name="sale_price_currency_id" position="after">
+                    <field name="tipo" />
+                    <button name="export_raw_material" type = "object" string="Export"/>
+                    
+                </field>
+            </field>
+        </record>
+    </data>
+</openerp>

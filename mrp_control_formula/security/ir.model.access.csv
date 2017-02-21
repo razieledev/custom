@@ -1,0 +1,34 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_formula_c1_user,modul.formula_c1 user,model_formula_c1,mrp_control_formula.group_formula_user,1,1,1,0
+access_formula_c1_manager,modul.formula_c1 manager,model_formula_c1,mrp_control_formula.group_formula_manager,1,1,1,1
+access_formula_c1_all,modul.formula_c1 all,model_formula_c1,base.group_user,1,1,1,0
+access_mrpformul00_user,modul.mrpformul00 user,model_mrpformul00,mrp_control_formula.group_formula_user,1,1,1,0
+access_mrpformul00_manager,modul.mrpformul00 manager,model_mrpformul00,mrp_control_formula.group_formula_manager,1,1,1,1
+access_mrpformul00_all,modul.mrpformul00 all,model_mrpformul00,base.group_user,1,1,1,0
+access_family_user,modul.family user,model_family,mrp_control_formula.group_formula_user,1,1,1,0
+access_family_manager,modul.family manager,model_family,mrp_control_formula.group_formula_manager,1,1,1,1
+access_family_all,modul.family all,model_family,base.group_user,1,1,1,0
+access_openerp_rpc_user,modul.openerp.rpc user,model_openerp_rpc,mrp_control_formula.group_formula_user,1,0,0,0
+access_openerp_rpc_manager,modul.openerp.rpc manager,model_openerp_rpc,mrp_control_formula.group_formula_manager,1,1,1,1
+access_openerp_rpc_all,modul.openerp.rpc all,model_openerp_rpc,base.group_user,1,1,0,0
+access_envio_formula_remote_user,modul.envio.formula.remote user,model_envio_formula_remote,mrp_control_formula.group_formula_user,1,0,0,0
+access_envio_formula_remote_manager,modul.envio.formula.remote manager,model_envio_formula_remote,mrp_control_formula.group_formula_manager,1,1,1,1
+access_envio_formula_remote_all,modul.envio.formula.remote all,model_envio_formula_remote,base.group_user,1,1,0,0
+access_envio_production_user,modul.envio.production user,model_envio_production,mrp_control_formula.group_formula_user,1,0,0,0
+access_envio_production_remote_manager,modul.envio.production manager,model_envio_production,mrp_control_formula.group_formula_manager,1,1,1,1
+access_envio_production_remote_all,modul.envio.production all,model_envio_production,base.group_user,1,1,0,0
+
+
+access_product_product_group_formula_user,product.product,product.model_product_product,mrp_control_formula.group_formula_manager,1,1,1,1
+access_product_template_group_formula_user,product.template,product.model_product_template,mrp_control_formula.group_formula_manager,1,1,1,1
+access_product_price_history_formula_user,product_price_history,product.model_product_price_history,mrp_control_formula.group_formula_manager,1,1,1,1
+access_product_attribute_line,product.attribute.line,product.model_product_attribute_line,mrp_control_formula.group_formula_manager,1,1,1,1
+access_mrp_bom,mrp.bom,mrp.model_mrp_bom,mrp_control_formula.group_formula_manager,1,1,1,1
+access_mrp_bom_line,mrp.bom.line,mrp.model_mrp_bom_line,mrp_control_formula.group_formula_manager,1,1,1,1
+access_master_mrp,master.mrp,bista_mrp_batch.model_master_mrp,mrp_control_formula.group_formula_manager,1,1,1,1
+access_stock_move,stock.move,stock.model_stock_move,mrp_control_formula.group_formula_manager,1,0,0,0
+
+
+
+access_ir_property,ir.property,base.model_ir_property,mrp_control_formula.group_formula_manager,1,1,1,1
+access_formula_product_history,formula.product.history,model_formula_product_history,mrp_control_formula.group_formula_manager,1,1,1,1

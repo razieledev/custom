@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+    <data>
+        <record id="view_formula_view_form_inherit_wc" model="ir.ui.view">
+            <field name="name">formula.form.inherit.wc</field>
+            <field name="model">formula.c1</field>
+            <field name="inherit_id" ref="mrp_control_formula.view_formula_view_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//button[@name='create_lp']" position="after">
+                    <button name="export_product" type="object" states="formulaenviar" string="Export LP" context="{'export_lp': True}"/>
+                </xpath>
+                <xpath expr="//button[@name='create_product']" position="after">
+                    <button name="export_product" type="object" states="L" string="Export Final Product" context="{'export_product': True}"/>
+                </xpath>
+
+            </field>
+        </record>
+
+
+    </data>
+</openerp>

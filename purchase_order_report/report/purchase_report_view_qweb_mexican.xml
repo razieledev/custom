@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+
+        <!--report for smc purchase report for multi company-->
+        <template id="report_purchaseorder_document_smc_layout2">
+            <t t-call="purchase_order_report.extend_custom_layout">
+                <div class="page">
+                <div class="oe_structure"/>
+                <div class="row">
+                    <h2 style="text-align:center">O R D E N&amp;nbsp;&amp;nbsp;&amp;nbsp;D E&amp;nbsp;&amp;nbsp;&amp;nbsp;C O M P R A</h2>
+                    <!--==========================================================-->
+                    <table class="table table-condensed">
+                        <tr>
+                            <td width="60%">
+                                <div>
+                                    <strong>Compuestos SMC Mexico SA de CV</strong>
+                                    <br/>
+                                    <strong>Dir. Fiscal:</strong>
+                                    <!--<div t-if="o.partner_id"/>
+                                        <div t-field="o.partner_id"
+                                             t-field-options='{"widget": "contact", "fields": ["address", "name", "phone", "fax"], "no_marker": true}'/>-->
+                                    <p>
+                                        Concepción Beistegui no. 307,<br/>
+                                        Col. Del Valle, Deleg. Benito Juárez,<br/>
+                                        México, D.F. 03100<br/>
+                                        RFC: CPM110610TB8<br/>
+
+                                    </p>
+
+                                </div>
+                            </td>
+                            <td width="40%">
+                                <strong>Fecha:</strong>
+                                <!--<span t-field="o.date_approve" t-field-options='{"format": "d / MM / y"}'/>-->
+                                <span t-usertime="%d / %m / %Y" />
+                                <!--<span t-esc="time.strftime('%Y-%m-%d %H:%M:%S')"/>-->
+                                <br/>
+                                <strong># Orden de Compra:</strong>
+                                <span t-field="o.name"/>
+                                <br/>
+                                <strong>Fecha de Entrega:</strong>
+                                <span t-field="o.minimum_planned_date" t-field-options='{"format": "d / MM / y"}'/>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div >
+                                    <strong>Dir. Entrega:  </strong>
+                                    <p>
+                                        Jupiter no. 11,<br/>
+                                        Col. Nueva Industrial Vallejo,<br/>
+                                        Deleg. Gustavo A. Madero,<br/>
+                                        México, D.F. 07700<br/>
+                                        Tel. (55) 41-69-40-12<br/>
+
+                                    </p>
+                                    <!--<div t-if="o.dest_address_id">
+                                            <div t-field="o.dest_address_id"
+                                                 t-field-options='{"widget": "contact", "fields": ["address", "name", "phone", "fax"], "no_marker": true}'/>
+                                        </div>
+
+                                        <div t-if="not o.dest_address_id and o.picking_type_id and o.picking_type_id.warehouse_id">
+                                            <span t-field="o.picking_type_id.warehouse_id.name"/>
+                                            <div t-field="o.picking_type_id.warehouse_id.partner_id"
+                                                 t-field-options='{"widget": "contact", "fields": ["address", "phone", "fax"], "no_marker": true}'/>
+                                        </div>-->
+                                </div>
+                                <br/>
+                            </td>
+                            <td>
+                                <div >
+                                    <strong>Proveedor:</strong>
+                                    <span t-if="o.partner_id">
+                                    <span t-field="o.partner_id"
+                                          t-field-options='{"widget": "contact", "fields": ["address", "name", "phone", "fax"], "no_marker": true}'/>
+                                    </span>
+                                    <br/>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div >
+                                    <strong>Validado por:</strong>
+                                    <span t-field="o.validator"/>
+                                </div>
+                            </td>
+                            <td>
+                                <!--<div class="col-xs-5">-->
+                                <strong>Condiciones de Pago:</strong>
+                                <span t-field="o.payment_term_id.name"/>
+                                <br/>
+                                <strong>Moneda de referencia:</strong>
+                                <span t-field="o.currency_id.name"/>
+                                <!--</div>-->
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+
+                <br/>
+                <table class="table table-condensed">
+                    <thead>
+                        <tr>
+                            <th><strong>Código</strong></th>
+                            <th><strong>Product</strong></th>
+                            <th><strong>Descripción</strong></th>
+                            <th class="text-center"><strong>Unidad</strong></th>
+                            <th class="text-right"><strong>Cantidad</strong></th>
+                            <th class="text-right"><strong>Costo</strong></th>
+                            <th class="text-right"><strong>Total</strong></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr t-foreach="o.order_line" t-as="line">
+                            <td>
+                                <span t-field="line.product_id.default_code"/>
+                            </td>
+                            <td>
+                                <span t-field="line.product_id.name"/>
+                            </td>
+                            <td>
+                                <span t-field="line.name"/>
+                            </td>
+                            <td class="text-center">
+                                <span t-field="line.product_uom.name"/>
+                            </td>
+                            <td class="text-right">
+                                <span t-esc="round(line.product_qty,4)" />
+                            </td>
+                            <td class="text-right">
+                                <span t-field="line.price_unit"/>
+                            </td>
+                            <td class="text-right">
+                                <span t-field="line.price_subtotal"
+                                      t-field-options='{"widget": "monetary", "display_currency": "o.pricelist_id.currency_id"}'/>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <hr/>
+
+                <div class="row">
+                    <div class="col-xs-4 pull-right">
+                        <table class="table table-condensed">
+                            <tr class="border-black">
+                                <td><strong>Subtotal</strong></td>
+                                <td class="text-right">
+                                    <span t-field="o.amount_untaxed"
+                                          t-field-options='{"widget": "monetary", "display_currency": "o.pricelist_id.currency_id"}'/>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>IVA</td>
+                                <td class="text-right">
+                                    <span t-field="o.amount_tax"
+                                          t-field-options='{"widget": "monetary", "display_currency": "o.pricelist_id.currency_id"}'/>
+                                </td>
+                            </tr>
+                            <tr class="border-black">
+                                <td><strong>Total</strong></td>
+                                <td class="text-right">
+                                    <span t-field="o.amount_total"
+                                          t-field-options='{"widget": "monetary", "display_currency": "o.pricelist_id.currency_id"}'/>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+
+                <table class="table table-bordered">
+                    <tr>
+                        <td>
+                            <b>Importante:</b><br />
+                            <p>
+                                Entregar las materias primas acompañadas de su Certificado de Calidad.
+                                <br/>
+                                Identificar las materias primas con el no. De lote correspondiente.
+                            </p>
+                        </td>
+                    </tr>
+                </table>
+
+                
+                <div class="oe_structure"/>
+                </div>
+            </t>
+        </template>
+
+        <template id="report_purchase_smc2">
+            <t t-call="report.html_container">
+            <t t-foreach="doc_ids" t-as="doc_id">
+                <t t-raw="translate_doc(doc_id, doc_model, 'partner_id.lang', 'purchase_order_report.report_purchaseorder_document_smc_layout2')"/>
+                </t>
+            </t>
+        </template>
+    </data>
+</openerp>

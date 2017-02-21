@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+        <record id="account_report_print_char_accounts_xml" model="ir.ui.view">
+          <field name="name">Print chart of accounts</field>
+          <field name="model">account.print.chart.accounts.report</field>
+          <field name="arch" type="xml">
+            <form string="Report Options" version="7.0">
+              <label nolabel="1" colspan="4" string="This report allows you to generate a xml of your chart of accounts allowing you to upload the zip file into SAT website."/>
+              <group col="4" colspan="4">
+                <field name="chart_account_id" widget='selection'/>
+                <field name="period_id"/>
+              </group>
+              <footer>
+                <button class="oe_highlight" name="generate_xml_report" string="Export"
+                        type="object"/>
+                or
+                <button string="Cancel" class="oe_link" special="cancel"/>
+              </footer>
+            </form>
+          </field>
+        </record>
+    </data>
+</openerp>

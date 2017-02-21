@@ -1,0 +1,110 @@
+<openerp>
+    <data>
+        <record id="product_normal_form_view_inh_rzl" model="ir.ui.view">
+            <field name="name">product.normal.form.view.inh.rzl</field>
+            <field name="model">product.product</field>
+            <field name="inherit_id" ref="product.product_normal_form_view"/>
+            <field name="arch" type="xml">
+                <data>
+                    <field name="default_code" position="after">
+                        <button name="generate_reference" type="object" string="Generate Code" confirm="Create new Code?"
+                                groups = "base.group_sale_manager"/>
+                    </field>
+                    <xpath expr="//page[@string='Information']/group[2]" position="after">
+                        <!--<page name="'Particulars">-->
+                        <h3 attrs="{'invisible':[('categ_id', '=', %(product.product_category_1)s)]}">Preform Configuration</h3>
+
+                        <!--<group attrs="{'invisible':[('categ_id', 'child_of', 'Saleable')]}"  colspan="4">-->
+                        <group attrs="{'invisible':[('categ_id', '=',  %(product.product_category_1)s)]}"  colspan="4">
+                            <field name="color_id"/>
+                            <field name="cuello_id"/>
+                            <field name="peso_gr"/>
+                        </group>
+                        <h3 attrs="{'invisible':[('categ_id', '!=',  %(product.product_category_1)s)]}">Bottle Configuration</h3>
+                        <!--<group attrs="{'invisible':[('categ_id', 'child_of', 'Raw Materials')]}"  colspan="4">-->
+                        <group attrs="{'invisible':[('categ_id', '!=',  %(product.product_category_1)s)]}"  colspan="4">
+                            <!---->
+                            <field name="bottle_model"/>
+                            <field name="preform_id"/>
+                            <field name="preform_color"/>
+                            <field name="preform_cuello"/>
+                            <field name="preform_peso_gr"/>
+                            <field name="resina"/>
+                            <field name="height"/>
+                            <field name="partner_id" string="Product Customer"/>
+
+                        </group>
+                        <!--</page>-->
+                    </xpath>
+                </data>
+            </field>
+        </record>
+
+        <record id="view_color_tree" model="ir.ui.view">
+            <field name="name">view.color.tree</field>
+            <field name="model">color</field>
+            <field name="arch" type="xml">
+                <tree string="Product Color" editable="'bottom">
+                    <field name="name"/>
+                     <field name="code"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="view_cuello_tree" model="ir.ui.view">
+            <field name="name">view.cuello.tree</field>
+            <field name="model">cuello</field>
+            <field name="arch" type="xml">
+                <tree string="Cuello" editable="'bottom">
+                    <field name="name"/>
+                     <field name="code"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="view_bottle_model_tree" model="ir.ui.view">
+            <field name="name">view.bottle.model.tree</field>
+            <field name="model">bottle.model</field>
+            <field name="arch" type="xml">
+                <tree string="Molde" editable="'bottom">
+                    <field name="name"/>
+                     <field name="code"/>
+                </tree>
+            </field>
+        </record>
+
+         <record id="action_color" model="ir.actions.act_window">
+            <field name="name">Color</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">color</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_id" ref="view_color_tree"/>
+        </record>
+        <record id="action_cuello" model="ir.actions.act_window">
+            <field name="name">Cuello</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">cuello</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_id" ref="view_cuello_tree"/>
+        </record>
+        <record id="action_bottle_model" model="ir.actions.act_window">
+            <field name="name">Molde</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">bottle.model</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_id" ref="view_bottle_model_tree"/>
+        </record>
+
+
+        <menuitem name="Color"
+                     id="product_color" parent="base.menu_product" action="action_color" sequence="101"/>
+        <menuitem name="Cuello"
+                     id="product_cuello" parent="base.menu_product" action="action_cuello" sequence="102"/>
+        <menuitem name="Molde"
+                     id="product_bottle_model" parent="base.menu_product" action="action_bottle_model" sequence="103"/>
+
+    </data>
+</openerp>

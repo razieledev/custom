@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+
+        <record id="view_account_auxiliary_wizard_xml" model="ir.ui.view">
+            <field name="name">account.auxiliary.wizard.xml</field>
+            <field name="model">account.auxiliary.wizard.xml</field>
+            <field name="inherit_id" ref="account.account_common_report_view"/>
+            <field name="arch" type="xml">
+                <data>
+                    <xpath expr="/form/label[@string='']" position="replace">
+                        <separator string="Auxiliary Account" colspan="4"/>
+                        <label nolabel="1" colspan="4" string="This report allows you to generate a xml of your general ledger with details of one account in zip format to upload iinto SAT website"/>
+                    </xpath>
+                    <field name="chart_account_id" position='attributes'>
+                        <attribute name="colspan">4</attribute>
+                    </field>
+                    <field name="target_move" position="after">
+                        <field name="period_id" string="Period" attrs="{'required': 'true'}" domain="[('fiscalyear_id', '=', fiscalyear_id), ('special', '=', False)]" />
+                        <group colspan="4">
+                            <label nolabel="1" colspan="4" string="Select the declaration type you are doing and type the number given to you by SAT"/>
+                            <group>
+                                <field name="type_request" />
+                            </group>
+                            <group>
+                                <field name="order_num" attrs="{'required':[('type_request','in',['AF','FC'])], 'invisible':[('type_request','not in',['AF','FC'])]}" />
+                                <field name="pro_num" attrs="{'required':[('type_request','in',['DE','CO'])], 'invisible':[('type_request','not in',['DE','CO'])]}" />
+                            </group>
+                        </group>
+                        <group colspan="4">
+                            <label nolabel="1" colspan="4" string="Select the accounts to include"></label>
+                            <field name="account_ids" colspan="4" nolabel="1" domain="[('sat_group_id', '!=', False)]">
+                                <tree>
+                                    <field name="code"/>
+                                    <field name="name"/>
+                                    <field name="type"/>
+                                    <field name="company_id"/>
+                                </tree>
+                            </field>
+                        </group>
+                    </field>
+                    <notebook position="attributes">
+                        <attribute name="invisible">True</attribute>
+                    </notebook>
+                    <field name="fiscalyear_id" position="replace">
+                        <field name="fiscalyear_id" on_change="onchange_fiscalyear_id(fiscalyear_id)"/>
+                    </field>
+                    <button name="check_report" position="replace">
+                        <button name="generate_xml_report" string="Export XML" type="object" default_focus="1" class="oe_highlight"></button>
+                    </button>
+                </data>
+            </field>
+        </record>
+
+    </data>
+</openerp>

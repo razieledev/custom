@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+        <record id="view_master_mrp_tree" model="ir.ui.view">
+            <field name="name">view.master.mrp.tree</field>
+            <field name="type">tree</field>
+            <field name="priority">2</field>
+            <field name="model">master.mrp</field>
+            <field name="arch" type="xml">
+                <tree string="Manufacturing Order">
+                    <field name="name"/>
+                    <field name="sale_id"/>
+                    <field name="origin"/>
+                    <field name="product_id"/>
+                    <field name="product_qty"/>
+                    <field name="date_planned"/>
+                    <field name="date_start"/>
+                    <field name="batches"/>
+                    <field name="batch_qty"/>
+                    <field name="state"/>
+                </tree>
+            </field>
+        </record>
+        <record id="view_master_mrp_form" model="ir.ui.view">
+            <field name="name">view.master.mrp.form</field>
+            <field name="type">form</field>
+            <!--<field name="priority">2</field>-->
+            <field name="model">master.mrp</field>
+            <field name="arch" type="xml">
+                <form string="Master MRP">
+                    <header>
+                        <button name="create_batches" type="object" states="draft" string="Create Batches"/>
+                        <!--<button name="validate" type="object" states="draft" string="Validate"/>-->
+                        <button name="cancel_master" type="object" states="draft,confirmed" string="Cancel"/>
+                        <field name="state" widget="statusbar" statusbar_visible="draft,confirmed,cancel,done" statusbar_colors='{"confirmed":"blue"}'/>
+                    </header>
+                    <group colspan="4">
+                        <group>
+                            <field name="name" required = "1"/>
+                            <field name="sale_id" readonly="1"/>
+                            <field name="origin"/>
+                            <field name="product_id" required = "1" on_change="product_id_change(product_id, product_qty)"
+                                   domain="[('bom_ids','!=',False),('bom_ids.type','!=','phantom')]" context='{"default_type": "product"}'/>
+                            <field name="product_qty" required = "1"/>
+                            <field name="product_uom" groups="product.group_uom" />
+                        </group>
+                        <group>
+                            <field name="date_planned" required = "1"/>
+                            <field name="date_start"/>
+                            <field name="batches" required="1" attrs="{'readonly':[('state', '!=', 'draft')]}"/>
+                            <field name="batch_qty" required="1" attrs="{'readonly':[('state', '!=', 'draft')]}"/>
+                            <!--<field name="state"/>-->
+                        </group>
+                    </group>
+                    <group>
+                        <field name="batch_ids" nolabel="1">
+                            <tree colors="red:state == 'confirmed';" string="Batch Orders">
+                                <field name="message_unread" invisible="1"/>
+                                <field name="name"/>
+                                <field name="date_planned"/>
+                                <field name="product_id"/>
+                                <field name="product_qty" sum="Total Qty"/>
+                                <field name="product_uom" groups="product.group_uom"/>
+                                <field name="routing_id" groups="mrp.group_mrp_routings"/>
+                                <field name="hour_total" sum="Total Hours"/>
+                                <field name="cycle_total" sum="Total Cycles"/>
+                                <field name="origin"/>
+                                <field name="state"/>
+                            </tree>
+                        </field>
+                    </group>
+                </form>
+            </field>
+        </record>
+        
+        
+
+        
+
+        <record id="action_master_mrp" model="ir.actions.act_window">
+            <field name="name">Manufacturing Orders</field>
+            <field name="res_model">master.mrp</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_type">form</field>
+            <field name="view_id" ref="view_master_mrp_tree"/>
+        </record>
+        
+        <menuitem name="Manufacturing Orders"
+            action="action_master_mrp"
+            id="menu_master_mrp_order"
+            parent="mrp.menu_mrp_manufacturing"
+            sequence="1"/>
+        
+    </data>
+</openerp>

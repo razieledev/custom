@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+    <data>
+
+        <!--<record id="view_sale_adjustment_tree" model="ir.ui.view">-->
+            <!--<field name="name">view.sale.order.extended.form</field>-->
+            <!--<field name="model">sale.order</field>-->
+            <!--<field name="inherit_id" ref="sale.view_order_tree"/>-->
+            <!--<field name="arch" type="xml">-->
+                <!--<field name="partner_id" position="after">-->
+                    <!--<field name="company_id"/>-->
+                <!--</field>-->
+            <!--</field>-->
+        <!--</record>-->
+
+        <!--<record id="view_purchase_order_form_inherit_mx" model="ir.ui.view">-->
+            <!--<field name="name">view.purchase.order.form.inh.mx</field>-->
+            <!--<field name="model">purchase.order</field>-->
+            <!--<field name="inherit_id" ref="purchase.purchase_order_form"/>-->
+            <!--<field name="arch" type="xml">-->
+                <!--<xpath expr="//field[@name='pricelist_id']" position="after">-->
+                    <!--<field name="ref_po_id" string="Compuestos PO" readonly="1"/>-->
+                <!--</xpath>-->
+                <!--<xpath expr="//sheet//notebook/page[@string='Deliveries &amp; Invoices']" position="after">-->
+                    <!--<page string="Related Sales" attrs="{'invisible':[('ref_po_id','!=',False)]}">-->
+                        <!--<field name="sale_line_ids"/>-->
+                    <!--</page>-->
+                <!--</xpath>-->
+                <!--<xpath expr="//sheet//notebook/page[@string='Deliveries &amp; Invoices']" position="after">-->
+                    <!--<page string="Related Purchases" attrs="{'invisible':[('ref_po_id','!=',False)]}">-->
+                        <!--<field name="purchase_line_ids"/>-->
+                    <!--</page>-->
+                <!--</xpath>-->
+            <!--</field>-->
+        <!--</record>-->
+
+        <record id="inherit_purchase_order_tree" model="ir.ui.view">
+            <field name="name">inherit.purchase.order.tree</field>
+            <field name="model">purchase.order</field>
+            <field name="inherit_id" ref="purchase.purchase_order_tree"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='state']" position="after">
+                    <field name="inv_state"/>
+                    <field name="pick_state"/>
+                </xpath>
+            </field>
+        </record>
+
+
+        <!--<record id="purchase_form_action_demo" model="ir.actions.act_window">-->
+            <!--<field name="name">Purchase Orders SMC Inc</field>-->
+            <!--<field name="type">ir.actions.act_window</field>-->
+            <!--<field name="res_model">purchase.order</field>-->
+            <!--<field name="view_mode">tree,form</field>-->
+            <!--<field name="view_type">form</field>-->
+            <!--<field name="view_id" ref="purchase.purchase_order_tree"/>-->
+            <!--<field name="context">{'smc' : True}</field>-->
+            <!--<field name="domain">[('company_id.name','=', 'SMC Comp Inc (USA)')]</field>-->
+        <!--</record>-->
+
+        <!--<menuitem action="purchase_form_action_demo"-->
+                  <!--id="menu_product_action_inherit_smc"-->
+                  <!--parent="purchase.menu_procurement_management"-->
+                  <!--sequence="8" />-->
+
+        <!--<record id="purchase_form_action_demo1" model="ir.actions.act_window">-->
+            <!--<field name="name">Purchase Orders Plasco</field>-->
+            <!--<field name="type">ir.actions.act_window</field>-->
+            <!--<field name="res_model">purchase.order</field>-->
+            <!--<field name="view_mode">tree,form</field>-->
+            <!--<field name="view_type">form</field>-->
+            <!--<field name="view_id" ref="purchase.purchase_order_tree"/>-->
+            <!--<field name="context">{'plasco' : True}</field>-->
+            <!--<field name="domain">[('company_id.name','=','Productos Plasco SA de CV')]</field>-->
+        <!--</record>-->
+
+        <!--<menuitem action="purchase_form_action_demo1"-->
+                  <!--id="menu_product_action_inherit_plasco"-->
+                  <!--parent="purchase.menu_procurement_management"-->
+                  <!--sequence="9" />-->
+
+        <!--<record id="purchase_form_action_demo2" model="ir.actions.act_window">-->
+            <!--<field name="name">Purchase Orders Compuestos</field>-->
+            <!--<field name="type">ir.actions.act_window</field>-->
+            <!--<field name="res_model">purchase.order</field>-->
+            <!--<field name="view_mode">tree,form</field>-->
+            <!--<field name="view_type">form</field>-->
+            <!--<field name="view_id" ref="purchase.purchase_order_tree"/>-->
+            <!--<field name="context">{'compuestos' : True}</field>-->
+            <!--<field name="domain">[('company_id.name','=','Compuestos SMC Mexico SA de CV')]</field>-->
+        <!--</record>-->
+
+        <!--<menuitem action="purchase_form_action_demo2"-->
+                  <!--id="menu_product_action_inherit_compuestos"-->
+                  <!--parent="purchase.menu_procurement_management"-->
+                  <!--sequence="7" />-->
+
+        <!--<record id="view_product_supplier_inherit_modified" model="ir.ui.view">-->
+            <!--<field name="name">product.template.supplier.form.inherit.modified</field>-->
+            <!--<field name="model">product.template</field>-->
+            <!--<field name="inherit_id" ref="product.product_template_form_view"/>-->
+            <!--<field name="arch" type="xml">-->
+                <!--<div name="options" position="inside">-->
+                    <!--<div>-->
+                        <!--<field name="raw_material"/>-->
+                        <!--<label for="raw_material"/>-->
+                    <!--</div>-->
+                <!--</div>-->
+            <!--</field>-->
+        <!--</record>-->
+
+        <!--<record id="view_category_property_form_modified" model="ir.ui.view">-->
+            <!--<field name="name">product.category.stock.property.form.inherit.modified</field>-->
+            <!--<field name="model">product.category</field>-->
+            <!--<field name="inherit_id" ref="stock_account.view_category_property_form"/>-->
+            <!--<field name="arch" type="xml">-->
+                    <!--<field name="property_stock_journal" position="after">-->
+                        <!--<field name="seller_ids"/>-->
+                    <!--</field>-->
+            <!--</field>-->
+        <!--</record>-->
+
+
+    </data>
+</openerp>

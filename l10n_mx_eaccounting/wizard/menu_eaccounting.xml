@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+	<data>
+        <!-- Actions -->
+        <record id="action_print_chart_menu" model="ir.actions.act_window">
+          <field name="name">Print chart of accounts</field>
+          <field name="type">ir.actions.act_window</field>
+          <field name="res_model">account.print.chart.accounts.report</field>
+          <field name="view_type">form</field>
+          <field name="view_mode">form</field>
+          <field name="target">new</field>
+          <field name="view_id" ref="account_report_print_char_accounts_xml"/>
+        </record>
+        
+        <record id="action_account_trial_balance_menu_webkit_xml" model="ir.actions.act_window">
+            <field name="name">Trial Balance</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">trial.balance.webkit</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">form</field>
+            <field name="view_id" ref="trial_balance_xml"/>
+            <field name="target">new</field>
+        </record>
+        
+        <record id="action_journal_entries_wizard" model="ir.actions.act_window">
+            <field name="name">Journal Entries</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">journal.entries.wizard.xml</field>
+            <field name="view_type">form</field>
+            <field name="view_id" ref="view_account_report_journal_entries_wizard_xml"/>
+            <field name="target">new</field>
+        </record> 
+
+        <record id="action_account_auxiliary_wizard" model="ir.actions.act_window">
+            <field name="name">Auxiliary Account</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">account.auxiliary.wizard.xml</field>
+            <field name="view_type">form</field>
+            <field name="view_id" ref="view_account_auxiliary_wizard_xml"/>
+            <field name="target">new</field>
+        </record>
+        
+        <!-- Menu items -->
+		<menuitem id="menu_finance_eaccounting" name="Electronic accounting" parent="account.menu_finance_legal_statement" sequence="14"/>
+		<!--Chart of Account-->
+		<menuitem action="action_print_chart_menu" id="menu_wizard_print_chart_account" sequence="1" parent="menu_finance_eaccounting" name="Chart of accounts"/>
+		<!--Journal Entries-->
+		<menuitem action="action_journal_entries_wizard" id="journal_entries_wizard_menu" sequence="3" parent="menu_finance_eaccounting" name="Journal Entries"/>
+		<!-- Balance de sumas y saldos -->
+		<menuitem action="action_account_trial_balance_menu_webkit_xml" id="menu_general_balance_report" sequence="2" parent="menu_finance_eaccounting" name="Trial Balance"/>
+                <!--Auxiliary Account-->
+                <menuitem action="action_account_auxiliary_wizard" id="account_auxiliary_wizard_menu" sequence="4" parent="menu_finance_eaccounting" name="Auxiliary Account"/>
+	</data>
+</openerp>

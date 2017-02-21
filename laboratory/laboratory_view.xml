@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- Siempre las lineas xml van a ir delimitados por la etiqueta openerp-->
+<openerp>
+    <!-- Las etiquetas data tambien delimitan a las record siempre -->
+    <data>
+       	<menuitem name = "Laboratory" id ="base.laboratory_menu" groups="group_laboratory_manager,group_laboratory_user" sequence = "80"/>
+       	<menuitem name = "Ordenes Laboratorio" id ="laboratory_menu_general" parent ="base.laboratory_menu"/> 
+       	<!--<menuitem name = "Alumnos" id = "notas_alumnos_menu" parent ="base.laboratory_menu"/>
+       	<menuitem name = "Cursos" id = "notas_cusos_menu" parent ="base.laboratory_menu"/>
+       	<menuitem name = "Evaluaciones" id = "notas_evaluaciones_menu" parent ="base.laboratory_menu"/>-->
+        <record model="ir.ui.view" id="laboratory_order_tree">
+            <field name="name">laboratory.order.tree</field>
+            <field name="model">laboratory.order</field>
+    	    <field name="type">tree</field>
+			<field name="arch" type="xml">
+				<tree string="Laboratory">
+            <field name="name" placeholder="Codigo Laboratory"/>					
+				    <field name="client"/>
+					<field name="project"/>
+					<field name="date"/>
+					<field name="users"/>
+                    <field name="state"/>
+			    </tree>
+		    </field> 
+        </record>
+				
+		<record model="ir.ui.view" id="laboratory_order_form">
+            <field name="name">laboratory.order.form</field>		
+            <field name="model">laboratory.order</field>
+		    <field name="type">form</field>			 
+	        <field name="arch" type="xml">
+                <form string="Laboratory" version="7.0">
+					<header>
+                        <button name="mymod_confirmed" string="Laboratorio" state="draft" type="object"/>
+                        <button name="mymod_test" string="Pruebas" state="test" type="object" />
+                        <button name="mymod_produce" string="Confirmar Produccion" state="produce" type="object" />
+                        <button name="mymod_voldraft" string="Borrador" state="cancel" type="object" />
+                        <button name="mymod_cancel" string="Cancelar" state="draft,Confirmed" type="object" />
+                        <field name="state" widget="statusbar" />
+                    </header>
+                    <sheet>
+					<h1>
+                        <field name="name" placeholder="Code.Laboratory"/>
+                    </h1>
+                    <group>
+                        <group>
+      	                    <field name="client"/>
+                            <field name="project"/>
+                        </group>
+                        <group>
+					                  <field name="date"/>
+					                  <field name="users"/>	
+                        </group>
+                      </group>
+                      <group>	
+                        <group>	
+                            <field name="formula"/>	
+             	              <field name="prev_muestra"/>
+                            <field name="product_qty"/>
+                            <field name="product_uom"/>
+                            <field name="color"/>
+                            <field name="presentation"/>
+                        </group>
+                        
+                        <group>	
+                        <field name="lot1"/>
+                        <field name="lot2"/>
+                        <field name="lot3"/>
+                        <field name="datasheet_no"/>
+                        </group>
+                      </group>	   
+                      <group>	
+                        <group>	  
+                        <field name="result"/>
+                        </group>
+                      </group>
+                      <group>	
+                      <group>
+                        </group>
+                        <group>
+					              <field name="quantity_d"/>
+					              <field name="presentation_d"/>		
+                        <field name="date_required"/>	
+             	          <field name="packing"/>
+                        <field name="charge"/>
+                        <field name="document"/>
+                        <field name="test"/>
+                        <field name="molding_plates1"/>
+              
+                        <field name="molding_plates2"/>
+                        <field name="pick_up"/>
+					              <field name="payment_shipping"/>
+					              <field name="box_type"/>		
+                        <field name="thermometer"/>	
+             	          <field name="contact"/>
+                        <field name="addrees"/>
+                        </group>
+                      </group>
+                      <group>	
+                        <group>
+                        <field name="description"/>
+                        </group>
+                      </group>
+                      <group>	
+                        <group>
+                        </group>
+                        <group>
+                        <field name="formulae"/>
+                        </group>
+                      </group>
+                    </sheet>
+                </form>		   
+			</field>    
+        </record>
+		
+		<record model="ir.actions.act_window" id="laboratory_order_action">
+            <field name="name">Laboratory</field>
+			<field name="res_model">laboratory.order</field>
+			<field name="view_type">form</field>
+		    <field name= "view_mode">tree,form</field>
+        </record>
+				
+		<menuitem action="laboratory_order_action" id="laboratory_order_menu" sequence="1" parent="laboratory_menu_general"/>	
+
+        <!-- Sequences for sale.order--> 
+        <record id="seq_type_lavorator_order" model="ir.sequence.type">
+            <field name="name">Laboratory Order</field>
+            <field name="code">laboratory.order</field>
+        </record>
+
+        <record id="seq_lavoratory_order" model="ir.sequence">
+            <field name="name">Laboratory Order</field>
+            <field name="code">laboratory.order</field>
+            <field name="prefix">LAB</field>
+            <field name="padding">5</field>
+        </record>		
+		<!--fin secuencuencia-->
+		
+	</data>
+</openerp>			

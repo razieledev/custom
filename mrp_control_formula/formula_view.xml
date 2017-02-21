@@ -1,0 +1,658 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+    <data>
+        <!-- Top menu item -->
+        <menuitem name="Formula" id="base.menu_test_base_main" groups="group_formula_manager,group_formula_user" sequence="30"/>
+        <menuitem id="menu_test_base" name="Purchase" parent="base.menu_test_base_main" sequence="1" />
+        <menuitem id="menu_test_config" name="Configuration" groups="group_formula_manager" parent="base.menu_test_base_main" sequence="26"/>  
+    
+        <record model="ir.ui.view" id="view_formula_view_form">
+            <field name="name">formula.form</field>
+            <field name="model">formula.c1</field>
+            <field name="type">form</field>
+            <field name="arch" type="xml">
+                <form string="Formula" version="7.0">
+                    <header>
+                        <button name="mymod_confirmed" string="Formulacion" states="Pruebas" type="object" class="oe_highlight" groups="mrp_control_formula.group_formula_manager" invisible="True"/>
+                        <button name="action_formulaenvio" string="Validar Formula" states="Confirmed,Reformulacion" type="object" class="oe_highlight" groups="mrp_control_formula.group_formula_manager"/>
+                        <button name="script_update_formula" string="Script Update Formula" states="Confirmed" type="object" class="oe_highlight" groups="mrp_control_formula.group_formula_manager" invisible="0"/>
+                        <!--<button name="mymod_p" string="Pruebas" states="Confirmed,Reformulacion" type="object" class="oe_highlight" />-->
+                        <button name="lines_reformula_local" string="Reformular" states="revisado,L"  type="object" class="oe_highlight" groups="mrp_control_formula.group_formula_manager"/>
+                        <!--<button name="create_manufacturing_order" string="Create MO"   type="object" class="oe_highlight"/>-->
+                        <button name="create_lp" states="formulaenviar" string="Create LP" type="object" class="oe_highlight" groups="mrp_control_formula.group_formula_manager"/>
+                        <button name="create_product" string="Create Product" states="revisado" type="object" class="oe_highlight" groups="mrp_control_formula.group_formula_manager"/>
+                        <button name="create_mo" states="formulaenviar" string="Create MO" type="object" class="oe_highlight" groups="mrp_control_formula.group_formula_manager"/>
+                        <button name="update_product" states="Reformulacion,revisado" string="Update Product" type="object" class="oe_highlight" groups="mrp_control_formula.group_formula_manager"/>
+                        <button name="revisado" states="Pruebas" string="Done" type="object" class="oe_highlight" groups="mrp_control_formula.group_formula_manager,mrp_control_formula.group_formula_user"/>
+                        <button name="Pruebas" states="mo_created" string="Pruebas" type="object" class="oe_highlight" groups="mrp_control_formula.group_formula_manager"/>
+                        <!-- states="revisado" -->
+                        <!--<button name="mymod_l" string="Confirmar Producción" states="revisado" type="object" class="oe_highlight"/>-->
+                        <button string="Confirmar Produccion" name="%(act_formula_envio_production)d" states="revisado" type="action" groups="mrp_control_formula.group_formula_manager" invisible="True"/>
+                        <field name="state" widget="statusbar" statusbar_visible="Confirmed,Reformulacion,Pruebas,L" groups="mrp_control_formula.group_formula_manager"/>
+                        <button name="lines_formula" string="Envio" type="object" invisible="True" groups="mrp_control_formula.group_formula_manager"/>
+                        <button string="Enviar Formula" name="%(act_formula_envio_remoto)d" states="formulaenviar" type="action"  invisible="1" icon="terp-check" groups="mrp_control_formula.group_formula_manager"/>
+                    </header>
+                        <h1>
+                            <group>
+                                <group>
+                                    <field name="cod_formula" class="oe_inline" nolabel="1"/>
+                                </group>
+                                <group>
+                                    <label for="count" string="Fecha" invisible="True"/>
+                                    <div>
+                                        <label string="RV00" class="oe_inline"/>
+                                        <field name="count" class="oe_inline" nolabel="1"/>
+                                    </div>
+                                </group>
+                            </group>
+                        </h1>
+                        
+                    <group>
+                    	<group>
+                            <field name="_cliente" domain="[('customer','=',True)]" attrs="{'readonly':[('state','in',('enviadorefor','p','L'))]}"/> 
+                            <field name="familia" attrs="{'readonly':[('state','in',('enviadorefor','Pruebas','L'))]}" string="Material"/>
+                            <field name="name" attrs="{'readonly':[('state','in',('enviadorefor','Pruebas','L'))]}" string="Descripcion"/>
+                            <field name="product_color" attrs="{'readonly':[('state','in',('enviadorefor','Pruebas','L'))]}"/>
+                            <field name="process" attrs="{'readonly':[('state','in',('enviadorefor','Pruebas','L'))]}"/>
+                            <field name="idcreado" invisible="True"/>
+                            <field name="idcreado_local" invisible="True"/>
+                            <field name="product_lp_variant" readonly="1"/>
+                            <field name="product_premix_variant" readonly="1"/>
+                            <field name="lp_product_qty"/>
+                            <field name="mo_refrence" readonly="1"/>
+                            <field name="is_ul" />
+                            <field name="formula_cost" />
+                        </group>
+                        <group>
+                            <field name="date" attrs="{'readonly':[('state','in',('enviadorefor','Pruebas','L'))]}"/>
+                            <field name="cost_date" readonly="1"/>
+                            <field name="n_cantidad" readonly="1"/>
+                            <field name="usuario" attrs="{'readonly':[('state','in',('enviadorefor','L'))]}"/>
+                            <field name="product_user_id" attrs="{'readonly':[('state','in',('enviadorefor','L'))]}"/>
+                            <field name="product_user3_id" attrs="{'readonly':[('state','in',('enviadorefor','L'))]}"/>
+                            <field name="n_total" required = "1" readonly="1" /> <!-- attrs="{'readonly':[('state','in',('enviadorefor','L'))]}"-->
+                            <field name="convert" invisible='True'/>
+                            <field name="product_type" required = "1"/>
+                            <field name="final_product_id" readonly = "1"/>
+                            <field name="final_premix_id" readonly = "1"/>
+                        </group>                        
+                    </group>
+                    <notebook >
+                        <page string="Componentes Formulacion" attrs="{'invisible': [('state', 'in',('enviadorefor','Pruebas','formulaenviar'))]}">
+                            <field name="line" > 
+                                <tree string="componentes" editable="button">
+                                    <!--<field name="rates_per_kg"/>-->
+                                    <field name="premix"/>
+                                    <field name="indice" invisible='True'/>
+                                    <field name="Ref" string="Codigo" />
+                                    <field name="producto"  domain="[('categ_id.name','in',('Materia prima','Aditivos','Aditivos especiales','Cargas Minerales','Catalizadores','Desmoldantes','Inhibidores','Otros','Pigmentos','Refuerzos','Resinas'))]" string="Ingredientes" attrs="{'readonly':[('state','=','revisado')]}"/>
+                                    <!--on_change="onchange_product_name(producto,Ref,context)"-->
+                                    <field name="product_uom" invisible='True'/>
+                                    <field name="cost_date" readonly="1" />
+                                    <field name="calculate_porcentaje" sum="Total" attrs="{'readonly':[('state','in',('enviadorefor','L'))]}"/>
+                                    <!--on_change="change_calculate_qty(calculate_porcentaje,cantidadproduct)"-->     
+                                    <field name="cantidadproduct" sum="Total" string="Kilos"/>
+                                    <field name="product_color" invisible='True'/>
+                                    <field name="costo" invisible='True'/>
+                                    <field name="cantidadcoste" sum="Total" string="US$/Kg"/>
+                                    <field name="cost_calculation" sum="Total Cost"/>
+                                    <field name="costoindi" invisible='True'/>
+                                    <field name="costotal" invisible='True'/>
+                                    <field groups="base.group_no_one" name="p_venta" sum="Total" invisible='True'/>
+                                    <field  groups="base.group_no_one" name="pzc1" sum="Total" invisible='True'/>
+                                    <field groups="base.group_no_one" name="pzc2" sum="Total" invisible='True'/>
+                                    <field name="coment"/>
+                                    <field name="state" invisible='True'/>      
+                                </tree>
+
+                            </field> 
+                            <button name="button_dummy" string="(Actualizar)" type="object" class="oe_edit_only oe_link"/>
+                            <group>
+                                <field name="total" invisible="True"/> 
+                                <field name="totalP" invisible="True"/>
+                                <field name="costototal" invisible="True"/>
+                                <field name="costototal_indirecto" invisible="True"/>
+                                <field groups="base.group_no_one" name="total_pv" invisible="True"/>
+                                <field groups="base.group_no_one" name="total_tpv1" invisible="True"/>
+                                <field groups="base.group_no_one" name="total_tpv2" invisible="True"/>
+                               <field name="_Notas0" placeholder="COMENTARIOS" nolabel="1"/>
+                            </group>
+                        </page>
+                        <page string="Datos" attrs="{'invisible': [('state', 'in',('Confirmed','Reformulacion'))]}">
+                            <group>
+                                <group>
+                                    <field name="_Fecha" invisible='True'/>
+                                    <field name="_aplicacion" attrs="{'readonly':[('state','in',('enviadorefor','L'))]}"/>
+                                    <field name="tamano" attrs="{'readonly':[('state','in',('enviadorefor','L'))]}"/>
+                                    <label for="Densidad" string="Densidad (grms/cm3)"/>
+                                    <div>
+                                        <field name="Densidad" class="oe_inline" attrs="{'readonly':[('state','in',('enviadorefor', 'Pruebas'))]}"/>
+                                        <label string="Real" class="oe_inline" style="color:#00F700" />
+                                        <field name="tidencidad" class="oe_inline" attrs="{'readonly':[('state','not in',('Pruebas'))]}" />
+                                    </div>
+
+                                    <label for="Encogimiento" string="Encogimiento (inch/Lineal)"/>
+                                    <div>
+                                        <field name="Encogimiento" class="oe_inline" attrs="{'readonly':[('state','in',('enviadorefor', 'Pruebas'))]}"/>
+                                        <label string="Real" class="oe_inline" style="color:#00F700"/>
+                                        <field name="tiencogimiento" class="oe_inline" attrs="{'readonly':[('state','not in',('Pruebas'))]}"/>
+                                    </div>
+                                </group>
+                                <group>
+                                    <field name="_proceso"/>
+                                    <label for="curados" string="Tiempo de Curado (seg)"/>
+                                    <div>
+                                        <field name="curados" class="oe_inline" attrs="{'readonly':[('state','in',('enviadorefor', 'Pruebas'))]}"/>
+                                        <label string="Real" class="oe_inline" style="color:#00F700"/>
+                                        <field name="ticurado" class="oe_inline" attrs="{'readonly':[('state','not in',('Pruebas'))]}"/>
+                                    </div>
+                                    
+                                    <label for="Primer_Ciclo" string="Dureza Barcol"/>
+                                    <div>
+                                        <field name="Dureza" class="oe_inline" attrs="{'readonly':[('state','in',('enviadorefor', 'Pruebas'))]}"/>
+                                        <label string="Real" class="oe_inline" style="color:#00F700"/>
+                                        <field name="durbarcol" class="oe_inline" attrs="{'readonly':[('state','not in',('Pruebas'))]}"/>
+                                    </div>
+                                    <field name="Flujo" invisible="True"/>
+                                </group>
+                            </group>
+                        </page>
+                        <page string="Elaboracion" attrs="{'invisible': [('state', 'in',('Confirmed','Reformulacion'))]}">
+                            <group>
+                                <group name="status" string="Tiempos">
+                                    <label for="Primer_Ciclo" string="Primer Ciclo (min/seg)" />
+                                    <div>
+                                        <field name="Primer_Ciclo" class="oe_inline" attrs="{'readonly':[('state','in',('enviadorefor', 'Pruebas'))]}"/>
+                                        <label string="Real" class="oe_inline" style="color:#00F700"/>
+                                        <field name="tiempo1" class="oe_inline" attrs="{'readonly':[('state','not in',('Pruebas'))]}"/>
+                                    </div>
+
+                                    <label for="Segundo_Ciclo" string="Segundo Ciclo (min/seg)"/>
+                                    <div>
+                                        <field name="Segundo_Ciclo" class="oe_inline" attrs="{'readonly':[('state','in',('enviadorefor', 'Pruebas'))]}"/>
+                                        <label string="Real" class="oe_inline" style="color:#00F700"/>
+                                        <field name="tiempo2" class="oe_inline"  attrs="{'readonly':[('state','not in',('Pruebas'))]}"/>
+                                    </div>
+                                    <label for="Tercer_Ciclo" string="Tercer Ciclo (min/seg)"/>
+                                    <div>
+                                        <field name="Tercer_Ciclo" class="oe_inline" attrs="{'readonly':[('state','in',('enviadorefor', 'Pruebas'))]}"/>
+                                        <label string="Real" class="oe_inline" style="color:#00F700"/>
+                                        <field name="tiempo3" class="oe_inline" attrs="{'readonly':[('state','not in',('Pruebas'))]}"/>
+                                    </div>
+                                    <label for="cuarto_ciclo" string="Cuarto Ciclo (min/seg)"/>
+                                    <div>
+                                        <field name="cuarto_ciclo" class="oe_inline" attrs="{'readonly':[('state','in',('enviadorefor', 'Pruebas'))]}"/>
+                                        <label string="Real" class="oe_inline" style="color:#00F700"/>
+                                        <field name="tiempo4" class="oe_inline" attrs="{'readonly':[('state','not in',('Pruebas'))]}"/>
+                                    </div>                                   
+                                </group>
+                                <group name="status" string="Control">
+                                    <field name="product_user2_id" attrs="{'readonly':[('state','=','enviadorefor')]}"/>
+                                </group>
+                            </group>
+                            <separator string="Teorico" />
+                                <notebook string="teorica">
+                                    <page string="Dispersion">
+                                        <field name="_Notas" attrs="{'readonly':[('state','in',('enviadorefor', 'Pruebas'))]}"/>
+                                    </page>
+                                    <page string="Cargas">
+                                         <field name="_Notas2" attrs="{'readonly':[('state','in',('enviadorefor', 'Pruebas'))]}"/>
+                                    </page>
+                                    <page string="Espesante">
+                                          <field name="_Notas3" attrs="{'readonly':[('state','in',('enviadorefor', 'Pruebas'))]}"/>
+                                    </page>
+                                    <page string="Refuerzo">
+                                          <field name="mescla4" attrs="{'readonly':[('state','in',('enviadorefor', 'Pruebas'))]}"/>
+                                    </page>
+                                </notebook>
+                                <separator string="Real" />
+                                <notebook string="real"> 
+                                    <page string="Dispersion">
+                                        <field name="notas_real" attrs="{'readonly':[('state','not in',('Pruebas'))]}"/>
+                                    </page>
+                                    <page string="Cargas">
+                                         <field name="notas2_real" attrs="{'readonly':[('state','not in',('Pruebas'))]}"/>
+                                    </page>
+                                    <page string="Espesante">
+                                          <field name="notas3_real" attrs="{'readonly':[('state','not in',('Pruebas'))]}"/>
+                                    </page>
+                                    <page string="Refuerzo">
+                                          <field name="mescla4_real" attrs="{'readonly':[('state','not in',('Pruebas'))]}"/>
+                                    </page>
+                                </notebook>
+                        </page>
+                        <page string="Propiedades" attrs="{'invisible': [('state', 'in',('Confirmed','Reformulacion'))]}">
+                            <notebook>
+                                <page string="Fisicas">
+                                    <separator string="Cure time" />
+                                    <group>
+                                        <group col="9">
+                                            <field name="dur_noma" attrs="{'readonly':[('state','in',('enviadorefor', 'Pruebas'))]}"/>
+                                            <field name="dur_num" attrs="{'readonly':[('state','in',('enviadorefor', 'Pruebas'))]}"/>
+                                            <field name="dur_valor" class="oe_inline" attrs="{'readonly':[('state','in',('enviadorefor', 'Pruebas'))]}"/>
+                                            <field name="dur_real" class="oe_inline" attrs="{'readonly':[('state','not in',('Pruebas'))]}"/>
+                                             <label string="Seg "/>
+                                        </group>
+                                    </group>
+                                 	  <separator string="Barcol Hardness" />
+                                    <group>
+                                        <group col="9">
+                                            <field name="ME1" attrs="{'readonly':[('state','in',('enviadorefor', 'Pruebas'))]}"/>
+                                            <field name="U1" attrs="{'readonly':[('state','in',('enviadorefor', 'Pruebas'))]}"/>
+                                            <!-- <label for="F1" string="Valor Unidad"/>
+                                            <div> -->
+                                            <field name="F1" class="oe_inline" attrs="{'readonly':[('state','in',('enviadorefor', 'Pruebas'))]}"/>
+                                             <!-- <label string="R" class="oe_inline" style="color:#00F700"/> -->
+                                            <field name="real1" class="oe_inline" attrs="{'readonly':[('state','not in',('Pruebas'))]}"/>
+                                            <label string="Barcol"/>
+                                           
+                                           <!--  </div> -->
+                                        </group>
+                                    </group>
+                                    <separator string="Specific Gravity"/>
+                                    <group>
+                                        <group  col="9">
+                                            <field name="ME2" attrs="{'readonly':[('state','in',('enviadorefor', 'Pruebas'))]}"/>
+                                            <field name="U2" attrs="{'readonly':[('state','in',('enviadorefor', 'Pruebas'))]}"/>
+                                            <!-- <label for="F2" string="Valor Unidad"/>
+                                            <div> -->
+                                            <field name="F2" class="oe_inline" attrs="{'readonly':[('state','in',('enviadorefor', 'Pruebas'))]}"/>
+                                             <!-- <label string="R" class="oe_inline" style="color:#00F700"/> -->
+                                            <field name="real2" class="oe_inline" attrs="{'readonly':[('state','not in',('Pruebas'))]}"/>
+                                            <label string=" "/>
+                                           <!--  </div> -->
+                                        </group>
+                                    </group>
+                                    <separator string="Mold Shrinkage"/>
+                                    <group>
+                                        <group col="9">
+                                            <field name="ME3" attrs="{'readonly':[('state','in',('enviadorefor', 'Pruebas'))]}"/>
+                                            <field name="U3" attrs="{'readonly':[('state','in',('enviadorefor', 'Pruebas'))]}"/>
+                                          <!--  <label for="F3" string="Valor Unidad"/>
+                                            <div> -->
+                                            <field name="F3" class="oe_inline" attrs="{'readonly':[('state','in',('enviadorefor', 'Pruebas'))]}"/>
+                                            <!--  <label string="R" class="oe_inline" style="color:#00F700"/> -->
+                                            <field name="real3" class="oe_inline"  attrs="{'readonly':[('state','not in',('Pruebas'))]}"/>
+                                            <label string="in/in"/>
+                                            <!-- </div> -->
+                                        </group>
+                                    </group>
+                                    <separator string="Flammability "/>
+                                    <group>
+                                        <group col="9">
+                                            <field name="ME4" attrs="{'readonly':[('state','in',('enviadorefor', 'Pruebas'))]}"/>
+                                            <field name="U4" attrs="{'readonly':[('state','in',('enviadorefor', 'Pruebas'))]}"/>
+                                            <field name="F4" class="oe_inline" attrs="{'readonly':[('state','in',('enviadorefor', 'Pruebas'))]}"/>
+                                            <field name="real4" class="oe_inline" attrs="{'readonly':[('state','not in',('Pruebas'))]}"/>
+                                             <label string=" "/>
+                                        </group>
+                                    </group>
+                                    
+                                </page>
+                                <page string="Mecánicas">
+                                    <separator string="Flexural Strength" />
+                                    <group>
+                                        <group col="9">
+                                            <field name="ME01" attrs="{'readonly':[('state','in',('enviadorefor', 'Pruebas'))]}"/>
+
+                                            <field name="U01" attrs="{'readonly':[('state','in',('enviadorefor', 'Pruebas'))]}"/>
+                                            <!-- <label for="M1" string="Valor Unidad"/>
+                                            <div> -->
+                                            <field name="M1" attrs="{'readonly':[('state','in',('enviadorefor', 'Pruebas'))]}"/>
+                                             <!-- <label string="R" class="oe_inline" style="color:#00F700"/> -->
+                                            <field name="real5" attrs="{'readonly':[('state','not in',('Pruebas'))]}"/>
+
+                                            <label string="psi"/>
+                                            <!-- <label string="psi"/> -->
+                                          <!--   </div> -->
+                                        </group>
+                                    </group>
+                                    <separator string="Tensile Strength"/>
+                                    <group>
+                                        <group  col="9">
+                                            <field name="ME02" attrs="{'readonly':[('state','in',('enviadorefor', 'Pruebas'))]}"/>
+                                            <field name="U02" attrs="{'readonly':[('state','in',('enviadorefor', 'Pruebas'))]}"/>
+                                            <!-- <label for="M2" string="Valor Unidad"/>
+                                            <div> -->
+                                            <field name="M2" class="oe_inline" attrs="{'readonly':[('state','in',('enviadorefor', 'Pruebas'))]}"/>
+                                             <!-- <label string="R" class="oe_inline" style="color:#00F700"/> -->
+                                            <field name="real6" class="oe_inline" attrs="{'readonly':[('state','not in',('Pruebas'))]}"/>
+                                            <label string="psi"/>
+                                           <!--  </div> -->
+                                        </group>
+                                    </group>
+                                    <separator string="Compressive Strength"/>
+                                    <group>
+                                        <group col="9">
+                                            <field name="ME03" attrs="{'readonly':[('state','in',('enviadorefor', 'Pruebas'))]}"/>
+                                            <field name="U03" attrs="{'readonly':[('state','in',('enviadorefor', 'Pruebas'))]}"/>
+                                            <!-- <label for="M3" string="Valor Unidad"/>
+                                            <div> -->
+                                            <field name="M3" class="oe_inline" attrs="{'readonly':[('state','in',('enviadorefor', 'Pruebas'))]}"/>
+                                             <!-- <label string="R" class="oe_inline" style="color:#00F700"/> -->
+                                            <field name="real7" class="oe_inline" attrs="{'readonly':[('state','not in',('Pruebas'))]}"/>
+                                            <label string="psi"/>
+                                            <!-- </div> -->
+                                        </group>
+                                    </group>
+                                    <separator string="Izod Impact Strength Notched"/>
+                                    <group>
+                                        <group col="9">
+                                            <field name="ME04" attrs="{'readonly':[('state','in',('enviadorefor', 'Pruebas'))]}"/>
+                                            <field name="U04" attrs="{'readonly':[('state','in',('enviadorefor', 'Pruebas'))]}"/>
+                                            <!-- <label for="M4" string="Valor Unidad"/>
+                                            <div> -->
+                                            <field name="M4" class="oe_inline" attrs="{'readonly':[('state','in',('enviadorefor', 'Pruebas'))]}"/>
+                                            <!--  <label string="R" class="oe_inline" style="color:#00F700"/> -->
+                                            <field name="real8" class="oe_inline" attrs="{'readonly':[('state','not in',('Pruebas'))]}"/>
+                                            <label string="ftlb/in"/>
+                                           <!--  </div> -->
+                                        </group>
+                                    </group>
+                                </page>
+                                <page string="Eléctricas">
+                                    <separator string="Arc Resistance" />
+                                    <group >
+                                        <group col="9">
+                                            <field name="ME001" attrs="{'readonly':[('state','in',('enviadorefor', 'Pruebas'))]}"/>
+                                            <field name="U001" attrs="{'readonly':[('state','in',('enviadorefor', 'Pruebas'))]}"/>
+                                            <!-- <label for="E1" string="Valor Unidad"/>
+                                            <div> -->
+                                            <field name="E1" attrs="{'readonly':[('state','in',('enviadorefor', 'Pruebas'))]}"/>
+                                          <!--   <label string="R" class="oe_inline" style="color:#00F700"/> -->
+                                            <field name="real9" attrs="{'readonly':[('state','not in',('Pruebas'))]}"/>
+                                             <label string="vpm"/>
+                                           <!--  </div> -->
+                                        </group>
+                                    </group>
+                                    <separator string="Dielectric Strength"/>
+                                    <group>
+                                        <group  col="9">
+                                            <field name="ME002" attrs="{'readonly':[('state','in',('enviadorefor', 'Pruebas'))]}"/>
+                                            <field name="U002" attrs="{'readonly':[('state','in',('enviadorefor', 'Pruebas'))]}"/>
+                                           <!--  <label for="E2" string="Valor Unidad"/>
+                                            <div> -->
+                                            <field name="E2" attrs="{'readonly':[('state','in',('enviadorefor', 'Pruebas'))]}"/>
+                                            <!-- <label string="R" class="oe_inline" style="color:#00F700"/> -->
+                                            <field name="real10" attrs="{'readonly':[('state','not in',('Pruebas'))]}"/>
+                                             <label string="seg"/>
+                                           <!--  </div> -->
+                                        </group>
+                                    </group>
+                                    <separator string="Comparative Tracking Index"/>
+                                    <group>
+                                        <group col="9">
+                                            <field name="ME003" attrs="{'readonly':[('state','in',('enviadorefor', 'Pruebas'))]}"/>
+                                            <field name="U003" attrs="{'readonly':[('state','in',('enviadorefor', 'Pruebas'))]}"/>
+                                           <!--  <label for="E3" string="Valor Unidad"/>
+                                            <div> -->
+                                            <field name="E3" class="oe_inline" attrs="{'readonly':[('state','in',('enviadorefor', 'Pruebas'))]}"/>
+                                            <!-- <label string="R" class="oe_inline" style="color:#00F700"/> -->
+                                            <field name="real11" class="oe_inline" attrs="{'readonly':[('state','not in',('Pruebas'))]}" />
+                                            <label string="seg"/>
+                                           <!--  </div> -->
+                                        </group>
+                                    </group>
+                                </page>
+                            </notebook>
+                        </page>
+                    </notebook>
+                    <div class="oe_chatter">
+                        <field name="message_follower_ids" widget="mail_followers" groups="base.group_user"/>
+                        <field name="message_ids" widget="mail_thread"/>
+                    </div>  
+                </form>
+            </field>
+        </record>
+        
+        <!--<record id="mrp_tolamesnsaje_view" model="ir.ui.view">
+            <field name="name">mrp.bom.from</field>
+            <field name="model">formula.c1</field>
+            <field name="inherit_id" ref="mrp_control_formula.view_formula_view_form"/>
+            <field name="arch" type="xml">
+            <field name="line" position="after">
+             <group>
+              <button name="button_dummy" string="(Actualizar)" type="object" class="oe_edit_only oe_link"/>
+              <div class="oe_clear"/>
+           	<group>
+                <field name="total" invisible="True"/> 
+                <field name="totalP" invisible="True"/>
+                <field name="costototal" invisible="True"/>
+                <field name="costototal_indirecto" invisible="True"/>
+                <field groups="base.group_no_one" name="total_pv" invisible="True"/>
+                <field groups="base.group_no_one" name="total_tpv1" invisible="True"/>
+                <field groups="base.group_no_one" name="total_tpv2" invisible="True"/>
+                <field name="_Notas0" placeholder="COMENTARIOS" nolabel="1"/> 
+            </group>
+            </group>-->
+             
+
+        <record model="ir.ui.view" id="view_formula_tree">
+            <field name="name">formula.tree</field>
+            <field name="model">formula.c1</field>
+            <field name="type">tree</field>
+            <field name="arch" type="xml">
+                <tree string="formula" colors="#0000FF:state=='L'">
+                    <field name="cod_formula" placeholder="Codigo Formula"/>
+                    <field name="count" string="RV00"/>
+                    <field name="name" string="Descripcion"/>
+                    <field name="familia" string="Material"/>
+                    <field name="_cliente" domain="[('customer','=',True)]"/> 
+                    <!--<field name="product_color"/>-->
+                    <field name="usuario"/>
+                    <field name="date"/>  
+                    <field name="state"/>   
+                </tree>
+            </field>
+        </record>
+
+            <!--formula-->
+            <!--INicio-->
+        <record model="ir.ui.view" id="view_mrp_familia_form">
+            <field name="name">mrp_familia.form</field>
+            <field name="model">family</field>
+            <field name="type">form</field>
+            <field name="arch" type="xml">
+                <form string="mrp_familia" version="7.0">
+                    <group>
+                    <field name="name" string="Nombre"/>
+                </group>
+                </form>
+            </field>
+        </record>  
+
+        <record model="ir.actions.act_window" id="action_mrp_familia">
+            <field name="name">Material</field>
+            <field name="res_model">family</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+            <!--fin-->
+            <!--inicio secuencia-->
+        <record model="ir.sequence.type" id="secuencia_type_formula">
+            <field name="name">Secuencia_formula</field>
+            <field name="code">code-formula</field>
+        </record>
+
+        <record model="ir.sequence" id="secuencia_formula">
+            <field name="name">Secuencia_formula</field>
+            <field name="code">code-formula</field>
+            <field name="prefix">FO</field>
+            <field name="padding">5</field>
+        </record>
+           <!--fin secuencuencia-->
+           <!--inicio-->
+        <record id="mrp_product_bon_view" model="ir.ui.view">
+            <field name="name">product_bom</field>
+            <field name="model">product.product</field>
+            <field name="inherit_id" ref="product.product_normal_form_view"/>
+                <field name="arch" type="xml">
+                    <field name="standard_price" position="after">
+                    <field groups="base.group_no_one" name="pzc1" />
+                    <field groups="base.group_no_one" name="pzc2"/>
+                </field>       
+            </field>
+        </record>
+
+        <!--<record id="mrp_bom_form_view2" model="ir.ui.view">-->
+            <!--<field name="name">mrp.bom.form.view2</field>-->
+            <!--<field name="model">mrp.bom</field>-->
+            <!--<field name="inherit_id" ref="mrp.mrp_bom_form_view"/>-->
+                <!--<field name="arch" type="xml">-->
+                    <!--<xpath expr="//field[@name='name']" position="after">-->
+                        <!--<field name="calculated_quantity" string="Total Product Quantity"/>-->
+                    <!--</xpath>-->
+                <!--</field>-->
+        <!--</record>-->
+
+       <!-- -->
+        <!--<record id="mrp_bom_form_view2" model="ir.ui.view">-->
+            <!--<field name="name">mrp.bom.form.view2</field>-->
+            <!--<field name="model">mrp.bom</field>-->
+            <!--<field name="inherit_id" ref="mrp.mrp_bom_form_view"/>-->
+                <!--<field name="arch" type="xml">-->
+                    <!--<xpath expr="//field[@name='name']" position="after">-->
+                        <!--<field name="calculated_quantity" string="Total Product Quantity"/>-->
+                    <!--</xpath>-->
+                <!--</field>-->
+        <!--</record>-->
+
+        <record id="product_supply_method_produce" model="ir.actions.act_window">
+            <field name="name">Producto</field>
+            <field name="res_model">product.product</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">kanban,tree,form</field>
+            <field name="context">{'search_default_filter_supply_method_produce' : 1}</field>
+            <field name="search_view_id" ref="product.product_search_form_view"/>
+        </record>
+           <!--fin-->
+
+        <record id="action_formula_from" model="ir.actions.act_window">
+		  <field name="name">Formulacion</field>
+		  <field name="type">ir.actions.act_window</field>
+		   <field name="res_model">formula.c1</field>
+		   <field name="view_type">form</field>
+		   <field name="view_mode">tree,form</field>
+		   <field name="context">{}</field>
+		   <field name="domain">[('state','in',('Confirmed','Reformulacion'))]</field>
+		   <field name="help" type="html">
+		     <p class="oe_view_nocontent_create">
+		       Formula.
+		     </p>
+		   </field>
+		</record>        
+            
+		<record id="action_formula_pruebas_from" model="ir.actions.act_window">
+			<field name="name">Formulas Pruebas</field>
+			<field name="type">ir.actions.act_window</field>
+			<field name="res_model">formula.c1</field>
+			<field name="view_type">form</field>
+			<field name="view_mode">tree,form</field>
+			<!-- <field name="search_view_id" ref="view_sales_order_filter"/> -->
+			<field name="context">{}</field>
+			<field name="domain">[('state','=','Pruebas')]</field>
+			<field name="help" type="html">
+			  <p class="oe_view_nocontent_create">
+			    Formula.
+				</p>
+			</field>
+		</record>
+
+
+		<record id="action_formula_history_from" model="ir.actions.act_window">
+			<field name="name">Formulas Hitoricas</field>
+			<field name="type">ir.actions.act_window</field>
+			<field name="res_model">formula.c1</field>
+			<field name="view_type">form</field>
+			<field name="view_mode">tree,form</field>
+			<!-- <field name="search_view_id" ref="view_sales_order_filter"/> -->
+			<field name="context">{}</field>
+			<field name="domain">[('state','=','enviadorefor')]</field>
+			<field name="help" type="html">
+			  <p class="oe_view_nocontent_create">
+			    Formula.
+				</p>
+			</field>
+		</record>
+
+		<record id="action_formula_mo" model="ir.actions.act_window">
+			<field name="name">Formulas MO</field>
+			<field name="type">ir.actions.act_window</field>
+			<field name="res_model">formula.c1</field>
+			<field name="view_type">form</field>
+			<field name="view_mode">tree,form</field>
+			<!-- <field name="search_view_id" ref="view_sales_order_filter"/> -->
+			<field name="context">{}</field>
+			<field name="domain">[('state','=','mo_created')]</field>
+			<field name="help" type="html">
+			  <p class="oe_view_nocontent_create">
+			    Formula.
+				</p>
+			</field>
+		</record>
+    
+    <record id="action_formula_validate_envio_remoto_from" model="ir.actions.act_window">
+            <field name="name">Formulas a Enviar</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">formula.c1</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <!-- <field name="search_view_id" ref="view_sales_order_filter"/> -->
+            <field name="context">{}</field>
+            <field name="domain">[('state','=','formulaenviar')]</field>
+            <field name="help" type="html">
+              <p class="oe_view_nocontent_create">
+                Formula.
+                </p>
+            </field>
+        </record> 
+        
+        <record id="action_formula_revisado_from" model="ir.actions.act_window">
+            <field name="name">Formulas Revisadas</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">formula.c1</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <!-- <field name="search_view_id" ref="view_sales_order_filter"/> -->
+            <field name="context">{}</field>
+            <field name="domain">[('state','=','revisado')]</field>
+            <field name="help" type="html">
+              <p class="oe_view_nocontent_create">
+                Formula.
+                </p>
+            </field>
+        </record> 
+        
+        
+        <record id="action_formula_envia_production_from" model="ir.actions.act_window">
+            <field name="name">Enviados a Produccion</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">formula.c1</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="context">{}</field>
+            <field name="domain">[('state','=','L')]</field>
+            <field name="help" type="html">
+              <p class="oe_view_nocontent_create">
+                Formula.
+                </p>
+            </field>
+        </record>      
+           
+         <menuitem id='base.menu_test_base_main' name='Formulacion' />
+        <menuitem id='menu_test_base' parent='base.menu_test_base_main' name='Formulacion' groups="group_formula_manager" />
+
+        <menuitem id='menu_test_base_formula' parent='base.menu_test_base_main' name='Formulacion Pruebas'/>
+        <menuitem id='menu_test_config' parent='base.menu_test_base_main' name='Configuracion'/>
+        <menuitem name="Formulas" id="menu_formula" parent="menu_test_base" action="action_formula_from" />
+        <menuitem name="Formulas a Enviar" id="menu_formula_envio_remoto" parent="menu_test_base" action="action_formula_validate_envio_remoto_from"/>
+        <menuitem name="Hitorial Formulas" id="menu_formula_hitory" parent="menu_test_base" action="action_formula_history_from"/>
+        <menuitem name="Formulas MO" id="menu_formula_mo" parent="menu_test_base" action="action_formula_mo"/>
+        <menuitem name="Formulas/Pruebas" id="menu_formula_prueba" parent="menu_test_base_formula" action="action_formula_pruebas_from"/>
+        <menuitem name="Formulas Revisados" id="menu_formula_revisado" parent="menu_test_base_formula" action="action_formula_revisado_from"/>
+        <menuitem name="Enviados a Produccion" id="menu_formula_produccion" parent="menu_test_base_formula" action="action_formula_envia_production_from"/>
+       <!--  <menuitem name="Producto" id="menu_producto" parent="menu_test_base" action="product_supply_method_produce" groups="group_formula_manager"/> -->
+        <menuitem name="Familia de formulas" id="menu_mrp_familia" parent="menu_test_config" action="action_mrp_familia"/>
+               
+    </data>
+</openerp>

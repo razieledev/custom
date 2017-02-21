@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data  noupdate = "1">
+
+        <!-- Sequences for Batches -->
+        <!--Do not change the code as sequences are searched by code -->
+        <record id="b1_machine_code" model="ir.sequence.type">
+            <field name="name">B1 Machine Code</field>
+            <field name="code">B01.machine.code</field>
+        </record>
+
+        <record id="b1_machine_sequence" model="ir.sequence">
+            <field name="name">B1 Machine Sequence</field>
+            <field name="code">B01.machine.code</field>
+            <field name="prefix">B1%(y)s</field>
+            <field name="padding">4</field>
+            <field name="implementation">no_gap</field>
+            <field name="company_id" eval="False"/>
+        </record>
+        
+        <record id="b2_machine_code" model="ir.sequence.type">
+            <field name="name">B2 Machine Code</field>
+            <field name="code">B02.machine.code</field>
+        </record>
+
+        <record id="b2_machine_sequence" model="ir.sequence">
+            <field name="name">B2 Machine Sequence</field>
+            <field name="code">B02.machine.code</field>
+            <field name="prefix">B2%(y)s</field>
+            <field name="padding">4</field>
+            <field name="implementation">no_gap</field>
+            <field name="company_id" eval="False"/>
+        </record>
+        
+        <record id="b3_machine_code" model="ir.sequence.type">
+            <field name="name">B3 Machine Code</field>
+            <field name="code">B03.machine.code</field>
+        </record>
+
+        <record id="b3_machine_sequence" model="ir.sequence">
+            <field name="name">B3 Machine Sequence</field>
+            <field name="code">B03.machine.code</field>
+            <field name="prefix">B3%(y)s</field>
+            <field name="padding">4</field>
+            <field name="implementation">no_gap</field>
+            <field name="company_id" eval="False"/>
+        </record>
+        
+        <record id="b4_machine_code" model="ir.sequence.type">
+            <field name="name">B4 Machine Code</field>
+            <field name="code">B04.machine.code</field>
+        </record>
+
+        <record id="b4_machine_sequence" model="ir.sequence">
+            <field name="name">B4 Machine Sequence</field>
+            <field name="code">B04.machine.code</field>
+            <field name="prefix">B4%(y)s</field>
+            <field name="padding">4</field>
+            <field name="implementation">no_gap</field>
+            <field name="company_id" eval="False"/>
+        </record>
+        
+        <record id="b5_machine_code" model="ir.sequence.type">
+            <field name="name">B5 Machine Code</field>
+            <field name="code">B05.machine.code</field>
+        </record>
+
+        <record id="b5_machine_sequence" model="ir.sequence">
+            <field name="name">B5 Machine Sequence</field>
+            <field name="code">B05.machine.code</field>
+            <field name="prefix">B5%(y)s</field>
+            <field name="padding">4</field>
+            <field name="implementation">no_gap</field>
+            <field name="company_id" eval="False"/>
+        </record>
+        
+        <record id="s1_machine_code" model="ir.sequence.type">
+            <field name="name">S1 Machine Code</field>
+            <field name="code">S01.machine.code</field>
+        </record>
+
+        <record id="s1_machine_sequence" model="ir.sequence">
+            <field name="name">S1 Machine Sequence</field>
+            <field name="code">S01.machine.code</field>
+            <field name="prefix">S1%(y)s</field>
+            <field name="padding">4</field>
+            <field name="implementation">no_gap</field>
+            <field name="company_id" eval="False"/>
+        </record>
+        
+        <record id="s2_machine_code" model="ir.sequence.type">
+            <field name="name">S2 Machine Code</field>
+            <field name="code">S02.machine.code</field>
+        </record>
+
+        <record id="s2_machine_sequence" model="ir.sequence">
+            <field name="name">S2 Machine Sequence</field>
+            <field name="code">S02.machine.code</field>
+            <field name="prefix">S2%(y)s</field>
+            <field name="padding">4</field>
+            <field name="implementation">no_gap</field>
+            <field name="company_id" eval="False"/>
+        </record>
+        
+        <record id="lp_batch_code" model="ir.sequence.type">
+            <field name="name">LP Batch Code</field>
+            <field name="code">LP.machine.code</field>
+        </record>
+
+        <record id="lp_batch_sequence" model="ir.sequence">
+            <field name="name">LP Machine Sequence</field>
+            <field name="code">LP.machine.code</field>
+            <field name="prefix">LP%(y)s</field>
+            <field name="padding">4</field>
+            <field name="implementation">no_gap</field>
+            <field name="company_id" eval="False"/>
+        </record>
+
+        <!--Sequence for sudo machine code used for Manual MO-->
+        
+        <record id="sudo_machine_code" model="ir.sequence.type">
+            <field name="name">Sudo Machine Code</field>
+            <field name="code">sudo.machine.code</field>
+        </record>
+
+        <record id="sudo_machine_sequence" model="ir.sequence">
+            <field name="name">Sudo Machine Sequence</field>
+            <field name="code">sudo.machine.code</field>
+            <field name="prefix">B0</field>
+            <field name="padding">6</field>
+            <field name="implementation">no_gap</field>
+            <field name="company_id" eval="False"/>
+        </record>
+
+        <record id="sudo_machine_count_code" model="ir.sequence.type">
+            <field name="name">Sudo Machine Count Code</field>
+            <field name="code">sudo.machine.count.code</field>
+        </record>
+
+        <record id="sudo_machine_count_sequence" model="ir.sequence">
+            <field name="name">Sudo Machine Count Sequence</field>
+            <field name="code">sudo.machine.count.code</field>
+            <!--<field name="prefix">B0</field>-->
+            <!--<field name="padding">6</field>-->
+            <field name="implementation">no_gap</field>
+            <field name="company_id" eval="False"/>
+        </record>
+        
+        
+        
+         <record id="d1_machine_code" model="ir.sequence.type">
+            <field name="name">D1 Machine Code</field>
+            <field name="code">D01.machine.code</field>
+        </record>
+
+        <record id="d1_machine_sequence" model="ir.sequence">
+            <field name="name">D1 Machine Sequence</field>
+            <field name="code">D01.machine.code</field>
+            <field name="prefix">D1%(y)s</field>
+            <field name="padding">4</field>
+            <field name="implementation">no_gap</field>
+            <field name="company_id" eval="False"/>
+        </record>
+
+
+
+
+        <record id="d2_machine_code" model="ir.sequence.type">
+            <field name="name">D2 Machine Code</field>
+            <field name="code">D02.machine.code</field>
+        </record>
+
+        <record id="d2_machine_sequence" model="ir.sequence">
+            <field name="name">D2 Machine Sequence</field>
+            <field name="code">D02.machine.code</field>
+            <field name="prefix">D2%(y)s</field>
+            <field name="padding">4</field>
+            <field name="implementation">no_gap</field>
+            <field name="company_id" eval="False"/>
+        </record>
+
+        <record id="d3_machine_code" model="ir.sequence.type">
+            <field name="name">D3 Machine Code</field>
+            <field name="code">D03.machine.code</field>
+        </record>
+
+        <record id="d3_machine_sequence" model="ir.sequence">
+            <field name="name">D3 Machine Sequence</field>
+            <field name="code">D03.machine.code</field>
+            <field name="prefix">D3%(y)s</field>
+            <field name="padding">4</field>
+            <field name="implementation">no_gap</field>
+            <field name="company_id" eval="False"/>
+        </record>
+
+        <record id="d4_machine_code" model="ir.sequence.type">
+            <field name="name">D4 Machine Code</field>
+            <field name="code">D04.machine.code</field>
+        </record>
+
+        <record id="d4_machine_sequence" model="ir.sequence">
+            <field name="name">D4 Machine Sequence</field>
+            <field name="code">D04.machine.code</field>
+            <field name="prefix">D4%(y)s</field>
+            <field name="padding">4</field>
+            <field name="implementation">no_gap</field>
+            <field name="company_id" eval="False"/>
+        </record>
+
+
+
+
+        <!--Sequence for Manual MO's Batches-->
+
+
+        <record id="manual_machine_code" model="ir.sequence.type">
+            <field name="name">Manual Machine Code</field>
+            <field name="code">manual.machine.code</field>
+        </record>
+
+        <record id="manual_machine_sequence" model="ir.sequence">
+            <field name="name">Manual Machine Sequence</field>
+            <field name="code">manual.machine.code</field>
+            <field name="prefix">AD%(y)s</field>
+            <field name="padding">4</field>
+            <field name="implementation">no_gap</field>
+            <field name="company_id" eval="False"/>
+        </record>
+
+
+
+    </data>
+</openerp>

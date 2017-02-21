@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+ 
+<!-- Siempre las lineas xml van a ir delimitados por la etiqueta openerp-->
+<openerp>
+        <!-- Las etiquetas data tambien delimitan a las record siempre -->
+        <data>
+                <!-- La etiqueta record son la que permitiran mostrar el campo color en el formulario producto-->
+                <record model='ir.ui.view' id='product_color_form_view'>
+                        <field name='name'>product.form.color</field>
+                        <field name='model'>product.product</field>
+                        <!-- the reference of the product inheritance form is changed to product template form product.product_normal_form_view > product.product_template_only_form_view-->
+                        <field name='inherit_id' ref='product.product_template_only_form_view'/>
+                        <field name='type'>form</field>
+                        <field name='arch' type='xml'>
+                        <field name="list_price" position="after"> <!-- after: despues del campo list_price -->
+                            <field name="colors"/> <!-- llamamos al campo coleres con el atributo name de field -->
+                        </field>
+                   </field>
+ 
+                </record>
+                
+                 <record model='ir.ui.view' id='product_indice_form_view'>
+                        <field name='name'>product.indice.color</field>
+                        <field name='model'>product.product</field>
+                        <field name='inherit_id' ref='product.product_normal_form_view'/>
+                        <field name='type'>form</field>
+                        <field name='arch' type='xml'>
+                        <field name="default_code" position="after">
+                            <field name="indice"/>
+                            <field name="colors"/>
+                        </field>
+                   </field>
+                 </record>
+
+
+                 <record id="product_view_inherit" model="ir.ui.view">
+                     <field name="name">product.tree_indice</field>
+                     <field name="model">product.product</field>
+                     <field name="inherit_id" ref="product.product_product_tree_view"/>
+                     <field name="type">tree</field>
+                     <field name="arch" type="xml">
+                         <field name="default_code" position="after">
+                             <field name="indice"/>
+                         </field>
+                     </field>
+                 </record>
+         
+  
+                <record model="ir.ui.view" id="view_R_color_form">
+                    <field name="name">R_color.form</field>
+                    <field name="model">productcolor</field>
+                    <field name="type">form</field>
+                    <field name="arch" type="xml">
+                        <form string="R_color">
+                            <field name="name" select="1"/>
+                        </form>
+                    </field>
+                </record>
+                  
+
+            <record model="ir.actions.act_window" id="action_R_color">
+                <field name="name">Producto Color</field>
+                <field name="res_model">productcolor</field>
+                <field name="view_type">form</field>
+                <field name="view_mode">tree,form</field>
+            </record>
+  
+    <menuitem name="Color " id="menu_R_color" parent="stock.menu_product_in_config_stock" action="action_R_color"/>
+    
+ </data>
+</openerp>

@@ -1,0 +1,11 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+
+access_machine,access.machine,model_machine,mrp.group_mrp_manager,1,0,0,0
+access_presentation,access.presentation,model_presentation,mrp.group_mrp_manager,1,0,0,0
+access_disperser_manger,access.disperser.manager,model_disperser,mrp.group_mrp_manager,1,0,0,0
+access_master_mrp_manger,access.master.mrp.manager,model_master_mrp,mrp.group_mrp_manager,1,1,1,0
+
+
+
+access_master_mrp_user,access.master.mrp.user,model_master_mrp,mrp.group_mrp_user,1,1,1,0
+access_finished_qty,finished.qty,bista_mrp_smc.model_finished_qty,mrp.group_mrp_user,1,1,1,1

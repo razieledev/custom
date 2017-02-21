@@ -1,0 +1,557 @@
+<?xml version="1.0" encoding="UTF-8"?>
+    <openerp>
+        <data noupdate="1">
+            <record id="eaccbnk_002" model="res.bank">
+                <field name="sat_code">002</field>
+                <field name="name">BANAMEX</field>
+                <field name="full_name">Banco Nacional de México, S.A., Institución de Banca Múltiple, Grupo Financiero Banamex</field>
+                <field name="country" ref="base.mx"/>
+            </record>
+            <record id="eaccbnk_006" model="res.bank">
+                <field name="sat_code">006</field>
+                <field name="name">BANCOMEXT</field>
+                <field name="full_name">Banco Nacional de Comercio Exterior, Sociedad Nacional de Crédito, Institución de Banca de Desarrollo</field>
+                <field name="country" ref="base.mx"/>
+            </record>
+            <record id="eaccbnk_009" model="res.bank">
+                <field name="sat_code">009</field>
+                <field name="name">BANOBRAS</field>
+                <field name="full_name">Banco Nacional de Obras y Servicios Públicos, Sociedad Nacional de Crédito, Institución de Banca de Desarrollo</field>
+                <field name="country" ref="base.mx"/>
+            </record>
+            <record id="eaccbnk_012" model="res.bank">
+                <field name="sat_code">012</field>
+                <field name="name">BBVA BANCOMER</field>
+                <field name="full_name">BBVA Bancomer, S.A., Institución de Banca Múltiple, Grupo Financiero BBVA Bancomer</field>
+                <field name="country" ref="base.mx"/>
+            </record>
+            <record id="eaccbnk_014" model="res.bank">
+                <field name="sat_code">014</field>
+                <field name="name">SANTANDER</field>
+                <field name="full_name">Banco Santander (México), S.A., Institución de Banca Múltiple, Grupo Financiero Santander</field>
+                <field name="country" ref="base.mx"/>
+            </record>
+            <record id="eaccbnk_019" model="res.bank">
+                <field name="sat_code">019</field>
+                <field name="name">BANJERCITO</field>
+                <field name="full_name">Banco Nacional del Ejército, Fuerza Aérea y Armada, Sociedad Nacional de Crédito, Institución de Banca de Desarrollo</field>
+                <field name="country" ref="base.mx"/>
+            </record>
+            <record id="eaccbnk_021" model="res.bank">
+                <field name="sat_code">021</field>
+                <field name="name">HSBC</field>
+                <field name="full_name">HSBC México, S.A., institución De Banca Múltiple, Grupo Financiero HSBC</field>
+                <field name="country" ref="base.mx"/>
+            </record>
+            <record id="eaccbnk_030" model="res.bank">
+                <field name="sat_code">030</field>
+                <field name="name">BAJIO</field>
+                <field name="full_name">Banco del Bajío, S.A., Institución de Banca Múltiple</field>
+                <field name="country" ref="base.mx"/>
+            </record>
+            <record id="eaccbnk_032" model="res.bank">
+                <field name="sat_code">032</field>
+                <field name="name">IXE</field>
+                <field name="full_name">IXE Banco, S.A., Institución de Banca Múltiple, IXE Grupo Financiero</field>
+                <field name="country" ref="base.mx"/>
+            </record>
+            <record id="eaccbnk_036" model="res.bank">
+                <field name="sat_code">036</field>
+                <field name="name">INBURSA</field>
+                <field name="full_name">Banco Inbursa, S.A., Institución de Banca Múltiple, Grupo Financiero Inbursa</field>
+                <field name="country" ref="base.mx"/>
+            </record>
+            <record id="eaccbnk_037" model="res.bank">
+                <field name="sat_code">037</field>
+                <field name="name">INTERACCIONES</field>
+                <field name="full_name">Banco Interacciones, S.A., Institución de Banca Múltiple</field>
+                <field name="country" ref="base.mx"/>
+            </record>
+            <record id="eaccbnk_042" model="res.bank">
+                <field name="sat_code">042</field>
+                <field name="name">MIFEL </field>
+                <field name="full_name">Banca Mifel, S.A., Institución de Banca Múltiple, Grupo Financiero Mifel</field>
+                <field name="country" ref="base.mx"/>
+            </record>
+            <record id="eaccbnk_044" model="res.bank">
+                <field name="sat_code">044</field>
+                <field name="name">SCOTIABANK</field>
+                <field name="full_name">Scotiabank Inverlat, S.A. </field>
+                <field name="country" ref="base.mx"/>
+            </record>
+            <record id="eaccbnk_058" model="res.bank">
+                <field name="sat_code">058</field>
+                <field name="name">BANREGIO</field>
+                <field name="full_name">Banco Regional de Monterrey, S.A., Institución de Banca Múltiple, Banregio Grupo Financiero</field>
+                <field name="country" ref="base.mx"/>
+            </record>
+            <record id="eaccbnk_059" model="res.bank">
+                <field name="sat_code">059</field>
+                <field name="name">INVEX</field>
+                <field name="full_name">Banco Invex, S.A., Institución de Banca Múltiple, Invex Grupo Financiero</field>
+                <field name="country" ref="base.mx"/>
+            </record>
+            <record id="eaccbnk_060" model="res.bank">
+                <field name="sat_code">060</field>
+                <field name="name">BANSI</field>
+                <field name="full_name">Bansi, S.A., Institución de Banca Múltiple</field>
+                <field name="country" ref="base.mx"/>
+            </record>
+            <record id="eaccbnk_062" model="res.bank">
+                <field name="sat_code">062</field>
+                <field name="name">AFIRME</field>
+                <field name="full_name">Banca Afirme, S.A., Institución de Banca Múltiple</field>
+                <field name="country" ref="base.mx"/>
+            </record>
+            <record id="eaccbnk_072" model="res.bank">
+                <field name="sat_code">072</field>
+                <field name="name">BANORTE</field>
+                <field name="full_name">Banco Mercantil del Norte, S.A., Institución de Banca  Múltiple, Grupo Financiero Banorte</field>
+                <field name="country" ref="base.mx"/>
+            </record>
+            <record id="eaccbnk_102" model="res.bank">
+                <field name="sat_code">102</field>
+                <field name="name">THE ROYAL BANK</field>
+                <field name="full_name">The Royal Bank of Scotland México, S.A., Institución de Banca Múltiple</field>
+                <field name="country" ref="base.mx"/>
+            </record>
+            <record id="eaccbnk_103" model="res.bank">
+                <field name="sat_code">103</field>
+                <field name="name">AMERICAN EXPRESS</field>
+                <field name="full_name">American Express Bank (México), S.A., Institución de Banca Múltiple</field>
+                <field name="country" ref="base.mx"/>
+            </record>
+            <record id="eaccbnk_106" model="res.bank">
+                <field name="sat_code">106</field>
+                <field name="name">BAMSA</field>
+                <field name="full_name">Bank of America México, S.A.,  Institución de Banca Múltiple, Grupo Financiero Bank of America</field>
+                <field name="country" ref="base.mx"/>
+            </record>
+            <record id="eaccbnk_108" model="res.bank">
+                <field name="sat_code">108</field>
+                <field name="name">TOKYO</field>
+                <field name="full_name">Bank of Tokyo-Mitsubishi UFJ (México), S.A.</field>
+                <field name="country" ref="base.mx"/>
+            </record>
+            <record id="eaccbnk_110" model="res.bank">
+                <field name="sat_code">110</field>
+                <field name="name">JP MORGAN</field>
+                <field name="full_name">Banco J.P. Morgan, S.A., Institución de Banca Múltiple, J.P. Morgan Grupo Financiero</field>
+                <field name="country" ref="base.mx"/>
+            </record>
+            <record id="eaccbnk_112" model="res.bank">
+                <field name="sat_code">112</field>
+                <field name="name">BMONEX</field>
+                <field name="full_name">Banco Monex, S.A., Institución de Banca Múltiple</field>
+                <field name="country" ref="base.mx"/>
+            </record>
+            <record id="eaccbnk_113" model="res.bank">
+                <field name="sat_code">113</field>
+                <field name="name">VE POR MAS</field>
+                <field name="full_name">Banco Ve Por Mas, S.A. Institución de Banca Múltiple</field>
+                <field name="country" ref="base.mx"/>
+            </record>
+            <record id="eaccbnk_116" model="res.bank">
+                <field name="sat_code">116</field>
+                <field name="name">ING</field>
+                <field name="full_name">ING Bank (México), S.A., Institución de Banca Múltiple, ING Grupo Financiero</field>
+                <field name="country" ref="base.mx"/>
+            </record>
+            <record id="eaccbnk_124" model="res.bank">
+                <field name="sat_code">124</field>
+                <field name="name">DEUTSCHE</field>
+                <field name="full_name">Deutsche Bank México, S.A., Institución de Banca Múltiple</field>
+                <field name="country" ref="base.mx"/>
+            </record>
+            <record id="eaccbnk_126" model="res.bank">
+                <field name="sat_code">126</field>
+                <field name="name">CREDIT SUISSE</field>
+                <field name="full_name">Banco Credit Suisse (México), S.A. Institución de Banca Múltiple, Grupo Financiero Credit Suisse (México)</field>
+                <field name="country" ref="base.mx"/>
+            </record>
+            <record id="eaccbnk_127" model="res.bank">
+                <field name="sat_code">127</field>
+                <field name="name">AZTECA</field>
+                <field name="full_name">Banco Azteca, S.A. Institución de Banca Múltiple.</field>
+                <field name="country" ref="base.mx"/>
+            </record>
+            <record id="eaccbnk_128" model="res.bank">
+                <field name="sat_code">128</field>
+                <field name="name">AUTOFIN</field>
+                <field name="full_name">Banco Autofin México, S.A. Institución de Banca Múltiple</field>
+                <field name="country" ref="base.mx"/>
+            </record>
+            <record id="eaccbnk_129" model="res.bank">
+                <field name="sat_code">129</field>
+                <field name="name">BARCLAYS</field>
+                <field name="full_name">Barclays Bank México, S.A., Institución de Banca Múltiple, Grupo Financiero Barclays México</field>
+                <field name="country" ref="base.mx"/>
+            </record>
+            <record id="eaccbnk_130" model="res.bank">
+                <field name="sat_code">130</field>
+                <field name="name">COMPARTAMOS</field>
+                <field name="full_name">Banco Compartamos, S.A., Institución de Banca Múltiple</field>
+                <field name="country" ref="base.mx"/>
+            </record>
+            <record id="eaccbnk_131" model="res.bank">
+                <field name="sat_code">131</field>
+                <field name="name">BANCO FAMSA</field>
+                <field name="full_name">Banco Ahorro Famsa, S.A., Institución de Banca Múltiple</field>
+                <field name="country" ref="base.mx"/>
+            </record>
+            <record id="eaccbnk_132" model="res.bank">
+                <field name="sat_code">132</field>
+                <field name="name">BMULTIVA</field>
+                <field name="full_name">Banco Multiva, S.A., Institución de Banca Múltiple, Multivalores Grupo Financiero</field>
+                <field name="country" ref="base.mx"/>
+            </record>
+            <record id="eaccbnk_133" model="res.bank">
+                <field name="sat_code">133</field>
+                <field name="name">ACTINVER</field>
+                <field name="full_name">Banco Actinver, S.A. Institución de Banca Múltiple, Grupo Financiero Actinver</field>
+                <field name="country" ref="base.mx"/>
+            </record>
+            <record id="eaccbnk_134" model="res.bank">
+                <field name="sat_code">134</field>
+                <field name="name">WAL-MART</field>
+                <field name="full_name">Banco Wal-Mart de México Adelante, S.A., Institución de Banca Múltiple</field>
+                <field name="country" ref="base.mx"/>
+            </record>
+            <record id="eaccbnk_135" model="res.bank">
+                <field name="sat_code">135</field>
+                <field name="name">NAFIN</field>
+                <field name="full_name">Nacional Financiera, Sociedad Nacional de Crédito, Institución de Banca de Desarrollo</field>
+                <field name="country" ref="base.mx"/>
+            </record>
+            <record id="eaccbnk_136" model="res.bank">
+                <field name="sat_code">136</field>
+                <field name="name">INTERBANCO</field>
+                <field name="full_name">Inter Banco, S.A. Institución de Banca Múltiple </field>
+                <field name="country" ref="base.mx"/>
+            </record>
+            <record id="eaccbnk_137" model="res.bank">
+                <field name="sat_code">137</field>
+                <field name="name">BANCOPPEL</field>
+                <field name="full_name">BanCoppel, S.A., Institución de Banca Múltiple</field>
+                <field name="country" ref="base.mx"/>
+            </record>
+            <record id="eaccbnk_138" model="res.bank">
+                <field name="sat_code">138</field>
+                <field name="name">ABC CAPITAL</field>
+                <field name="full_name">ABC Capital, S.A., Institución de Banca Múltiple </field>
+                <field name="country" ref="base.mx"/>
+            </record>
+            <record id="eaccbnk_139" model="res.bank">
+                <field name="sat_code">139</field>
+                <field name="name">UBS BANK</field>
+                <field name="full_name">UBS Bank México, S.A., Institución de Banca Múltiple, UBS Grupo Financiero</field>
+                <field name="country" ref="base.mx"/>
+            </record>
+            <record id="eaccbnk_140" model="res.bank">
+                <field name="sat_code">140</field>
+                <field name="name">CONSUBANCO</field>
+                <field name="full_name">Consubanco, S.A. Institución de Banca Múltiple </field>
+                <field name="country" ref="base.mx"/>
+            </record>
+            <record id="eaccbnk_141" model="res.bank">
+                <field name="sat_code">141</field>
+                <field name="name">VOLKSWAGEN</field>
+                <field name="full_name">Volkswagen Bank, S.A., Institución de Banca Múltiple</field>
+                <field name="country" ref="base.mx"/>
+            </record>
+            <record id="eaccbnk_143" model="res.bank">
+                <field name="sat_code">143</field>
+                <field name="name">CIBANCO</field>
+                <field name="full_name">CIBanco, S.A.</field>
+                <field name="country" ref="base.mx"/>
+            </record>
+            <record id="eaccbnk_145" model="res.bank">
+                <field name="sat_code">145</field>
+                <field name="name">BBASE</field>
+                <field name="full_name">Banco Base, S.A., Institución de Banca Múltiple </field>
+                <field name="country" ref="base.mx"/>
+            </record>
+            <record id="eaccbnk_166" model="res.bank">
+                <field name="sat_code">166</field>
+                <field name="name">BANSEFI</field>
+                <field name="full_name">Banco del Ahorro Nacional y Servicios Financieros, Sociedad Nacional de Crédito, Institución de Banca de Desarrollo</field>
+                <field name="country" ref="base.mx"/>
+            </record>
+            <record id="eaccbnk_168" model="res.bank">
+                <field name="sat_code">168</field>
+                <field name="name">HIPOTECARIA FEDERAL</field>
+                <field name="full_name">Sociedad Hipotecaria Federal, Sociedad Nacional de Crédito, Institución de Banca de Desarrollo</field>
+                <field name="country" ref="base.mx"/>
+            </record>
+            <record id="eaccbnk_600" model="res.bank">
+                <field name="sat_code">600</field>
+                <field name="name">MONEXCB</field>
+                <field name="full_name">Monex Casa de Bolsa, S.A. de C.V. Monex Grupo Financiero</field>
+                <field name="country" ref="base.mx"/>
+            </record>
+            <record id="eaccbnk_601" model="res.bank">
+                <field name="sat_code">601</field>
+                <field name="name">GBM</field>
+                <field name="full_name">GBM Grupo Bursátil Mexicano, S.A. de C.V. Casa de Bolsa</field>
+                <field name="country" ref="base.mx"/>
+            </record>
+            <record id="eaccbnk_602" model="res.bank">
+                <field name="sat_code">602</field>
+                <field name="name">MASARI</field>
+                <field name="full_name">Masari Casa de Bolsa, S.A.</field>
+                <field name="country" ref="base.mx"/>
+            </record>
+            <record id="eaccbnk_605" model="res.bank">
+                <field name="sat_code">605</field>
+                <field name="name">VALUE</field>
+                <field name="full_name">Value, S.A. de C.V. Casa de Bolsa</field>
+                <field name="country" ref="base.mx"/>
+            </record>
+            <record id="eaccbnk_606" model="res.bank">
+                <field name="sat_code">606</field>
+                <field name="name">ESTRUCTURADORES</field>
+                <field name="full_name">Estructuradores del Mercado de Valores Casa de Bolsa, S.A. de C.V.</field>
+                <field name="country" ref="base.mx"/>
+            </record>
+            <record id="eaccbnk_607" model="res.bank">
+                <field name="sat_code">607</field>
+                <field name="name">TIBER</field>
+                <field name="full_name">Casa de Cambio Tiber, S.A. de C.V.</field>
+                <field name="country" ref="base.mx"/>
+            </record>
+            <record id="eaccbnk_608" model="res.bank">
+                <field name="sat_code">608</field>
+                <field name="name">VECTOR</field>
+                <field name="full_name">Vector Casa de Bolsa, S.A. de C.V.</field>
+                <field name="country" ref="base.mx"/>
+            </record>
+            <record id="eaccbnk_610" model="res.bank">
+                <field name="sat_code">610</field>
+                <field name="name">B&amp;B</field>
+                <field name="full_name">B y B, Casa de Cambio, S.A. de C.V.</field>
+                <field name="country" ref="base.mx"/>
+            </record>
+            <record id="eaccbnk_614" model="res.bank">
+                <field name="sat_code">614</field>
+                <field name="name">ACCIVAL</field>
+                <field name="full_name">Acciones y Valores Banamex, S.A. de C.V., Casa de Bolsa</field>
+                <field name="country" ref="base.mx"/>
+            </record>
+            <record id="eaccbnk_615" model="res.bank">
+                <field name="sat_code">615</field>
+                <field name="name">MERRILL LYNCH</field>
+                <field name="full_name">Merrill Lynch México, S.A. de C.V. Casa de Bolsa</field>
+                <field name="country" ref="base.mx"/>
+            </record>
+            <record id="eaccbnk_616" model="res.bank">
+                <field name="sat_code">616</field>
+                <field name="name">FINAMEX</field>
+                <field name="full_name">Casa de Bolsa Finamex, S.A. de C.V.</field>
+                <field name="country" ref="base.mx"/>
+            </record>
+            <record id="eaccbnk_617" model="res.bank">
+                <field name="sat_code">617</field>
+                <field name="name">VALMEX</field>
+                <field name="full_name">Valores Mexicanos Casa de Bolsa, S.A. de C.V.</field>
+                <field name="country" ref="base.mx"/>
+            </record>
+            <record id="eaccbnk_618" model="res.bank">
+                <field name="sat_code">618</field>
+                <field name="name">UNICA</field>
+                <field name="full_name">Unica Casa de Cambio, S.A. de C.V.</field>
+                <field name="country" ref="base.mx"/>
+            </record>
+            <record id="eaccbnk_619" model="res.bank">
+                <field name="sat_code">619</field>
+                <field name="name">MAPFRE</field>
+                <field name="full_name">MAPFRE Tepeyac, S.A.</field>
+                <field name="country" ref="base.mx"/>
+            </record>
+            <record id="eaccbnk_620" model="res.bank">
+                <field name="sat_code">620</field>
+                <field name="name">PROFUTURO</field>
+                <field name="full_name">Profuturo G.N.P., S.A. de C.V., Afore</field>
+                <field name="country" ref="base.mx"/>
+            </record>
+            <record id="eaccbnk_621" model="res.bank">
+                <field name="sat_code">621</field>
+                <field name="name">CB ACTINVER</field>
+                <field name="full_name">Actinver Casa de Bolsa, S.A. de C.V.</field>
+                <field name="country" ref="base.mx"/>
+            </record>
+            <record id="eaccbnk_622" model="res.bank">
+                <field name="sat_code">622</field>
+                <field name="name">OACTIN</field>
+                <field name="full_name">OPERADORA ACTINVER, S.A. DE C.V.</field>
+                <field name="country" ref="base.mx"/>
+            </record>
+            <record id="eaccbnk_623" model="res.bank">
+                <field name="sat_code">623</field>
+                <field name="name">SKANDIA</field>
+                <field name="full_name">Skandia Vida, S.A. de C.V.</field>
+                <field name="country" ref="base.mx"/>
+            </record>
+            <record id="eaccbnk_626" model="res.bank">
+                <field name="sat_code">626</field>
+                <field name="name">CBDEUTSCHE</field>
+                <field name="full_name">Deutsche Securities, S.A. de C.V. CASA DE BOLSA</field>
+                <field name="country" ref="base.mx"/>
+            </record>
+            <record id="eaccbnk_627" model="res.bank">
+                <field name="sat_code">627</field>
+                <field name="name">ZURICH</field>
+                <field name="full_name">Zurich Compañía de Seguros, S.A.</field>
+                <field name="country" ref="base.mx"/>
+            </record>
+            <record id="eaccbnk_628" model="res.bank">
+                <field name="sat_code">628</field>
+                <field name="name">ZURICHVI</field>
+                <field name="full_name">Zurich Vida, Compañía de Seguros, S.A.</field>
+                <field name="country" ref="base.mx"/>
+            </record>
+            <record id="eaccbnk_629" model="res.bank">
+                <field name="sat_code">629</field>
+                <field name="name">SU CASITA</field>
+                <field name="full_name">Hipotecaria Su Casita, S.A. de C.V. SOFOM ENR</field>
+                <field name="country" ref="base.mx"/>
+            </record>
+            <record id="eaccbnk_630" model="res.bank">
+                <field name="sat_code">630</field>
+                <field name="name">CB INTERCAM</field>
+                <field name="full_name">Intercam Casa de Bolsa, S.A. de C.V.</field>
+                <field name="country" ref="base.mx"/>
+            </record>
+            <record id="eaccbnk_631" model="res.bank">
+                <field name="sat_code">631</field>
+                <field name="name">CI BOLSA</field>
+                <field name="full_name">CI Casa de Bolsa, S.A. de C.V. </field>
+                <field name="country" ref="base.mx"/>
+            </record>
+            <record id="eaccbnk_632" model="res.bank">
+                <field name="sat_code">632</field>
+                <field name="name">BULLTICK CB</field>
+                <field name="full_name">Bulltick Casa de Bolsa, S.A., de C.V. </field>
+                <field name="country" ref="base.mx"/>
+            </record>
+            <record id="eaccbnk_633" model="res.bank">
+                <field name="sat_code">633</field>
+                <field name="name">STERLING</field>
+                <field name="full_name">Sterling Casa de Cambio, S.A. de C.V.</field>
+                <field name="country" ref="base.mx"/>
+            </record>
+            <record id="eaccbnk_634" model="res.bank">
+                <field name="sat_code">634</field>
+                <field name="name">FINCOMUN</field>
+                <field name="full_name">Fincomún, Servicios Financieros Comunitarios, S.A. de C.V.</field>
+                <field name="country" ref="base.mx"/>
+            </record>
+            <record id="eaccbnk_636" model="res.bank">
+                <field name="sat_code">636</field>
+                <field name="name">HDI SEGUROS</field>
+                <field name="full_name">HDI Seguros, S.A. de C.V.</field>
+                <field name="country" ref="base.mx"/>
+            </record>
+            <record id="eaccbnk_637" model="res.bank">
+                <field name="sat_code">637</field>
+                <field name="name">ORDER</field>
+                <field name="full_name">Order Express Casa de Cambio, S.A. de C.V</field>
+                <field name="country" ref="base.mx"/>
+            </record>
+            <record id="eaccbnk_638" model="res.bank">
+                <field name="sat_code">638</field>
+                <field name="name">AKALA</field>
+                <field name="full_name">Akala, S.A. de C.V., Sociedad Financiera Popular</field>
+                <field name="country" ref="base.mx"/>
+            </record>
+            <record id="eaccbnk_640" model="res.bank">
+                <field name="sat_code">640</field>
+                <field name="name">CB JPMORGAN</field>
+                <field name="full_name">J.P. Morgan Casa de Bolsa, S.A. de C.V. J.P. Morgan Grupo Financiero</field>
+                <field name="country" ref="base.mx"/>
+            </record>
+            <record id="eaccbnk_642" model="res.bank">
+                <field name="sat_code">642</field>
+                <field name="name">REFORMA</field>
+                <field name="full_name">Operadora de Recursos Reforma, S.A. de C.V., S.F.P.</field>
+                <field name="country" ref="base.mx"/>
+            </record>
+            <record id="eaccbnk_646" model="res.bank">
+                <field name="sat_code">646</field>
+                <field name="name">STP</field>
+                <field name="full_name">Sistema de Transferencias y Pagos STP, S.A. de C.V.SOFOM ENR</field>
+                <field name="country" ref="base.mx"/>
+            </record>
+            <record id="eaccbnk_647" model="res.bank">
+                <field name="sat_code">647</field>
+                <field name="name">TELECOMM</field>
+                <field name="full_name">Telecomunicaciones de México</field>
+                <field name="country" ref="base.mx"/>
+            </record>
+            <record id="eaccbnk_648" model="res.bank">
+                <field name="sat_code">648</field>
+                <field name="name">EVERCORE</field>
+                <field name="full_name">Evercore Casa de Bolsa, S.A. de C.V.</field>
+                <field name="country" ref="base.mx"/>
+            </record>
+            <record id="eaccbnk_649" model="res.bank">
+                <field name="sat_code">649</field>
+                <field name="name">SKANDIA</field>
+                <field name="full_name">Skandia Operadora de Fondos, S.A. de C.V.</field>
+                <field name="country" ref="base.mx"/>
+            </record>
+            <record id="eaccbnk_651" model="res.bank">
+                <field name="sat_code">651</field>
+                <field name="name">SEGMTY</field>
+                <field name="full_name">Seguros Monterrey New York Life, S.A de C.V</field>
+                <field name="country" ref="base.mx"/>
+            </record>
+            <record id="eaccbnk_652" model="res.bank">
+                <field name="sat_code">652</field>
+                <field name="name">ASEA</field>
+                <field name="full_name">Solución Asea, S.A. de C.V., Sociedad Financiera Popular</field>
+                <field name="country" ref="base.mx"/>
+            </record>
+            <record id="eaccbnk_653" model="res.bank">
+                <field name="sat_code">653</field>
+                <field name="name">KUSPIT</field>
+                <field name="full_name">Kuspit Casa de Bolsa, S.A. de C.V. </field>
+                <field name="country" ref="base.mx"/>
+            </record>
+            <record id="eaccbnk_655" model="res.bank">
+                <field name="sat_code">655</field>
+                <field name="name">SOFIEXPRESS</field>
+                <field name="full_name">J.P. SOFIEXPRESS, S.A. de C.V., S.F.P.</field>
+                <field name="country" ref="base.mx"/>
+            </record>
+            <record id="eaccbnk_656" model="res.bank">
+                <field name="sat_code">656</field>
+                <field name="name">UNAGRA</field>
+                <field name="full_name">UNAGRA, S.A. de C.V., S.F.P.</field>
+                <field name="country" ref="base.mx"/>
+            </record>
+            <record id="eaccbnk_659" model="res.bank">
+                <field name="sat_code">659</field>
+                <field name="name">OPCIONES EMPRESARIALES DEL NOROESTE</field>
+                <field name="full_name">Opciones Empresariales del Noreste, S.A. De C.V., S.F.P.</field>
+                <field name="country" ref="base.mx"/>
+            </record>
+            <record id="eaccbnk_670" model="res.bank">
+                <field name="sat_code">670</field>
+                <field name="name">LIBERTAD</field>
+                <field name="full_name">Libertad Servicios Financieros, S.A. De C.V.  </field>
+                <field name="country" ref="base.mx"/>
+            </record>
+            <record id="eaccbnk_901" model="res.bank">
+                <field name="sat_code">901</field>
+                <field name="name">CLS</field>
+                <field name="full_name">Cls Bank International</field>
+                <field name="country" ref="base.mx"/>
+            </record>
+            <record id="eaccbnk_902" model="res.bank">
+                <field name="sat_code">902</field>
+                <field name="name">INDEVAL</field>
+                <field name="full_name">SD. Indeval, S.A. de C.V.</field>
+                <field name="country" ref="base.mx"/>
+            </record>
+        </data>
+    </openerp>

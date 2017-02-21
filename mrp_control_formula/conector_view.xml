@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+    	<!--<record model="ir.ui.view" id="view_conection_rpc_form">
+            <field name="name">conecxion.xmlrpc</field>
+            <field name="model">openerp.rpc</field>
+            <field name="type">form</field>
+            <field name="arch" type="xml">
+                <form string="Establecer conecxion" version="7.0">
+                	<header>
+                		<button name="action_conectar" string="Conectar" states="desconectado" type="object" icon="STOCK_NETWORK"/>
+                        <button name="action_disconected" string="Desconectar" states="conectado" type="object" icon="disconected"/>
+                		<field name="state" widget="statusbar"/>
+                	</header>
+                    <group>
+                    	<group>
+                        	<field name="host_destino" attrs="{'readonly': [('state', '=','conectado')]}"/>
+                        	<field name="db_destino" attrs="{'readonly': [('state', '=','conectado')]}"/>
+                    	</group>
+                        <group>
+                            <field name="user_destino" attrs="{'readonly': [('state', '=','conectado')]}"/>
+                            <field name="pass_destino" attrs="{'readonly': [('state', '=','conectado')]}" password="True"/>
+                        </group>
+                    </group>
+                </form>
+            </field>
+        </record>-->
+
+        <!--<record model="ir.ui.view" id="view_coneccion_rpc_tree">
+            <field name="name">formula.tree</field>
+            <field name="model">openerp.rpc</field>
+            <field name="type">tree</field>
+            <field name="arch" type="xml">
+                <tree string="Establecer Conexion">
+                    <field name="host_destino"/>
+                    <field name="db_destino"/>
+                    <field name="user_destino"/>
+                    <field name="pass_destino" password="True"/>
+                    <field name="state"/>  
+                </tree>
+            </field>
+        </record> 
+
+        <record model="ir.actions.act_window" id="action_conexion">
+            <field name="name">Establecer Conexion</field>
+            <field name="res_model">openerp.rpc</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <menuitem name="Conexion DB Remoto" id="menu_conexion_remoto" parent="menu_test_config" action="action_conexion"/>-->
+
+    </data>
+</openerp>

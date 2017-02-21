@@ -1,0 +1,61 @@
+<?xml version="1.0"?>
+
+<openerp>
+    <data>
+
+        <!--Desing tree view for machine class-->
+        
+        <record id="view_machine_tree" model="ir.ui.view">
+            <field name="name">view.machine.tree</field>
+            <field name="model">machine</field>
+            <field name="arch" type="xml">
+                <tree string="Machine Tree">
+                    <field name="name"/>
+                    <field name="code"/>
+                    
+                </tree>
+            </field>
+        </record>
+        
+        
+
+        <!--Desing form view for Machine class-->
+        
+        <record id="view_machine_form" model="ir.ui.view">
+            <field name="name">view.machine.form</field>
+            <field name="model">machine</field>
+            <field name="arch" type="xml">
+                <form string="Machine Details" version="7.0">
+                    <sheet>
+                        <group>
+                            <group><field name="name"/></group>
+                            <group><field name="code" /></group>
+                            <group><field name="product_type"/></group>
+                            <group><field name="use_default"/> </group>
+                            
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+        
+        
+        
+        <!--     Design action for Machine-->
+        <record id="action_machine" model="ir.actions.act_window">
+            <field name="name">action.machine</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">machine</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_id" ref="view_machine_tree"/>
+        </record>
+
+
+        <menuitem name="Machine"
+                     id="machine_menu" parent="mrp.menu_mrp_configuration" action="action_machine"
+        />
+        
+    </data>
+</openerp>   
+

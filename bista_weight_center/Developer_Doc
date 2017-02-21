@@ -1,0 +1,11 @@
+This Doc is made for reference in the future and applies only to this module.
+
+1. mrp.py/_get_raw_material_procure_method():
+        We have override this method and all the Moves to consume will be created of type 'make to stock'.
+        Reason: Check Availabilty was not working as the product is of type Buy and MTO.
+        Effect: We cannot have a flow of type MTO and Buy for Manufacturing.
+
+2. Shared Product Id Flow:
+    a. On create automatically gets assigned based product type sequence. eg smc.shared.product.id code for sequence
+        self.env['ir.sequence'].next_by_code('%s.shared.product.id'%(product_type))
+

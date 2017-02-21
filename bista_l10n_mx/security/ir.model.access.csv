@@ -1,0 +1,2 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_account_sat_group_manager,account.sat_group manager,bista_l10n_mx.model_account_account_sat_group,account.group_account_manager,1,1,1,1

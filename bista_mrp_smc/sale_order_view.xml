@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+    <data>
+        <record id="view_order_form_inherit_mex" model="ir.ui.view">
+            <field name="name">view.order.form.inh.mex</field>
+            <field name="model">sale.order</field>
+            <field name="inherit_id" ref="sale.view_order_form"/>
+            <field name="arch" type="xml">
+
+                <!--<field name="company_id" position="attributes">
+                    <attribute name="on_change">company_onchange(company_id)</attribute>
+                </field>-->
+
+                <xpath expr="//button[@name='invoice_cancel']" position="after">
+                    <button name="create_manufacturing_order" string="Create MO" type="object"/>
+                </xpath>
+                <!--Changing onchange of product id in SOL. -->
+                <!--<xpath expr="//field[@name='order_line']/form//field[@name='product_id']" position="replace">-->
+                       <!--<field name="product_id"-->
+                       <!--context="{'partner_id':parent.partner_id, 'quantity':product_uom_qty, 'pricelist':parent.pricelist_id, 'uom':False, 'company_id': parent.company_id}"-->
+                       <!--groups="base.group_user"-->
+                       <!--on_change="product_id_change_with_wh(parent.pricelist_id,product_id,product_uom_qty,False,product_uos_qty,False,name,parent.partner_id, False, True, parent.date_order, product_packaging, parent.fiscal_position, False, parent.warehouse_id, context)"/>
+                       -->
+                <!--this is not used for because of in sale.py  product_id_change_smc_route is commented!-->
+                <!--<xpath expr="//field[@name='order_line']/form//field[@name='product_id']" position="attributes">
+                        <attribute name="on_change">product_id_change_smc_route(parent.pricelist_id,product_id,product_uom_qty,False,product_uos_qty,False,name,parent.partner_id, False, True, parent.date_order, product_packaging, parent.fiscal_position, False, parent.warehouse_id, context)</attribute>
+                </xpath>-->
+
+                <!--<xpath expr="//field[@name='order_line']/form//field[@name='tax_id']" position="after">-->
+                        <!--<field name="order_id"/>-->
+                        <!--<field name="company_id"/>-->
+                <!--</xpath>-->
+
+                <xpath expr="//field[@name='order_line']/form//field[@name='tax_id']" position="attributes">
+                        <attribute name="domain">[('parent_id', '=', False),('type_tax_use', '&lt;&gt;' , 'purchase'), ('company_id', '=', parent.company_id)]</attribute>
+                </xpath>
+            </field>
+        </record>
+
+
+    </data>
+</openerp>

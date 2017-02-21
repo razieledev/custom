@@ -1,0 +1,4 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_laboratory_order_user,product.laboratory.order user,model_laboratory_order,laboratory.group_laboratory_user,1,0,0,0
+access_laboratory_order_manager,product.laboratory.order manager,model_laboratory_order,laboratory.group_laboratory_manager,1,1,1,1
+access_laboratory_order_all,product.laboratory.order all,model_laboratory_order,laboratory.group_laboratory_user,1,0,0,0

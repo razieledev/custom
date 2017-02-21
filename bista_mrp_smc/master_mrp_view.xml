@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+    <data>
+        <record id="master_mrp_view_form_inherit" model="ir.ui.view">
+            <field name="name">master.mrp.form.mexican.inherit</field>
+            <field name="model">master.mrp</field>
+            <field name="inherit_id" ref="bista_mrp_batch.view_master_mrp_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//button[@name='create_batches']" position="attributes">
+                    <attribute name = 'context'>{'has_master': True}</attribute>
+                </xpath>
+                <xpath expr="//field[@name='batch_qty']" position="attributes">
+                    <attribute name = 'on_change'>onchange_batch_qty(batch_qty, context)</attribute>
+                </xpath>
+                
+                <xpath expr="//field[@name='date_start']" position="after">
+                    <field name="finished_qty_ids" >
+                                    <tree string="Finished" >
+                                        <field name="pesoneto"/>
+                                        <field name="Lotes"/>
+                                        <field name="master_mrp_id" invisible="1"/>
+                                    </tree>
+                                </field>
+                    </xpath>
+                <xpath expr="//field[@name='batch_qty']" position="after">
+<!--                    <field name = "machine" required = "1"/>-->
+                    <field name = "machine_id" required = "1" domain="['|',('product_type','=',product_type),('product_type','=', False)]" attrs="{'readonly': [('state', '!=', 'draft')]}"/>
+                    <field name="disperser_id" attrs="{'invisible':[('premix_product_id','=',False)], 'readonly': [('state', '!=', 'draft')], 'required':[('premix_product_id','!=',False)]}"/>
+                    <field name="tanks" on_change="onchange_tanks(tanks, total_premix_weight,context)" attrs="{'invisible':[('premix_product_id','=',False)], 'required':[('premix_product_id','!=',False)], 'readonly': [('state', '!=', 'draft')]}" />
+                    <field name="tank_weight" attrs="{'invisible':[('premix_product_id','=',False)], 'required':[('premix_product_id','!=',False)]}" widget="readonly_text"/>
+                    <field name="total_premix_weight" attrs="{'invisible':[('premix_product_id','=',False)], 'required':[('premix_product_id','!=',False)]}" widget="readonly_text"/>
+                </xpath>
+                
+                <xpath expr="//field[@name='product_uom']" position="after">
+                    <field name = "product_type" required="1" readonly="1"/>
+                    <field name="pres_id" required="1" domain="[('product_type','=',product_type)]" attrs="{'readonly':[('state', '!=', 'draft')]}"/>
+                    <field name="premix_product_id" domain="[('product_type','=','premix')]" readonly="1"/>
+                </xpath>
+                
+                 <xpath expr="//field[@name='product_id']" position="attributes">
+                         <attribute name="on_change">onchange_product_id(product_id)</attribute>
+                </xpath>
+                <xpath expr="//field[@name='batches']" position="attributes">
+                         <attribute name="widget">readonly_text</attribute>
+                </xpath>
+                <xpath expr="//field[@name='product_qty']" position="attributes">
+                         <attribute name="on_change">onchange_product_qty(product_qty,product_id)</attribute>
+                         <attribute name="widget">readonly_text</attribute>
+                </xpath>
+            </field>
+        </record>
+        <!--Overiding action to bind the above form view to master.mrp-->
+        <record id="bista_mrp_batch.action_master_mrp" model="ir.actions.act_window">
+            <field name="name">Manufacturing Orders</field>
+            <field name="res_model">master.mrp</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="domain">[('manual', '=', False)]</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_type">form</field>
+            <!--<field name="view_id" ref="view_master_mrp_tree"/>-->
+        </record>
+
+        <record id="action_master_mrp_tree" model="ir.actions.act_window.view">
+            <field eval="1" name="sequence"/>
+            <field name="view_mode">tree</field>
+            <field name="view_id" ref="bista_mrp_batch.view_master_mrp_tree"/>
+            <field name="act_window_id" ref="bista_mrp_batch.action_master_mrp"/>
+        </record>
+
+        <record id="action_master_mrp_form" model="ir.actions.act_window.view">
+            <field eval="2" name="sequence"/>
+            <field name="view_mode">form</field>
+            <field name="view_id" ref="master_mrp_view_form_inherit"/>
+            <field name="act_window_id" ref="bista_mrp_batch.action_master_mrp"/>
+        </record>
+
+
+
+        <!--Tree and form for creating extra manual MO's-->
+
+        <record id="manual_master_mrp_tree" model="ir.ui.view">
+            <field name="name">manual.master.mrp.tree</field>
+            <field name="type">tree</field>
+            <field name="priority">2</field>
+            <field name="model">master.mrp</field>
+            <field name="arch" type="xml">
+                <tree string="Manufacturing Order">
+                    <field name="name"/>
+                    <!--<field name="sale_id"/>-->
+                    <field name="origin"/>
+                    <field name="product_id"/>
+                    <field name="product_qty"/>
+                    <field name="date_planned"/>
+                    <field name="date_start"/>
+                    <field name="batches"/>
+                    <field name="batch_qty"/>
+                    <field name="state"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="extra_manual_mrp_view_form" model="ir.ui.view">
+            <field name="name">manual.master.mrp.form.mexican.inherit</field>
+            <field name="model">master.mrp</field>
+            <!--<field name="inherit_id" ref="bista_mrp_batch.view_master_mrp_form"/>-->
+            <field name="arch" type="xml">
+                <form string="Master MRP">
+                    <header>
+                        <button name="create_batches" type="object" states="draft" string="Create Batches"/>
+                        <!--<button name="validate" type="object" states="draft" string="Validate"/>-->
+                        <button name="cancel_master" type="object" states="draft,confirmed" string="Cancel"/>
+                        <field name="state" widget="statusbar" statusbar_visible="draft,confirmed,cancel,done" statusbar_colors='{"confirmed":"blue"}'/>
+                    </header>
+                    <group colspan="4">
+                        <group>
+                            <field name="name" required = "1"/>
+                            <field name = "manual" invisible="1"/>
+                            <!--<field name="sale_id"/>-->
+                            <!--<field name="origin"/>-->
+                            <field name="product_id" required = "1" on_change="onchange_product_id(product_id)"
+                                   domain="[('bom_ids','!=',False),('bom_ids.type','!=','phantom'),('product_type', '=', 'internal')]" context='{"default_type": "product"}'/>
+                            <field name="product_qty"  required = "1"/>
+                            <field name="product_uom" groups="product.group_uom" />
+                            <field name = "product_type" required="1" />
+                        </group>
+                        <group>
+                            <field name="date_planned" required = "1"/>
+                            <field name="date_start"/>
+                            <field name="batches" required="1" attrs="{'readonly':[('state', '!=', 'draft')]}"/>
+                            <field name="batch_qty" required="1" attrs="{'readonly':[('state', '!=', 'draft')]}"/>
+                            <field name="disperser_id" attrs="{'readonly': [('state', '!=', 'draft')]}"/>
+                            <!--<field name="state"/>-->
+                        </group>
+                    </group>
+                    <group>
+                        <field name="batch_ids" nolabel="1">
+                            <tree colors="red:state == 'confirmed';" string="Batch Orders">
+                                <field name="message_unread" invisible="1"/>
+                                <field name="name"/>
+                                <field name="date_planned"/>
+                                <field name="product_id"/>
+                                <field name="product_qty" sum="Total Qty"/>
+                                <field name="product_uom" groups="product.group_uom"/>
+                                <field name="routing_id" groups="mrp.group_mrp_routings"/>
+                                <field name="hour_total" sum="Total Hours"/>
+                                <field name="cycle_total" sum="Total Cycles"/>
+                                <field name="origin"/>
+                                <field name="state"/>
+                            </tree>
+                        </field>
+                    </group>
+                </form>
+            </field>
+        </record>
+
+        <record id="action_manual_master_mrp" model="ir.actions.act_window">
+            <field name="name">Manual MO</field>
+            <field name="res_model">master.mrp</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="context">{'default_manual': True}</field>
+            <field name="domain">[('manual', '=', True)]</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_type">form</field>
+            <!--<field name="view_id" ref="manual_master_mrp_tree"/>-->
+        </record>
+
+        <record id="action_manual_master_mrp_tree" model="ir.actions.act_window.view">
+            <field eval="1" name="sequence"/>
+            <field name="view_mode">tree</field>
+            <field name="view_id" ref="manual_master_mrp_tree"/>
+            <field name="act_window_id" ref="action_manual_master_mrp"/>
+        </record>
+
+        <record id="action_manual_master_mrp_form" model="ir.actions.act_window.view">
+            <field eval="2" name="sequence"/>
+            <field name="view_mode">form</field>
+            <field name="view_id" ref="extra_manual_mrp_view_form"/>
+            <field name="act_window_id" ref="action_manual_master_mrp"/>
+        </record>
+
+        <menuitem name="Manual Manufacturing Orders"
+            action="action_manual_master_mrp"
+            id="menu_manual_master_mrp_order"
+            parent="mrp.menu_mrp_manufacturing"
+            sequence="10"/>
+
+    </data>
+</openerp>

@@ -1,0 +1,16 @@
+<openerp>
+    <data>
+        <record id="view_order_form_inherit_rzl" model="ir.ui.view">
+            <field name="name">sale.order.form.sale.stock.inh.rzl</field>
+            <field name="model">sale.order</field>
+            <field name="inherit_id" ref="sale_stock.view_order_form_inherit"/>
+            <field name="arch" type="xml">
+                <data>
+                    <xpath expr="//page[@string='Order Lines']/field[@name='order_line']/form[@string='Sales Order Lines']/group/group/field[@name='product_packaging']" position="after">
+                       <field name="packaging_qty" attrs="{'invisible':[('product_packaging','=', False)]}"/>
+                   </xpath>
+                </data>
+            </field>
+        </record>
+    </data>
+</openerp>

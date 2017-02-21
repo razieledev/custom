@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+    <data>
+
+        <record id="view_stock_lot_form_inherit" model="ir.ui.view">
+            <field name="name">view.stock.lot.form.inh</field>
+            <field name="model">stock.production.lot</field>
+            <field name="inherit_id" ref="stock.view_production_lot_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='ref']" position="after">
+                    <field name="pedimentos_id"/>
+                </xpath>
+            </field>
+        </record>
+
+
+        <!--<record id="action_picking_Plasco_list" model="ir.actions.act_window">-->
+            <!--<field name="name">Picking Plasco</field>-->
+            <!--<field name="type">ir.actions.act_window</field>-->
+            <!--<field name="res_model">stock.picking</field>-->
+            <!--<field name="view_mode">tree,form</field>-->
+            <!--<field name="view_type">form</field>-->
+            <!--<field name="view_id" ref="stock.vpicktree"/>-->
+            <!--<field name="context">{'auto_pick_flag' : True}</field>-->
+            <!--<field name="domain">[-->
+                <!--('picking_type_code','=','incoming'),-->
+                <!--('partner_id.name', '=', 'SMC Comp Inc (USA)'),-->
+                <!--('company_id.name', '=', 'Productos Plasco SA de CV')]</field>-->
+        <!--</record>-->
+
+
+
+        <!--<menuitem id="menu_picking_Plasco"-->
+                  <!--name="Incoming at Plasco"-->
+                  <!--parent="stock.menu_stock_warehouse_mgmt"-->
+                  <!--action="action_picking_Plasco_list" />-->
+
+        <!--<record id="action_picking_in_compuestos_list" model="ir.actions.act_window">-->
+            <!--<field name="name">Picking IN Compuestos</field>-->
+            <!--<field name="type">ir.actions.act_window</field>-->
+            <!--<field name="res_model">stock.picking</field>-->
+            <!--<field name="view_mode">tree,form</field>-->
+            <!--<field name="view_type">form</field>-->
+            <!--<field name="view_id" ref="stock.vpicktree"/>-->
+            <!--<field name="domain">[-->
+                <!--('picking_type_code','=','incoming'),-->
+                <!--('partner_id.name', '!=', 'Productos Plasco SA de CV'),-->
+                <!--('company_id.name', '=', 'Compuestos SMC Mexico SA de CV')]</field>-->
+        <!--</record>-->
+
+        <!--<menuitem id="menu_picking_in_Compuestos"-->
+                  <!--name="Incoming at Compuestos"-->
+                  <!--parent="stock.menu_stock_warehouse_mgmt"-->
+                  <!--action="action_picking_in_compuestos_list" />-->
+
+        <!--<record id="action_picking_out_Compuestos_list" model="ir.actions.act_window">-->
+            <!--<field name="name">Picking OUT Compuestos</field>-->
+            <!--<field name="type">ir.actions.act_window</field>-->
+            <!--<field name="res_model">stock.picking</field>-->
+            <!--<field name="view_mode">tree,form</field>-->
+            <!--<field name="view_type">form</field>-->
+            <!--<field name="view_id" ref="stock.vpicktree"/>-->
+            <!--<field name="domain">[-->
+                <!--('picking_type_code','=','outgoing'),-->
+                <!--('company_id.name', '=', 'Compuestos SMC Mexico SA de CV')]</field>-->
+        <!--</record>-->
+
+        <!--<menuitem id="menu_picking_out_Compuestos"-->
+                  <!--name="Outgoing from Compuestos"-->
+                  <!--parent="stock.menu_stock_warehouse_mgmt"-->
+                  <!--action="action_picking_out_Compuestos_list" />-->
+
+        <!--this menu item visible for only admin users-->
+        <!--<menuitem
+            action="stock.action_picking_type_form"
+            id="stock.menu_action_picking_type_form"
+            parent="stock.menu_stock_warehouse_mgmt"
+            groups="base.group_no_one"
+            sequence="1"/>-->
+
+    </data>
+</openerp>

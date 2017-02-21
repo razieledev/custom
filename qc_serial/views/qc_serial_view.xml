@@ -1,0 +1,138 @@
+<?xml version="1.0"?>
+<openerp>
+    <data>
+
+
+        <record id="serial_revision_tree" model="ir.ui.view">
+            <field name="name">serial.revision.view.tree</field>
+            <field name="model">serial.revision</field>
+            <field name="priority">1</field>
+            <field name="arch" type="xml">
+                <tree string="Serial Revision" editable="top">
+                    <field name="serial_revision" />
+                </tree>
+            </field>
+        </record>
+        
+        <record id="qc_serial_view_form" model="ir.ui.view">
+            <field name="name">qc.serial.view.form</field>
+            <field name="model">stock.production.lot</field>
+            <field name="priority">1</field>
+            <field name="arch" type="xml">
+                <form string="QC Serial">
+                    <sheet string="SerialNumber">
+                        <group>
+                            <field name="name" readonly="1"/>
+                            <field name="header"/>
+                            <field name="product_id" readonly="1"/>
+                            <field name="date" />
+                            <field name="exp_date" />
+                            <field name="picking_id" readonly="1"/>
+                            <field name="company_id" readonly="1"/>
+                            <field name="supplier_ref"/>
+                            <field name="inspector" />
+                            <field name="label" />
+                            <field name="obs" />
+                            <field name="de_material" />
+                            <field name="note" placeholder="Notes" />
+                        </group>
+                        
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="qc_serial_view_tree" model="ir.ui.view">
+            <field name="name">qc.serial.view.tree</field>
+            <field name="model">stock.production.lot</field>
+            <field name="priority">1</field>
+            <field name="arch" type="xml">
+                <tree string="Attendance Sheet">
+                    <field name="date" />
+                            <field name="name" />
+                            <field name="product_id" />
+                            <field name="picking_id" />
+                            <field name="inspector" />
+                            <field name="label" />
+                </tree>
+            </field>
+        </record>
+
+        <record id="action_serial_revision_tree" model="ir.actions.act_window">
+		  <field name="name">Serial Revision</field>
+		  <field name="type">ir.actions.act_window</field>
+		   <field name="res_model">serial.revision</field>
+		   <field name="view_type">form</field>
+		   <field name="view_mode">tree,form</field>
+                   <field name="view_id" eval="False"/>
+		   <field name="help" type="html">
+		     <p class="oe_view_nocontent_create">
+		     </p>
+		   </field>
+		</record>
+                
+
+        <record id="action_qc_serial_form" model="ir.actions.act_window">
+            <field name="name">Serial Number</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">stock.production.lot</field>
+            <field name="domain">[('label','=', False)]</field>
+            <field name="context">{'order': 'date desc'}</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+        
+        <record id="action_printed_serial_form" model="ir.actions.act_window">
+            <field name="name">Printed Serials</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">stock.production.lot</field>
+            <field name="domain">[('label','=', True)]</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <record id="qc_serial_action_tree" model="ir.actions.act_window.view">
+            <field eval="1" name="sequence"/>
+            <field name="view_mode">tree</field>
+            <field name="view_id" ref="qc_serial_view_tree"/>
+            <field name="act_window_id" ref="action_qc_serial_form"/>
+        </record>
+
+        <record id="qc_serial_action_form" model="ir.actions.act_window.view">
+            <field eval="2" name="sequence"/>
+            <field name="view_mode">form</field>
+            <field name="view_id" ref="qc_serial_view_form"/>
+            <field name="act_window_id" ref="action_qc_serial_form"/>
+        </record>
+
+        <!--the following 2 actions for default seral no-->
+        <record id="default_serial_action_tree" model="ir.actions.act_window.view">
+            <field eval="1" name="sequence"/>
+            <field name="view_mode">tree</field>
+            <field name="view_id" ref="stock.view_production_lot_tree"/>
+            <field name="act_window_id" ref="stock.action_production_lot_form"/>
+        </record>
+
+        <record id="default_serial_action_form" model="ir.actions.act_window.view">
+            <field eval="2" name="sequence"/>
+            <field name="view_mode">form</field>
+            <field name="view_id" ref="stock.view_production_lot_form"/>
+            <field name="act_window_id" ref="stock.action_production_lot_form"/>
+        </record>
+
+        <menuitem name="QC" id="qc_serial_details"  sequence="2" />
+        <menuitem name="Serial Number" id="qc_serial_sub_details"
+                parent="qc_serial_details" sequence="2"/>
+        <menuitem id="menu_qc_serial_sheet" action="action_qc_serial_form" parent="qc_serial_sub_details" sequence="7"/>
+        <menuitem id="menu_printed_serial_sheet" action="action_printed_serial_form" parent="qc_serial_sub_details" sequence="8"/>
+
+        <menuitem id="menu_serial_revision" action="action_serial_revision_tree" name="Configration" parent="qc_serial_sub_details" sequence="9"/>
+
+
+
+        <menuitem
+            action="stock.action_picking_type_form"
+            id="stock.menu_action_picking_type_form"
+            parent="stock.menu_stock_warehouse_mgmt" sequence="1" groups="base.group_erp_manager"/>
+    </data>
+</openerp>

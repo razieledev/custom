@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <openerp>
+        <data>
+            <record model="ir.ui.view" id="view_account_journal_inh_form">
+                <field name="name">account.journal.inh.form.view</field>
+                <field name="model">account.journal</field>
+                <field name='inherit_id' ref='account.view_account_journal_form'/>
+                <field name="arch" type="xml">
+                    <notebook position="inside">
+                        <page string="Bank Accounts" attrs="{'required':[('type','in', ('bank'))], 'invisible':[('type','!=', ('bank'))]}">
+                            <field name="res_partner_bank_id" attrs="{'required':[('type','in', ('bank'))], 'invisible':[('type','!=', ('bank'))]}"/>
+                        </page>
+                    </notebook>
+                </field>
+            </record>
+
+            <record model="ir.ui.view" id="view_res_bank_inh_form">
+                <field name="name">view.res.bank.inh.form</field>
+                <field name="model">res.bank</field>
+                <field name='inherit_id' ref='base.view_res_bank_form'/>
+                <field name="arch" type="xml">
+                    <field name="name" position="after">
+                        <field name="sat_code"/>
+                        <field name="full_name"/>
+                    </field>
+                </field>
+            </record>
+
+            <record model="ir.ui.view" id="view_res_bank_inh_tree">
+                <field name="name">view.res.bank.inh.tree</field>
+                <field name="model">res.bank</field>
+                <field name='inherit_id' ref='base.view_res_bank_tree'/>
+                <field name="arch" type="xml">
+                    <field name="name" position="before">
+                        <field name="sat_code"/>
+                    </field>
+                </field>
+            </record>
+
+            <record id="action_res_bank" model="ir.actions.act_window">
+                <field name="name">Banks</field>
+                <field name="res_model">res.bank</field>
+                <field name="view_type">form</field>
+                <field name="view_mode">tree,form</field>
+            </record>
+
+            <menuitem name="Banks" action="action_res_bank" id="res_bank_menu" sequence="1" parent="account.menu_configuration_misc"/>
+
+        </data>
+    </openerp>

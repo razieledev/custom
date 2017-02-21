@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+    <data>
+        <record id="mrp_view_form_batch" model="ir.ui.view">
+            <field name="name">mrp.form.batch</field>
+            <field name="model">mrp.production</field>
+            <field name="inherit_id" ref="mrp.mrp_production_form_view"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='origin']" position="after">
+                    <field name = 'master_id'/>
+                </xpath>
+            </field>
+        </record>
+        
+        <menuitem name = "Batch Orders" action="mrp.mrp_production_action" id="mrp.menu_mrp_production_action"
+            parent="mrp.menu_mrp_manufacturing" sequence="2"/>
+    </data>
+</openerp>

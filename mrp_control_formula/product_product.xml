@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+    <data>
+        <record model='ir.ui.view' id='product_form_view_formula_inherite'>
+                        <field name='name'>product.formula.inherit</field>
+                        <field name='model'>product.product</field>
+                        <field name='inherit_id' ref='product.product_normal_form_view'/>
+                        <field name='type'>form</field>
+                        <field name='arch' type='xml'>
+                        <field name="default_code" position="after">
+                            <field name="formula_id"/>
+                        </field>
+                   </field>
+                 </record>
+    </data>
+</openerp>

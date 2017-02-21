@@ -1,0 +1,10 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_mrp_familia_user,mrp.familia.user,model_family,mrp.group_mrp_user,1,0,0,0
+access_mrp_familia_manager,mrp.familia.maneger,model_family,mrp.group_mrp_manager,1,1,1,1
+access_mrp_familia_all,mrp.familia.all,model_family,base.group_user,1,0,0,0
+access_mrp_formula_user,formula_c1.user,model_formula_c1,mrp.group_mrp_user,1,0,0,0
+access_mrp_formula_maneger,formula_c1.manager,model_formula_c1,mrp.group_mrp_manager,1,1,1,1
+access_mrp_formula_all,formula_c1,model_formula_c1,base.group_user,1,0,0,0
+access_formula_percentage_user,mrpformul00.user,model_mrpformul00,mrp.group_mrp_user,1,0,0,0
+access_formula_percentage_maneger,mrpformul00.manager,model_mrpformul00,mrp.group_mrp_manager,1,1,1,1
+access_formula_percentage_all,mrpformul00.all,model_mrpformul00,base.group_user,1,0,0,0

@@ -1,0 +1,82 @@
+<?xml version="1.0"?>
+<openerp>
+    <data>
+
+
+        <record id="view_move_line_tree_smc" model="ir.ui.view">
+            <field name="name">account.move.line.tree</field>
+            <field name="model">account.move.line</field>
+            <field eval="1" name="priority"/>
+            <field name="arch" type="xml">
+                <tree colors="red:state == 'draft';black:state == 'valid'" string="Journal Items" create="true" on_write="on_create_write" editable="top">
+                    <field name="journal_id" options='{"no_open":True}'/>
+                    <field name="period_id" options='{"no_open":True}'/>
+                    <field name="date"/>
+                    <field name="name"/>
+                    <field name="ref"/>
+                    <field name="statement_id" invisible="1"/>
+                    <field name="partner_id"
+                        domain="['|', ('parent_id', '=', False), ('is_company', '=', True)]"
+                        on_change="onchange_partner_id(move_id, partner_id, account_id, debit, credit, date, journal_id)"/>
+                    <field name="account_id" options='{"no_open":True}' domain="[('journal_id','=',journal_id), ('company_id', '=', company_id)]" on_change="onchange_account_id(account_id, partner_id, context)"/>
+                    <field name="account_tax_id" options='{"no_open":True}' invisible="context.get('journal_type', False) not in ['sale','sale_refund','purchase','purchase_refund','general']"/>
+                    <field name="analytic_account_id" groups="analytic.group_analytic_accounting" domain="[('type','not in',['view','template'])]" invisible="not context.get('analytic_journal_id',False)"/>
+                    <field name="move_id" required="0"/>
+                    <field name="debit" sum="Total Debit"/>
+                    <field name="credit" sum="Total Credit"/>
+                    <field name="date_maturity" invisible="context.get('journal_type', False) not in ['sale','sale_refund','purchase','purchase_refund']"/>
+                    <field name="reconcile_ref"/>
+                    <field name="invoice" invisible="1"/>
+                    <field name="amount_currency" readonly="True" invisible="not context.get('currency',False)"/>
+                    <field name="currency_id" readonly="True" invisible="not context.get('currency',False)" />
+                    <field name="state" invisible="1"/>
+                    <field name="company_id" invisible="1"/>
+                </tree>
+            </field>
+        </record>
+
+
+        <record id="view_account_move_line_filter_smc" model="ir.ui.view">
+            <field name="name">Bank Transaction</field>
+            <field name="model">account.move.line</field>
+            <field name="arch" type="xml">
+                <search string="Search Journal Items">
+                    <field string="Journals" name="journal_id" filter_domain="[('journal_id','ilike', 'Bank')]" />
+                    <group expand="0" string="Group By">
+                        <filter string="Journals" domain="[]" context="{'group_by':'journal_id'}" name='group_by_Journals'/>
+                    </group>
+                </search>
+
+            </field>
+        </record>
+
+        <record id="action_account_moves_all_a_smc" model="ir.actions.act_window">
+            <field name="context">{'search_default_journal_id': 1, 'search_default_group_by_Journals': 1}</field>
+            <field name="name">Bank Transaction</field>
+            <field name="res_model">account.move.line</field>
+            <field name="domain">[('account_id.type', '=', 'liquidity')]</field>
+            <field name="view_id" ref="view_move_line_tree_smc"/>
+            <field name="search_view_id" ref="view_account_move_line_filter_smc"/>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">
+                    Select the period and the journal you want to fill.
+                </p><p>
+                    This view can be used by accountants in order to quickly record
+                    entries in Odoo. If you want to record a supplier invoice,
+                    start by recording the line of the expense account. Odoo
+                    will propose to you automatically the Tax related to this
+                    account and the counterpart "Account Payable".
+                </p>
+            </field>
+        </record>
+
+        <menuitem
+            action="action_account_moves_all_a_smc"
+            icon="STOCK_JUSTIFY_FILL"
+            id="menu_action_account_moves_all_smc"
+            parent="all_smc_reports"
+            sequence="1"
+            />
+
+    </data>
+</openerp>

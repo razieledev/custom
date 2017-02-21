@@ -1,0 +1,13 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+
+access_color_manager,access.color.manager,model_color,base.group_sale_manager,1,1,1,0
+access_cuello_manager,access.cuello.manager,model_cuello,base.group_sale_manager,1,1,1,0
+access_molde_manager,access.bottle.model.manager,model_bottle_model,base.group_sale_manager,1,1,1,0
+
+
+access_color_user,access.color.user,model_color,base.group_user,1,0,0,0
+access_cuello_user,access.cuello.user,model_cuello,base.group_user,1,0,0,0
+access_molde_user,access.bottle.model.user,model_bottle_model,base.group_user,1,0,0,0
+
+
+

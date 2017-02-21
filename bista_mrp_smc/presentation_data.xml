@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data noupdate="1"> 
+        <record id="masa_id" model="presentation">
+            <field name="type">Masa</field>
+            <field name="code">MASA</field>
+            <field name="product_type">bmc</field>
+            
+        </record>
+        <record id="queso_id" model="presentation">
+            <field name="type">Queso</field>
+            <field name="code">QUESO</field>
+            <field name="product_type">bmc</field>
+            
+        </record>
+        
+        <record id="lwt_id" model="presentation">
+            <field name="type">LWT - 36X16X12</field>
+            <field name="product_type">smc</field>
+            
+        </record>
+        <record id="tan_id" model="presentation">
+            <field name="type">Tanque</field>
+            <field name="code">TANQUE</field>
+            <field name="product_type">premix</field>
+            
+        </record>
+        
+    </data>
+
+</openerp>

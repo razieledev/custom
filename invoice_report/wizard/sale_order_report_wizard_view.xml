@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+     <data>
+
+        <record id="sale_order_report_wizard_form_view" model="ir.ui.view">
+            <field name="name">Sale Order Report Wizard</field>
+            <field name="model">sale.order.report.wizard</field>
+            <!--<field name="inherit_id" ref="account_common_report_view" />-->
+            <field name="arch" type="xml">
+                <form string="Sale Order Report">
+                    <separator string="Sale Order Report"/>
+                    <group col="4">
+                        <field name="from_date"/>
+                        <field name="to_date"/>
+                        <newline/>
+                        <field name="monthwise" string = "Monthwise"/>
+                    </group>
+                    <footer>
+                        <button name="get_report" string="Get" type="object" class="oe_highlight"/>
+                    </footer>
+                </form>
+            </field>
+        </record>
+
+         <record id="action_sale_order_report_wizard_view" model="ir.actions.act_window">
+             <field name="name">Sale Order Report Wizard</field>
+             <field name="res_model">sale.order.report.wizard</field>
+             <field name="type">ir.actions.act_window</field>
+             <field name="view_type">form</field>
+             <field name="view_mode">tree,form</field>
+             <field name="view_id" ref="sale_order_report_wizard_form_view"/>
+             <field name="context">{}</field>
+             <field name="target">new</field>
+             <!--<field name="domain">[()]</field>-->
+
+       </record>
+
+
+         <menuitem id="menu_sale_order_report_wizard" action="action_sale_order_report_wizard_view" parent="all_smc_reports" sequence="7"/>
+
+        <!--<menuitem icon="STOCK_PRINT"-->
+            <!--name="Aged Partner Balance"-->
+            <!--action="action_account_aged_balance_view"-->
+            <!--id="menu_aged_trial_balance"-->
+            <!--parent="account.next_id_22"/>-->
+
+    </data>
+</openerp>

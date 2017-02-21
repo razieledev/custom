@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+
+         <record id="view_partner_simple_form_inherit" model="ir.ui.view">
+            <field name="name">res.partner.inherit.form</field>
+            <field name="model">res.partner</field>
+             <field name="inherit_id" ref="base.view_partner_form"/>
+            <field name="arch" type="xml">
+                <field name="mobile" position="after">
+                     <button name="tik_on" type="object" string="Com Partner"/>
+                     <button name="serial_c" type="object" string="Serial"/>
+                     <button name="inv_c" type="object" string="INV"/>
+                </field>
+            </field>
+        </record>
+    </data>
+</openerp>

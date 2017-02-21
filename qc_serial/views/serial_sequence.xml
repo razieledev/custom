@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data noupdate="1">
+
+        <!-- Sequences from tracking numbers -->
+
+        <record id="qc_serial_sequence_type_serial" model="ir.sequence.type">
+            <field name="name">Serial Numbers</field>
+            <field name="code">stock.lot.serials</field>
+        </record>
+
+        <record id="qc_serial_sequence_production_lots" model="ir.sequence">
+            <field name="name">Serial Numbers</field>
+            <field name="code">stock.lot.serials</field>
+            <field name="prefix"></field>
+            <field name="padding">6</field>
+            <field name="number_next">1</field>
+            <field name="number_increment">1</field>
+            <field name="company_id" eval="False"/>
+        </record>
+
+        <record id="stock_production_lot_type" model="ir.sequence.type">
+            <field name="name">Stock Production Lot Type</field>
+            <field name="code">stock.production.lot.sequence</field>
+        </record>
+
+        <record id="stock_production_lot_sequence" model="ir.sequence">
+            <field name="name">Stock Production Lot Sequence</field>
+            <field name="code">stock.production.lot.sequence</field>
+            <field name="padding" eval="6"/>
+            <field name="number_next" eval="1"/>
+            <field name="number_increment" eval="1"/>
+            <field name="company_id" eval="False"/>
+        </record>
+
+    </data>
+</openerp>

@@ -1,0 +1,8 @@
+
+mostrar el logo en la parte superior derecha
+
+colocar dentro de <pageTemplate> abajo de <frame >
+
+<pageGraphics><!-- inicio de las lineas para mostrar el logo-->
+  <image x="15.3cm" y="27.8cm" height="25.0">[[ company.logo or removeParentNode('image') ]]</image>
+ </pageGraphics><!-- fin de las lineas para mostrar el logo-->
