@@ -1,0 +1,1341 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="faa985c3-8750-4697-9946-bb3e9569c8f3" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/rzl/packaging/procurement.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/rzl/packaging/purchase.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/rzl/security/ir.model.access.csv" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/account_aged_partner_balance_vw/static/description/icon.png" afterPath="$PROJECT_DIR$/account_aged_partner_balance_vw/static/description/icon.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/account_balance_line/static/description/icon.png" afterPath="$PROJECT_DIR$/account_balance_line/static/description/icon.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/account_financial_report_webkit_xls/static/description/icon.png" afterPath="$PROJECT_DIR$/account_financial_report_webkit_xls/static/description/icon.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/account_invoice_currency/static/description/icon.png" afterPath="$PROJECT_DIR$/account_invoice_currency/static/description/icon.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/account_journal_report_xls/static/description/icon.png" afterPath="$PROJECT_DIR$/account_journal_report_xls/static/description/icon.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/account_move_line_extended/static/description/icon.png" afterPath="$PROJECT_DIR$/account_move_line_extended/static/description/icon.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/account_move_line_extended/static/src/img/icon.png" afterPath="$PROJECT_DIR$/account_move_line_extended/static/src/img/icon.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/account_move_line_payable_receivable_filter/static/description/icon.png" afterPath="$PROJECT_DIR$/account_move_line_payable_receivable_filter/static/description/icon.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/account_move_line_report_xls/static/description/icon.png" afterPath="$PROJECT_DIR$/account_move_line_report_xls/static/description/icon.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/account_move_line_report_xls/static/description/journal_items.png" afterPath="$PROJECT_DIR$/account_move_line_report_xls/static/description/journal_items.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/account_move_line_report_xls/static/description/oca_logo.png" afterPath="$PROJECT_DIR$/account_move_line_report_xls/static/description/oca_logo.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/aging_due_report/static/description/icon.png" afterPath="$PROJECT_DIR$/aging_due_report/static/description/icon.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/base_external_dbsource/images/screenshot01.png" afterPath="$PROJECT_DIR$/base_external_dbsource/images/screenshot01.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/base_external_dbsource/static/description/icon.png" afterPath="$PROJECT_DIR$/base_external_dbsource/static/description/icon.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/controller_report_xls/static/description/icon.png" afterPath="$PROJECT_DIR$/controller_report_xls/static/description/icon.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/report_xls/static/description/help.png" afterPath="$PROJECT_DIR$/report_xls/static/description/help.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/report_xls/static/description/icon.png" afterPath="$PROJECT_DIR$/report_xls/static/description/icon.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/report_xls/static/description/open_receivables.png" afterPath="$PROJECT_DIR$/report_xls/static/description/open_receivables.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/stock_picking_invoice_link/static/description/icon.png" afterPath="$PROJECT_DIR$/stock_picking_invoice_link/static/description/icon.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/.name" afterPath="$PROJECT_DIR$/.idea/.name" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/encodings.xml" afterPath="$PROJECT_DIR$/.idea/encodings.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/smc.iml" afterPath="$PROJECT_DIR$/.idea/smc.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/account_aged_partner_balance_vw/README.rst" afterPath="$PROJECT_DIR$/account_aged_partner_balance_vw/README.rst" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/account_aged_partner_balance_vw/__init__.py" afterPath="$PROJECT_DIR$/account_aged_partner_balance_vw/__init__.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/account_aged_partner_balance_vw/__openerp__.py" afterPath="$PROJECT_DIR$/account_aged_partner_balance_vw/__openerp__.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/account_aged_partner_balance_vw/data/data.xml" afterPath="$PROJECT_DIR$/account_aged_partner_balance_vw/data/data.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/account_aged_partner_balance_vw/i18n/account_aged_partner_balance_vw.pot" afterPath="$PROJECT_DIR$/account_aged_partner_balance_vw/i18n/account_aged_partner_balance_vw.pot" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/account_aged_partner_balance_vw/i18n/es.po" afterPath="$PROJECT_DIR$/account_aged_partner_balance_vw/i18n/es.po" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/account_aged_partner_balance_vw/i18n/es_MX.po" afterPath="$PROJECT_DIR$/account_aged_partner_balance_vw/i18n/es_MX.po" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/account_aged_partner_balance_vw/i18n/es_VE.po" afterPath="$PROJECT_DIR$/account_aged_partner_balance_vw/i18n/es_VE.po" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/account_aged_partner_balance_vw/i18n/fr.po" afterPath="$PROJECT_DIR$/account_aged_partner_balance_vw/i18n/fr.po" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/account_aged_partner_balance_vw/i18n/mk.po" afterPath="$PROJECT_DIR$/account_aged_partner_balance_vw/i18n/mk.po" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/account_aged_partner_balance_vw/model/__init__.py" afterPath="$PROJECT_DIR$/account_aged_partner_balance_vw/model/__init__.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/account_aged_partner_balance_vw/model/account_aged_partner_balance_vw.py" afterPath="$PROJECT_DIR$/account_aged_partner_balance_vw/model/account_aged_partner_balance_vw.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/account_aged_partner_balance_vw/report/account_aged_partner_balance.mako" afterPath="$PROJECT_DIR$/account_aged_partner_balance_vw/report/account_aged_partner_balance.mako" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/account_aged_partner_balance_vw/report/report.xml" afterPath="$PROJECT_DIR$/account_aged_partner_balance_vw/report/report.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/account_aged_partner_balance_vw/static/description/index.html" afterPath="$PROJECT_DIR$/account_aged_partner_balance_vw/static/description/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/account_aged_partner_balance_vw/view/action_menues.xml" afterPath="$PROJECT_DIR$/account_aged_partner_balance_vw/view/action_menues.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/account_aged_partner_balance_vw/view/view.xml" afterPath="$PROJECT_DIR$/account_aged_partner_balance_vw/view/view.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/account_aged_partner_balance_vw/view/wizard.xml" afterPath="$PROJECT_DIR$/account_aged_partner_balance_vw/view/wizard.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/account_aged_partner_balance_vw/view/wizard_print_report_view.xml" afterPath="$PROJECT_DIR$/account_aged_partner_balance_vw/view/wizard_print_report_view.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/account_aged_partner_balance_vw/wizard/__init__.py" afterPath="$PROJECT_DIR$/account_aged_partner_balance_vw/wizard/__init__.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/account_aged_partner_balance_vw/wizard/webkit_parser_header_fix.py" afterPath="$PROJECT_DIR$/account_aged_partner_balance_vw/wizard/webkit_parser_header_fix.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/account_aged_partner_balance_vw/wizard/wizard_open_move_line.py" afterPath="$PROJECT_DIR$/account_aged_partner_balance_vw/wizard/wizard_open_move_line.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/account_aged_partner_balance_vw/wizard/wizard_print_report.py" afterPath="$PROJECT_DIR$/account_aged_partner_balance_vw/wizard/wizard_print_report.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/account_balance_line/README.rst" afterPath="$PROJECT_DIR$/account_balance_line/README.rst" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/account_balance_line/__init__.py" afterPath="$PROJECT_DIR$/account_balance_line/__init__.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/account_balance_line/__openerp__.py" afterPath="$PROJECT_DIR$/account_balance_line/__openerp__.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/account_balance_line/account_move_line.py" afterPath="$PROJECT_DIR$/account_balance_line/account_move_line.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/account_balance_line/account_move_line_view.xml" afterPath="$PROJECT_DIR$/account_balance_line/account_move_line_view.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/account_balance_line/i18n/account_balance_line.pot" afterPath="$PROJECT_DIR$/account_balance_line/i18n/account_balance_line.pot" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/account_balance_line/i18n/ar.po" afterPath="$PROJECT_DIR$/account_balance_line/i18n/ar.po" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/account_balance_line/i18n/bs.po" afterPath="$PROJECT_DIR$/account_balance_line/i18n/bs.po" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/account_balance_line/i18n/ca.po" afterPath="$PROJECT_DIR$/account_balance_line/i18n/ca.po" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/account_balance_line/i18n/cs.po" afterPath="$PROJECT_DIR$/account_balance_line/i18n/cs.po" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/account_balance_line/i18n/de.po" afterPath="$PROJECT_DIR$/account_balance_line/i18n/de.po" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/account_balance_line/i18n/en.po" afterPath="$PROJECT_DIR$/account_balance_line/i18n/en.po" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/account_balance_line/i18n/en_GB.po" afterPath="$PROJECT_DIR$/account_balance_line/i18n/en_GB.po" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/account_balance_line/i18n/es.po" afterPath="$PROJECT_DIR$/account_balance_line/i18n/es.po" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/account_balance_line/i18n/es_CR.po" afterPath="$PROJECT_DIR$/account_balance_line/i18n/es_CR.po" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/account_balance_line/i18n/es_EC.po" afterPath="$PROJECT_DIR$/account_balance_line/i18n/es_EC.po" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/account_balance_line/i18n/es_MX.po" afterPath="$PROJECT_DIR$/account_balance_line/i18n/es_MX.po" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/account_balance_line/i18n/fr.po" afterPath="$PROJECT_DIR$/account_balance_line/i18n/fr.po" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/account_balance_line/i18n/hr.po" afterPath="$PROJECT_DIR$/account_balance_line/i18n/hr.po" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/account_balance_line/i18n/hu.po" afterPath="$PROJECT_DIR$/account_balance_line/i18n/hu.po" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/account_balance_line/i18n/it.po" afterPath="$PROJECT_DIR$/account_balance_line/i18n/it.po" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/account_balance_line/i18n/ja.po" afterPath="$PROJECT_DIR$/account_balance_line/i18n/ja.po" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/account_balance_line/i18n/lt.po" afterPath="$PROJECT_DIR$/account_balance_line/i18n/lt.po" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/account_balance_line/i18n/mk.po" afterPath="$PROJECT_DIR$/account_balance_line/i18n/mk.po" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/account_balance_line/i18n/mn.po" afterPath="$PROJECT_DIR$/account_balance_line/i18n/mn.po" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/account_balance_line/i18n/nb.po" afterPath="$PROJECT_DIR$/account_balance_line/i18n/nb.po" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/account_balance_line/i18n/nl.po" afterPath="$PROJECT_DIR$/account_balance_line/i18n/nl.po" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/account_balance_line/i18n/nl_BE.po" afterPath="$PROJECT_DIR$/account_balance_line/i18n/nl_BE.po" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/account_balance_line/i18n/pt.po" afterPath="$PROJECT_DIR$/account_balance_line/i18n/pt.po" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/account_balance_line/i18n/pt_BR.po" afterPath="$PROJECT_DIR$/account_balance_line/i18n/pt_BR.po" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/account_balance_line/i18n/pt_PT.po" afterPath="$PROJECT_DIR$/account_balance_line/i18n/pt_PT.po" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/account_balance_line/i18n/ro.po" afterPath="$PROJECT_DIR$/account_balance_line/i18n/ro.po" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/account_balance_line/i18n/ru.po" afterPath="$PROJECT_DIR$/account_balance_line/i18n/ru.po" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/account_balance_line/i18n/sl.po" afterPath="$PROJECT_DIR$/account_balance_line/i18n/sl.po" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/account_balance_line/i18n/sv.po" afterPath="$PROJECT_DIR$/account_balance_line/i18n/sv.po" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/account_balance_line/i18n/tr.po" afterPath="$PROJECT_DIR$/account_balance_line/i18n/tr.po" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/account_balance_line/i18n/zh_CN.po" afterPath="$PROJECT_DIR$/account_balance_line/i18n/zh_CN.po" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/account_balance_line/i18n/zh_TW.po" afterPath="$PROJECT_DIR$/account_balance_line/i18n/zh_TW.po" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/account_financial_report_webkit_xls/__init__.py" afterPath="$PROJECT_DIR$/account_financial_report_webkit_xls/__init__.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/account_financial_report_webkit_xls/__openerp__.py" afterPath="$PROJECT_DIR$/account_financial_report_webkit_xls/__openerp__.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/account_financial_report_webkit_xls/report/__init__.py" afterPath="$PROJECT_DIR$/account_financial_report_webkit_xls/report/__init__.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/account_financial_report_webkit_xls/report/general_ledger_xls.py" afterPath="$PROJECT_DIR$/account_financial_report_webkit_xls/report/general_ledger_xls.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/account_financial_report_webkit_xls/report/open_invoices_xls.py" afterPath="$PROJECT_DIR$/account_financial_report_webkit_xls/report/open_invoices_xls.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/account_financial_report_webkit_xls/report/partner_ledger_xls.py" afterPath="$PROJECT_DIR$/account_financial_report_webkit_xls/report/partner_ledger_xls.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/account_financial_report_webkit_xls/report/partners_balance_xls.py" afterPath="$PROJECT_DIR$/account_financial_report_webkit_xls/report/partners_balance_xls.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/account_financial_report_webkit_xls/report/trial_balance_xls.py" afterPath="$PROJECT_DIR$/account_financial_report_webkit_xls/report/trial_balance_xls.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/account_financial_report_webkit_xls/static/description/icon.svg" afterPath="$PROJECT_DIR$/account_financial_report_webkit_xls/static/description/icon.svg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/account_financial_report_webkit_xls/tests/general_ledger.yml" afterPath="$PROJECT_DIR$/account_financial_report_webkit_xls/tests/general_ledger.yml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/account_financial_report_webkit_xls/tests/open_invoices.yml" afterPath="$PROJECT_DIR$/account_financial_report_webkit_xls/tests/open_invoices.yml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/account_financial_report_webkit_xls/tests/partner_balance.yml" afterPath="$PROJECT_DIR$/account_financial_report_webkit_xls/tests/partner_balance.yml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/account_financial_report_webkit_xls/tests/partner_ledger.yml" afterPath="$PROJECT_DIR$/account_financial_report_webkit_xls/tests/partner_ledger.yml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/account_financial_report_webkit_xls/tests/trial_balance.yml" afterPath="$PROJECT_DIR$/account_financial_report_webkit_xls/tests/trial_balance.yml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/account_financial_report_webkit_xls/wizard/__init__.py" afterPath="$PROJECT_DIR$/account_financial_report_webkit_xls/wizard/__init__.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/account_financial_report_webkit_xls/wizard/general_ledger_wizard.py" afterPath="$PROJECT_DIR$/account_financial_report_webkit_xls/wizard/general_ledger_wizard.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/account_financial_report_webkit_xls/wizard/general_ledger_wizard_view.xml" afterPath="$PROJECT_DIR$/account_financial_report_webkit_xls/wizard/general_ledger_wizard_view.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/account_financial_report_webkit_xls/wizard/open_invoices_wizard.py" afterPath="$PROJECT_DIR$/account_financial_report_webkit_xls/wizard/open_invoices_wizard.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/account_financial_report_webkit_xls/wizard/open_invoices_wizard_view.xml" afterPath="$PROJECT_DIR$/account_financial_report_webkit_xls/wizard/open_invoices_wizard_view.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/account_financial_report_webkit_xls/wizard/partners_balance_wizard.py" afterPath="$PROJECT_DIR$/account_financial_report_webkit_xls/wizard/partners_balance_wizard.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/account_financial_report_webkit_xls/wizard/partners_balance_wizard_view.xml" afterPath="$PROJECT_DIR$/account_financial_report_webkit_xls/wizard/partners_balance_wizard_view.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/account_financial_report_webkit_xls/wizard/partners_ledger_wizard.py" afterPath="$PROJECT_DIR$/account_financial_report_webkit_xls/wizard/partners_ledger_wizard.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/account_financial_report_webkit_xls/wizard/partners_ledger_wizard_view.xml" afterPath="$PROJECT_DIR$/account_financial_report_webkit_xls/wizard/partners_ledger_wizard_view.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/account_financial_report_webkit_xls/wizard/trial_balance_wizard.py" afterPath="$PROJECT_DIR$/account_financial_report_webkit_xls/wizard/trial_balance_wizard.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/account_financial_report_webkit_xls/wizard/trial_balance_wizard_view.xml" afterPath="$PROJECT_DIR$/account_financial_report_webkit_xls/wizard/trial_balance_wizard_view.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/account_invoice_currency/README.rst" afterPath="$PROJECT_DIR$/account_invoice_currency/README.rst" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/account_invoice_currency/__init__.py" afterPath="$PROJECT_DIR$/account_invoice_currency/__init__.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/account_invoice_currency/__openerp__.py" afterPath="$PROJECT_DIR$/account_invoice_currency/__openerp__.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/account_invoice_currency/i18n/account_invoice_currency.pot" afterPath="$PROJECT_DIR$/account_invoice_currency/i18n/account_invoice_currency.pot" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/account_invoice_currency/i18n/ar.po" afterPath="$PROJECT_DIR$/account_invoice_currency/i18n/ar.po" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/account_invoice_currency/i18n/bs.po" afterPath="$PROJECT_DIR$/account_invoice_currency/i18n/bs.po" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/account_invoice_currency/i18n/ca.po" afterPath="$PROJECT_DIR$/account_invoice_currency/i18n/ca.po" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/account_invoice_currency/i18n/cs.po" afterPath="$PROJECT_DIR$/account_invoice_currency/i18n/cs.po" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/account_invoice_currency/i18n/de.po" afterPath="$PROJECT_DIR$/account_invoice_currency/i18n/de.po" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/account_invoice_currency/i18n/en.po" afterPath="$PROJECT_DIR$/account_invoice_currency/i18n/en.po" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/account_invoice_currency/i18n/en_GB.po" afterPath="$PROJECT_DIR$/account_invoice_currency/i18n/en_GB.po" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/account_invoice_currency/i18n/es.po" afterPath="$PROJECT_DIR$/account_invoice_currency/i18n/es.po" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/account_invoice_currency/i18n/es_CR.po" afterPath="$PROJECT_DIR$/account_invoice_currency/i18n/es_CR.po" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/account_invoice_currency/i18n/es_EC.po" afterPath="$PROJECT_DIR$/account_invoice_currency/i18n/es_EC.po" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/account_invoice_currency/i18n/es_MX.po" afterPath="$PROJECT_DIR$/account_invoice_currency/i18n/es_MX.po" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/account_invoice_currency/i18n/et.po" afterPath="$PROJECT_DIR$/account_invoice_currency/i18n/et.po" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/account_invoice_currency/i18n/fr.po" afterPath="$PROJECT_DIR$/account_invoice_currency/i18n/fr.po" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/account_invoice_currency/i18n/hr.po" afterPath="$PROJECT_DIR$/account_invoice_currency/i18n/hr.po" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/account_invoice_currency/i18n/hu.po" afterPath="$PROJECT_DIR$/account_invoice_currency/i18n/hu.po" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/account_invoice_currency/i18n/id.po" afterPath="$PROJECT_DIR$/account_invoice_currency/i18n/id.po" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/account_invoice_currency/i18n/it.po" afterPath="$PROJECT_DIR$/account_invoice_currency/i18n/it.po" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/account_invoice_currency/i18n/ja.po" afterPath="$PROJECT_DIR$/account_invoice_currency/i18n/ja.po" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/account_invoice_currency/i18n/lt.po" afterPath="$PROJECT_DIR$/account_invoice_currency/i18n/lt.po" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/account_invoice_currency/i18n/mk.po" afterPath="$PROJECT_DIR$/account_invoice_currency/i18n/mk.po" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/account_invoice_currency/i18n/mn.po" afterPath="$PROJECT_DIR$/account_invoice_currency/i18n/mn.po" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/account_invoice_currency/i18n/nb.po" afterPath="$PROJECT_DIR$/account_invoice_currency/i18n/nb.po" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/account_invoice_currency/i18n/nl.po" afterPath="$PROJECT_DIR$/account_invoice_currency/i18n/nl.po" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/account_invoice_currency/i18n/nl_BE.po" afterPath="$PROJECT_DIR$/account_invoice_currency/i18n/nl_BE.po" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/account_invoice_currency/i18n/pl.po" afterPath="$PROJECT_DIR$/account_invoice_currency/i18n/pl.po" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/account_invoice_currency/i18n/pt.po" afterPath="$PROJECT_DIR$/account_invoice_currency/i18n/pt.po" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/account_invoice_currency/i18n/pt_BR.po" afterPath="$PROJECT_DIR$/account_invoice_currency/i18n/pt_BR.po" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/account_invoice_currency/i18n/pt_PT.po" afterPath="$PROJECT_DIR$/account_invoice_currency/i18n/pt_PT.po" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/account_invoice_currency/i18n/ro.po" afterPath="$PROJECT_DIR$/account_invoice_currency/i18n/ro.po" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/account_invoice_currency/i18n/ru.po" afterPath="$PROJECT_DIR$/account_invoice_currency/i18n/ru.po" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/account_invoice_currency/i18n/sl.po" afterPath="$PROJECT_DIR$/account_invoice_currency/i18n/sl.po" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/account_invoice_currency/i18n/sv.po" afterPath="$PROJECT_DIR$/account_invoice_currency/i18n/sv.po" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/account_invoice_currency/i18n/th.po" afterPath="$PROJECT_DIR$/account_invoice_currency/i18n/th.po" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/account_invoice_currency/i18n/tr.po" afterPath="$PROJECT_DIR$/account_invoice_currency/i18n/tr.po" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/account_invoice_currency/i18n/zh_CN.po" afterPath="$PROJECT_DIR$/account_invoice_currency/i18n/zh_CN.po" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/account_invoice_currency/i18n/zh_TW.po" afterPath="$PROJECT_DIR$/account_invoice_currency/i18n/zh_TW.po" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/account_invoice_currency/models/__init__.py" afterPath="$PROJECT_DIR$/account_invoice_currency/models/__init__.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/account_invoice_currency/models/account_invoice.py" afterPath="$PROJECT_DIR$/account_invoice_currency/models/account_invoice.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/account_invoice_currency/views/account_invoice_view.xml" afterPath="$PROJECT_DIR$/account_invoice_currency/views/account_invoice_view.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/account_invoice_merge/README.rst" afterPath="$PROJECT_DIR$/account_invoice_merge/README.rst" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/account_invoice_merge/__init__.py" afterPath="$PROJECT_DIR$/account_invoice_merge/__init__.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/account_invoice_merge/__openerp__.py" afterPath="$PROJECT_DIR$/account_invoice_merge/__openerp__.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/account_invoice_merge/i18n/account_invoice_merge.pot" afterPath="$PROJECT_DIR$/account_invoice_merge/i18n/account_invoice_merge.pot" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/account_invoice_merge/i18n/de.po" afterPath="$PROJECT_DIR$/account_invoice_merge/i18n/de.po" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/account_invoice_merge/i18n/en.po" afterPath="$PROJECT_DIR$/account_invoice_merge/i18n/en.po" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/account_invoice_merge/i18n/es.po" afterPath="$PROJECT_DIR$/account_invoice_merge/i18n/es.po" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/account_invoice_merge/i18n/fr.po" afterPath="$PROJECT_DIR$/account_invoice_merge/i18n/fr.po" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/account_invoice_merge/i18n/it.po" afterPath="$PROJECT_DIR$/account_invoice_merge/i18n/it.po" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/account_invoice_merge/i18n/nl.po" afterPath="$PROJECT_DIR$/account_invoice_merge/i18n/nl.po" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/account_invoice_merge/i18n/pt_BR.po" afterPath="$PROJECT_DIR$/account_invoice_merge/i18n/pt_BR.po" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/account_invoice_merge/i18n/sl.po" afterPath="$PROJECT_DIR$/account_invoice_merge/i18n/sl.po" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/account_invoice_merge/i18n/zh_CN.po" afterPath="$PROJECT_DIR$/account_invoice_merge/i18n/zh_CN.po" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/account_invoice_merge/invoice.py" afterPath="$PROJECT_DIR$/account_invoice_merge/invoice.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/account_invoice_merge/wizard/__init__.py" afterPath="$PROJECT_DIR$/account_invoice_merge/wizard/__init__.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/account_invoice_merge/wizard/invoice_merge.py" afterPath="$PROJECT_DIR$/account_invoice_merge/wizard/invoice_merge.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/account_invoice_merge/wizard/invoice_merge_view.xml" afterPath="$PROJECT_DIR$/account_invoice_merge/wizard/invoice_merge_view.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/account_invoice_production_lot/README.rst" afterPath="$PROJECT_DIR$/account_invoice_production_lot/README.rst" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/account_invoice_production_lot/__init__.py" afterPath="$PROJECT_DIR$/account_invoice_production_lot/__init__.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/account_invoice_production_lot/__openerp__.py" afterPath="$PROJECT_DIR$/account_invoice_production_lot/__openerp__.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/account_invoice_production_lot/demo/sale.yml" afterPath="$PROJECT_DIR$/account_invoice_production_lot/demo/sale.yml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/account_invoice_production_lot/i18n/account_invoice_production_lot.pot" afterPath="$PROJECT_DIR$/account_invoice_production_lot/i18n/account_invoice_production_lot.pot" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/account_invoice_production_lot/i18n/it.po" afterPath="$PROJECT_DIR$/account_invoice_production_lot/i18n/it.po" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/account_invoice_production_lot/invoice.py" afterPath="$PROJECT_DIR$/account_invoice_production_lot/invoice.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/account_invoice_production_lot/invoice_view.xml" afterPath="$PROJECT_DIR$/account_invoice_production_lot/invoice_view.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/account_invoice_production_lot/tests/__init__.py" afterPath="$PROJECT_DIR$/account_invoice_production_lot/tests/__init__.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/account_invoice_production_lot/tests/test_invoice_production_lot.py" afterPath="$PROJECT_DIR$/account_invoice_production_lot/tests/test_invoice_production_lot.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/account_invoice_production_lot/view/report_invoice.xml" afterPath="$PROJECT_DIR$/account_invoice_production_lot/view/report_invoice.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/account_journal_report_xls/README.rst" afterPath="$PROJECT_DIR$/account_journal_report_xls/README.rst" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/account_journal_report_xls/__init__.py" afterPath="$PROJECT_DIR$/account_journal_report_xls/__init__.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/account_journal_report_xls/__openerp__.py" afterPath="$PROJECT_DIR$/account_journal_report_xls/__openerp__.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/account_journal_report_xls/account_journal.py" afterPath="$PROJECT_DIR$/account_journal_report_xls/account_journal.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/account_journal_report_xls/i18n/account_journal_report_xls.pot" afterPath="$PROJECT_DIR$/account_journal_report_xls/i18n/account_journal_report_xls.pot" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/account_journal_report_xls/i18n/fr.po" afterPath="$PROJECT_DIR$/account_journal_report_xls/i18n/fr.po" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/account_journal_report_xls/i18n/nl.po" afterPath="$PROJECT_DIR$/account_journal_report_xls/i18n/nl.po" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/account_journal_report_xls/report/__init__.py" afterPath="$PROJECT_DIR$/account_journal_report_xls/report/__init__.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/account_journal_report_xls/report/nov_account_journal.py" afterPath="$PROJECT_DIR$/account_journal_report_xls/report/nov_account_journal.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/account_journal_report_xls/report/nov_account_journal.rml" afterPath="$PROJECT_DIR$/account_journal_report_xls/report/nov_account_journal.rml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/account_journal_report_xls/report/nov_account_journal_xls.py" afterPath="$PROJECT_DIR$/account_journal_report_xls/report/nov_account_journal_xls.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/account_journal_report_xls/static/description/icon.svg" afterPath="$PROJECT_DIR$/account_journal_report_xls/static/description/icon.svg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/account_journal_report_xls/tests/export_csv_journal_by_fiscal_year.yml" afterPath="$PROJECT_DIR$/account_journal_report_xls/tests/export_csv_journal_by_fiscal_year.yml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/account_journal_report_xls/tests/export_csv_journal_by_period.yml" afterPath="$PROJECT_DIR$/account_journal_report_xls/tests/export_csv_journal_by_period.yml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/account_journal_report_xls/tests/print_journal_by_fiscal_year.yml" afterPath="$PROJECT_DIR$/account_journal_report_xls/tests/print_journal_by_fiscal_year.yml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/account_journal_report_xls/tests/print_journal_by_period.yml" afterPath="$PROJECT_DIR$/account_journal_report_xls/tests/print_journal_by_period.yml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/account_journal_report_xls/wizard/__init__.py" afterPath="$PROJECT_DIR$/account_journal_report_xls/wizard/__init__.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/account_journal_report_xls/wizard/print_journal_wizard.py" afterPath="$PROJECT_DIR$/account_journal_report_xls/wizard/print_journal_wizard.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/account_journal_report_xls/wizard/print_journal_wizard.xml" afterPath="$PROJECT_DIR$/account_journal_report_xls/wizard/print_journal_wizard.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/account_move_line_extended/README.rst" afterPath="$PROJECT_DIR$/account_move_line_extended/README.rst" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/account_move_line_extended/__init__.py" afterPath="$PROJECT_DIR$/account_move_line_extended/__init__.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/account_move_line_extended/__openerp__.py" afterPath="$PROJECT_DIR$/account_move_line_extended/__openerp__.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/account_move_line_extended/model/__init__.py" afterPath="$PROJECT_DIR$/account_move_line_extended/model/__init__.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/account_move_line_extended/static/description/index.html" afterPath="$PROJECT_DIR$/account_move_line_extended/static/description/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/account_move_line_extended/view/account_move_line_view.xml" afterPath="$PROJECT_DIR$/account_move_line_extended/view/account_move_line_view.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/account_move_line_extended/wizard/__init__.py" afterPath="$PROJECT_DIR$/account_move_line_extended/wizard/__init__.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/account_move_line_payable_receivable_filter/README.rst" afterPath="$PROJECT_DIR$/account_move_line_payable_receivable_filter/README.rst" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/account_move_line_payable_receivable_filter/__init__.py" afterPath="$PROJECT_DIR$/account_move_line_payable_receivable_filter/__init__.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/account_move_line_payable_receivable_filter/__openerp__.py" afterPath="$PROJECT_DIR$/account_move_line_payable_receivable_filter/__openerp__.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/account_move_line_payable_receivable_filter/i18n/de.po" afterPath="$PROJECT_DIR$/account_move_line_payable_receivable_filter/i18n/de.po" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/account_move_line_payable_receivable_filter/i18n/en.po" afterPath="$PROJECT_DIR$/account_move_line_payable_receivable_filter/i18n/en.po" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/account_move_line_payable_receivable_filter/i18n/fr.po" afterPath="$PROJECT_DIR$/account_move_line_payable_receivable_filter/i18n/fr.po" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/account_move_line_payable_receivable_filter/i18n/fr_BE.po" afterPath="$PROJECT_DIR$/account_move_line_payable_receivable_filter/i18n/fr_BE.po" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/account_move_line_payable_receivable_filter/i18n/sl.po" afterPath="$PROJECT_DIR$/account_move_line_payable_receivable_filter/i18n/sl.po" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/account_move_line_payable_receivable_filter/views/account_move_line_view.xml" afterPath="$PROJECT_DIR$/account_move_line_payable_receivable_filter/views/account_move_line_view.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/account_move_line_report_xls/README.rst" afterPath="$PROJECT_DIR$/account_move_line_report_xls/README.rst" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/account_move_line_report_xls/__init__.py" afterPath="$PROJECT_DIR$/account_move_line_report_xls/__init__.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/account_move_line_report_xls/__openerp__.py" afterPath="$PROJECT_DIR$/account_move_line_report_xls/__openerp__.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/account_move_line_report_xls/account_move_line.py" afterPath="$PROJECT_DIR$/account_move_line_report_xls/account_move_line.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/account_move_line_report_xls/i18n/fr.po" afterPath="$PROJECT_DIR$/account_move_line_report_xls/i18n/fr.po" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/account_move_line_report_xls/i18n/nl.po" afterPath="$PROJECT_DIR$/account_move_line_report_xls/i18n/nl.po" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/account_move_line_report_xls/report/__init__.py" afterPath="$PROJECT_DIR$/account_move_line_report_xls/report/__init__.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/account_move_line_report_xls/report/move_line_list_xls.py" afterPath="$PROJECT_DIR$/account_move_line_report_xls/report/move_line_list_xls.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/account_move_line_report_xls/report/move_line_list_xls.xml" afterPath="$PROJECT_DIR$/account_move_line_report_xls/report/move_line_list_xls.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/account_move_line_report_xls/static/description/icon.svg" afterPath="$PROJECT_DIR$/account_move_line_report_xls/static/description/icon.svg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/account_move_line_report_xls/static/description/index.html" afterPath="$PROJECT_DIR$/account_move_line_report_xls/static/description/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/account_move_report/account_move.py" afterPath="$PROJECT_DIR$/account_move_report/account_move.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/account_move_report/account_move_view.xml" afterPath="$PROJECT_DIR$/account_move_report/account_move_view.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/aging_due_report/README.rst" afterPath="$PROJECT_DIR$/aging_due_report/README.rst" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/aging_due_report/__init__.py" afterPath="$PROJECT_DIR$/aging_due_report/__init__.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/aging_due_report/__openerp__.py" afterPath="$PROJECT_DIR$/aging_due_report/__openerp__.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/aging_due_report/data/aging_due_report_paper_format.xml" afterPath="$PROJECT_DIR$/aging_due_report/data/aging_due_report_paper_format.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/aging_due_report/data/aging_due_report_style.xml" afterPath="$PROJECT_DIR$/aging_due_report/data/aging_due_report_style.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/aging_due_report/i18n/aging_due_report.pot" afterPath="$PROJECT_DIR$/aging_due_report/i18n/aging_due_report.pot" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/aging_due_report/i18n/es.po" afterPath="$PROJECT_DIR$/aging_due_report/i18n/es.po" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/aging_due_report/i18n/es_MX.po" afterPath="$PROJECT_DIR$/aging_due_report/i18n/es_MX.po" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/aging_due_report/i18n/es_VE.po" afterPath="$PROJECT_DIR$/aging_due_report/i18n/es_VE.po" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/aging_due_report/report/__init__.py" afterPath="$PROJECT_DIR$/aging_due_report/report/__init__.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/aging_due_report/report/aging_detail_due_report_qweb.xml" afterPath="$PROJECT_DIR$/aging_due_report/report/aging_detail_due_report_qweb.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/aging_due_report/report/aging_due_report_qweb.xml" afterPath="$PROJECT_DIR$/aging_due_report/report/aging_due_report_qweb.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/aging_due_report/report/customer_formal_due_report_qweb.xml" afterPath="$PROJECT_DIR$/aging_due_report/report/customer_formal_due_report_qweb.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/aging_due_report/report/detail_due_report_qweb.xml" afterPath="$PROJECT_DIR$/aging_due_report/report/detail_due_report_qweb.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/aging_due_report/report/parser.py" afterPath="$PROJECT_DIR$/aging_due_report/report/parser.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/aging_due_report/report/supplier_formal_due_report_qweb.xml" afterPath="$PROJECT_DIR$/aging_due_report/report/supplier_formal_due_report_qweb.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/aging_due_report/static/description/index.html" afterPath="$PROJECT_DIR$/aging_due_report/static/description/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/aging_due_report/tests/__init__.py" afterPath="$PROJECT_DIR$/aging_due_report/tests/__init__.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/aging_due_report/tests/common.py" afterPath="$PROJECT_DIR$/aging_due_report/tests/common.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/aging_due_report/tests/test_report_partner.py" afterPath="$PROJECT_DIR$/aging_due_report/tests/test_report_partner.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/aging_due_report/views/report.xml" afterPath="$PROJECT_DIR$/aging_due_report/views/report.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/aging_due_report/views/wizard.xml" afterPath="$PROJECT_DIR$/aging_due_report/views/wizard.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/aging_due_report/wizard/__init__.py" afterPath="$PROJECT_DIR$/aging_due_report/wizard/__init__.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/aging_due_report/wizard/wizard.py" afterPath="$PROJECT_DIR$/aging_due_report/wizard/wizard.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/base_external_dbsource/__init__.py" afterPath="$PROJECT_DIR$/base_external_dbsource/__init__.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/base_external_dbsource/__openerp__.py" afterPath="$PROJECT_DIR$/base_external_dbsource/__openerp__.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/base_external_dbsource/base_external_dbsource.py" afterPath="$PROJECT_DIR$/base_external_dbsource/base_external_dbsource.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/base_external_dbsource/base_external_dbsource_demo.xml" afterPath="$PROJECT_DIR$/base_external_dbsource/base_external_dbsource_demo.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/base_external_dbsource/base_external_dbsource_view.xml" afterPath="$PROJECT_DIR$/base_external_dbsource/base_external_dbsource_view.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/base_external_dbsource/i18n/de.po" afterPath="$PROJECT_DIR$/base_external_dbsource/i18n/de.po" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/base_external_dbsource/i18n/es.po" afterPath="$PROJECT_DIR$/base_external_dbsource/i18n/es.po" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/base_external_dbsource/i18n/fi.po" afterPath="$PROJECT_DIR$/base_external_dbsource/i18n/fi.po" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/base_external_dbsource/i18n/fr.po" afterPath="$PROJECT_DIR$/base_external_dbsource/i18n/fr.po" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/base_external_dbsource/i18n/it.po" afterPath="$PROJECT_DIR$/base_external_dbsource/i18n/it.po" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/base_external_dbsource/i18n/pt_BR.po" afterPath="$PROJECT_DIR$/base_external_dbsource/i18n/pt_BR.po" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/base_external_dbsource/i18n/sl.po" afterPath="$PROJECT_DIR$/base_external_dbsource/i18n/sl.po" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/base_external_dbsource/i18n/tr.po" afterPath="$PROJECT_DIR$/base_external_dbsource/i18n/tr.po" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/base_external_dbsource/i18n/zh_CN.po" afterPath="$PROJECT_DIR$/base_external_dbsource/i18n/zh_CN.po" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/base_external_dbsource/security/ir.model.access.csv" afterPath="$PROJECT_DIR$/base_external_dbsource/security/ir.model.access.csv" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/base_external_dbsource/test/dbsource_connect.yml" afterPath="$PROJECT_DIR$/base_external_dbsource/test/dbsource_connect.yml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bista_account_domain/__init__.py" afterPath="$PROJECT_DIR$/bista_account_domain/__init__.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bista_account_domain/__openerp__.py" afterPath="$PROJECT_DIR$/bista_account_domain/__openerp__.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bista_account_domain/smc_view.xml" afterPath="$PROJECT_DIR$/bista_account_domain/smc_view.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bista_l10n_mx/account_account.py" afterPath="$PROJECT_DIR$/bista_l10n_mx/account_account.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/controller_report_xls/README.rst" afterPath="$PROJECT_DIR$/controller_report_xls/README.rst" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/controller_report_xls/__init__.py" afterPath="$PROJECT_DIR$/controller_report_xls/__init__.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/controller_report_xls/__openerp__.py" afterPath="$PROJECT_DIR$/controller_report_xls/__openerp__.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/controller_report_xls/controllers/__init__.py" afterPath="$PROJECT_DIR$/controller_report_xls/controllers/__init__.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/controller_report_xls/controllers/main.py" afterPath="$PROJECT_DIR$/controller_report_xls/controllers/main.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/controller_report_xls/static/description/index.html" afterPath="$PROJECT_DIR$/controller_report_xls/static/description/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/excel_report_for_stock_valuation/README.rst" afterPath="$PROJECT_DIR$/excel_report_for_stock_valuation/README.rst" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/excel_report_for_stock_valuation/__init__.py" afterPath="$PROJECT_DIR$/excel_report_for_stock_valuation/__init__.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/excel_report_for_stock_valuation/__openerp__.py" afterPath="$PROJECT_DIR$/excel_report_for_stock_valuation/__openerp__.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/excel_report_for_stock_valuation/report/__init__.py" afterPath="$PROJECT_DIR$/excel_report_for_stock_valuation/report/__init__.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/excel_report_for_stock_valuation/report/report.xml" afterPath="$PROJECT_DIR$/excel_report_for_stock_valuation/report/report.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/excel_report_for_stock_valuation/report/report_stock_valuation_xls.py" afterPath="$PROJECT_DIR$/excel_report_for_stock_valuation/report/report_stock_valuation_xls.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/excel_report_for_stock_valuation/wizard/__init__.py" afterPath="$PROJECT_DIR$/excel_report_for_stock_valuation/wizard/__init__.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/excel_report_for_stock_valuation/wizard/report_stock.py" afterPath="$PROJECT_DIR$/excel_report_for_stock_valuation/wizard/report_stock.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/excel_report_for_stock_valuation/wizard/report_stock.xml" afterPath="$PROJECT_DIR$/excel_report_for_stock_valuation/wizard/report_stock.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/excel_report_for_stock_valuation/wizard/report_stock_list.py" afterPath="$PROJECT_DIR$/excel_report_for_stock_valuation/wizard/report_stock_list.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/excel_report_for_stock_valuation/wizard/report_stock_list.xml" afterPath="$PROJECT_DIR$/excel_report_for_stock_valuation/wizard/report_stock_list.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/inter_company_rules/__openerp__.py" afterPath="$PROJECT_DIR$/inter_company_rules/__openerp__.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/inter_company_rules/models/inter_company_so_po.py" afterPath="$PROJECT_DIR$/inter_company_rules/models/inter_company_so_po.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/inter_company_rules/models/purchase_order.py" afterPath="$PROJECT_DIR$/inter_company_rules/models/purchase_order.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/inter_company_rules/models/sale_order.py" afterPath="$PROJECT_DIR$/inter_company_rules/models/sale_order.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/invoice_report/journal_view.xml" afterPath="$PROJECT_DIR$/invoice_report/journal_view.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/invoice_report/report/__init__.py" afterPath="$PROJECT_DIR$/invoice_report/report/__init__.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/invoice_report/report/account_aged_partner_balance.py" afterPath="$PROJECT_DIR$/invoice_report/report/account_aged_partner_balance.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/invoice_report/report_agedpartnerbalance.xml" afterPath="$PROJECT_DIR$/invoice_report/report_agedpartnerbalance.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/invoice_report/report_menus.xml" afterPath="$PROJECT_DIR$/invoice_report/report_menus.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/invoice_report/sale_order_report_view.py" afterPath="$PROJECT_DIR$/invoice_report/sale_order_report_view.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/invoice_report/sale_order_report_view.xml" afterPath="$PROJECT_DIR$/invoice_report/sale_order_report_view.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/invoice_report/wizard/__init__.py" afterPath="$PROJECT_DIR$/invoice_report/wizard/__init__.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/invoice_report/wizard/sale_order_report_wizard.py" afterPath="$PROJECT_DIR$/invoice_report/wizard/sale_order_report_wizard.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mrp_control_formula/ir_conf_data.xml" afterPath="$PROJECT_DIR$/mrp_control_formula/ir_conf_data.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/qc_serial/report/print_barcode.xml" afterPath="$PROJECT_DIR$/qc_serial/report/print_barcode.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/report_xls/__init__.py" afterPath="$PROJECT_DIR$/report_xls/__init__.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/report_xls/__openerp__.py" afterPath="$PROJECT_DIR$/report_xls/__openerp__.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/report_xls/ir_report.py" afterPath="$PROJECT_DIR$/report_xls/ir_report.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/report_xls/report_xls.py" afterPath="$PROJECT_DIR$/report_xls/report_xls.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/report_xls/static/description/index.html" afterPath="$PROJECT_DIR$/report_xls/static/description/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/report_xls/utils.py" afterPath="$PROJECT_DIR$/report_xls/utils.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res_partner_onchange/__init__.py" afterPath="$PROJECT_DIR$/res_partner_onchange/__init__.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res_partner_onchange/__openerp__.py" afterPath="$PROJECT_DIR$/res_partner_onchange/__openerp__.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res_partner_onchange/res_partner.py" afterPath="$PROJECT_DIR$/res_partner_onchange/res_partner.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res_partner_onchange/res_partner_view.xml" afterPath="$PROJECT_DIR$/res_partner_onchange/res_partner_view.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/stock_picking_invoice_link/README.rst" afterPath="$PROJECT_DIR$/stock_picking_invoice_link/README.rst" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/stock_picking_invoice_link/__init__.py" afterPath="$PROJECT_DIR$/stock_picking_invoice_link/__init__.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/stock_picking_invoice_link/__openerp__.py" afterPath="$PROJECT_DIR$/stock_picking_invoice_link/__openerp__.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/stock_picking_invoice_link/i18n/de.po" afterPath="$PROJECT_DIR$/stock_picking_invoice_link/i18n/de.po" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/stock_picking_invoice_link/i18n/en.po" afterPath="$PROJECT_DIR$/stock_picking_invoice_link/i18n/en.po" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/stock_picking_invoice_link/i18n/es.po" afterPath="$PROJECT_DIR$/stock_picking_invoice_link/i18n/es.po" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/stock_picking_invoice_link/i18n/fr.po" afterPath="$PROJECT_DIR$/stock_picking_invoice_link/i18n/fr.po" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/stock_picking_invoice_link/i18n/it.po" afterPath="$PROJECT_DIR$/stock_picking_invoice_link/i18n/it.po" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/stock_picking_invoice_link/i18n/sl.po" afterPath="$PROJECT_DIR$/stock_picking_invoice_link/i18n/sl.po" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/stock_picking_invoice_link/i18n/stock_picking_invoice_link.pot" afterPath="$PROJECT_DIR$/stock_picking_invoice_link/i18n/stock_picking_invoice_link.pot" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/stock_picking_invoice_link/models/__init__.py" afterPath="$PROJECT_DIR$/stock_picking_invoice_link/models/__init__.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/stock_picking_invoice_link/models/stock.py" afterPath="$PROJECT_DIR$/stock_picking_invoice_link/models/stock.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/stock_picking_invoice_link/tests/__init__.py" afterPath="$PROJECT_DIR$/stock_picking_invoice_link/tests/__init__.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/stock_picking_invoice_link/tests/test_stock_picking_invoice_link.py" afterPath="$PROJECT_DIR$/stock_picking_invoice_link/tests/test_stock_picking_invoice_link.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/stock_picking_invoice_link/views/account_invoice_view.xml" afterPath="$PROJECT_DIR$/stock_picking_invoice_link/views/account_invoice_view.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/stock_picking_invoice_link/views/stock_view.xml" afterPath="$PROJECT_DIR$/stock_picking_invoice_link/views/stock_view.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web_easy_switch_company/__openerp__.py" afterPath="$PROJECT_DIR$/web_easy_switch_company/__openerp__.py" />
+    </list>
+    <ignored path="smc.iws" />
+    <ignored path=".idea/workspace.xml" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ChangesViewManager" flattened_view="true" show_ignored="false" />
+  <component name="CreatePatchCommitExecutor">
+    <option name="PATCH_PATH" value="" />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
+  <component name="FavoritesManager">
+    <favorites_list name="smc" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="__openerp__.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/rzl/__openerp__.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="29" column="49" selection-start-line="29" selection-start-column="49" selection-end-line="29" selection-end-column="49" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="purchase_order.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/inter_company_rules/models/purchase_order.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="105" column="37" selection-start-line="105" selection-start-column="8" selection-end-line="105" selection-end-column="37" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="__init__.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/rzl/__init__.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding>
+                <element signature="e#0#12#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="sale_order.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/rzl/packaging/sale_order.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="6" column="17" selection-start-line="6" selection-start-column="4" selection-end-line="6" selection-end-column="17" />
+              <folding>
+                <element signature="e#0#39#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="__init__.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/rzl/packaging/__init__.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="3" column="26" selection-start-line="3" selection-start-column="26" selection-end-line="3" selection-end-column="26" />
+              <folding>
+                <element signature="e#0#18#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="__init__.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/rzl/models/__init__.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding>
+                <element signature="e#0#14#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="inter_company_so_po.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/rzl/packaging/inter_company_so_po.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="__init__.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/inter_company_rules/models/__init__.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding>
+                <element signature="e#270#294#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="purchase.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/rzl/packaging/purchase.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="6" column="17" selection-start-line="6" selection-start-column="4" selection-end-line="6" selection-end-column="17" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="procurement.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/rzl/packaging/procurement.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.19607843">
+              <caret line="6" column="78" selection-start-line="6" selection-start-column="78" selection-end-line="6" selection-end-column="78" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/l10n_mx_settings_facturae/model/res_config.py" />
+        <option value="$PROJECT_DIR$/l10n_mx_sale_payment_method/model/sale.py" />
+        <option value="$PROJECT_DIR$/l10n_mx_sale_payment_method/model/stock.py" />
+        <option value="$PROJECT_DIR$/l10n_mx_regimen_fiscal/partner.py" />
+        <option value="$PROJECT_DIR$/l10n_mx_regimen_fiscal/regimen_fiscal.py" />
+        <option value="$PROJECT_DIR$/l10n_mx_purchase_payment_method/purchase.py" />
+        <option value="$PROJECT_DIR$/l10n_mx_purchase_payment_method/stock.py" />
+        <option value="$PROJECT_DIR$/l10n_mx_payment_method/invoice.py" />
+        <option value="$PROJECT_DIR$/l10n_mx_payment_method/partner.py" />
+        <option value="$PROJECT_DIR$/l10n_mx_payment_method/pay_method.py" />
+        <option value="$PROJECT_DIR$/l10n_mx_partner_address/partner_address.py" />
+        <option value="$PROJECT_DIR$/l10n_mx_partner_address/res_company.py" />
+        <option value="$PROJECT_DIR$/l10n_mx_params_pac/params_pac.py" />
+        <option value="$PROJECT_DIR$/l10n_mx_notes_invoice/res_company.py" />
+        <option value="$PROJECT_DIR$/l10n_mx_ir_attachment_facturae/invoice.py" />
+        <option value="$PROJECT_DIR$/l10n_mx_ir_attachment_facturae/ir_attachment_facturae.py" />
+        <option value="$PROJECT_DIR$/l10n_mx_ir_attachment_facturae/res_config.py" />
+        <option value="$PROJECT_DIR$/l10n_mx_invoice_ftp/wizard/wizard_facturae_ftp.py" />
+        <option value="$PROJECT_DIR$/l10n_mx_invoice_ftp/wizard/wizard_facturae_ftp_v5.py" />
+        <option value="$PROJECT_DIR$/l10n_mx_invoice_discount/invoice.py" />
+        <option value="$PROJECT_DIR$/l10n_mx_invoice_discount/partner.py" />
+        <option value="$PROJECT_DIR$/l10n_mx_invoice_datetime/invoice.py" />
+        <option value="$PROJECT_DIR$/l10n_mx_invoice_currency_chgdft/invoice.py" />
+        <option value="$PROJECT_DIR$/l10n_mx_invoice_amount_to_text/invoice.py" />
+        <option value="$PROJECT_DIR$/l10n_mx_import_info/import_info.py" />
+        <option value="$PROJECT_DIR$/l10n_mx_import_info/invoice.py" />
+        <option value="$PROJECT_DIR$/l10n_mx_import_info/product.py" />
+        <option value="$PROJECT_DIR$/l10n_mx_import_info/stock.py" />
+        <option value="$PROJECT_DIR$/l10n_mx_facturae_seq/invoice.py" />
+        <option value="$PROJECT_DIR$/l10n_mx_facturae_seq/ir_sequence.py" />
+        <option value="$PROJECT_DIR$/l10n_mx_facturae_pac_sf/wizard/wizard_cancel_invoice_pac_sf_v6.py" />
+        <option value="$PROJECT_DIR$/l10n_mx_facturae_pac_sf/wizard/wizard_export_invoice_pac_sf_v6.py" />
+        <option value="$PROJECT_DIR$/l10n_mx_facturae_pac_sf/invoice.py" />
+        <option value="$PROJECT_DIR$/l10n_mx_facturae_pac_sf/ir_attachment_facturae.py" />
+        <option value="$PROJECT_DIR$/l10n_mx_facturae_pac_sf/params_pac.py" />
+        <option value="$PROJECT_DIR$/l10n_mx_facturae_pac/invoice.py" />
+        <option value="$PROJECT_DIR$/l10n_mx_facturae_cer/invoice.py" />
+        <option value="$PROJECT_DIR$/l10n_mx_facturae_cer/res_company.py" />
+        <option value="$PROJECT_DIR$/l10n_mx_facturae_cbb/invoice.py" />
+        <option value="$PROJECT_DIR$/bista_account_domain/__openerp__.py" />
+        <option value="$PROJECT_DIR$/rzl/models/stock.py" />
+        <option value="$PROJECT_DIR$/rzl/__init__.py" />
+        <option value="$PROJECT_DIR$/rzl/packaging/purchase.py" />
+        <option value="$PROJECT_DIR$/rzl/views/stock.xml" />
+        <option value="$PROJECT_DIR$/rzl/packaging/sale_order.py" />
+        <option value="$PROJECT_DIR$/rzl/models/__init__.py" />
+        <option value="$PROJECT_DIR$/rzl/models/inter_company_so_po.py" />
+        <option value="$PROJECT_DIR$/rzl/packaging/__init__.py" />
+        <option value="$PROJECT_DIR$/rzl/__openerp__.py" />
+        <option value="$PROJECT_DIR$/rzl/packaging/inter_company_so_po.py" />
+        <option value="$PROJECT_DIR$/rzl/packaging/procurement.py" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds">
+    <option name="y" value="24" />
+    <option name="width" value="1366" />
+    <option name="height" value="615" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="false">
+    <OptionsSetting value="true" id="Add" />
+    <OptionsSetting value="true" id="Remove" />
+    <OptionsSetting value="true" id="Checkout" />
+    <OptionsSetting value="true" id="Update" />
+    <OptionsSetting value="true" id="Status" />
+    <OptionsSetting value="true" id="Edit" />
+    <ConfirmationsSetting value="2" id="Add" />
+    <ConfirmationsSetting value="0" id="Remove" />
+  </component>
+  <component name="ProjectView">
+    <navigator currentView="Scope" currentSubView="Project Files" proportions="" version="1">
+      <flattenPackages />
+      <showMembers />
+      <showModules />
+      <showLibraryContents />
+      <hideEmptyPackages />
+      <abbreviatePackageNames />
+      <autoscrollToSource />
+      <autoscrollFromSource />
+      <sortByType />
+      <manualOrder />
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="Scratches" />
+      <pane id="Scope">
+        <subPane subId="Project Files">
+          <PATH>
+            <PATH_ELEMENT USER_OBJECT="Root">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="smc">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT USER_OBJECT="Root">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="smc">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="rzl">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT USER_OBJECT="Root">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="smc">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="rzl">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="views">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT USER_OBJECT="Root">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="smc">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="rzl">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="packaging">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT USER_OBJECT="Root">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="smc">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="rzl">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="models">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT USER_OBJECT="Root">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="smc">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="inter_company_rules">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT USER_OBJECT="Root">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="smc">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="inter_company_rules">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="models">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+      <pane id="ProjectPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="smc" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="smc" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="smc" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="smc" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="smc" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="rzl" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="smc" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="smc" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="rzl" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="smc" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="smc" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="rzl" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="models" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="last_opened_file_path" value="/opt/odoo_smc" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth0" value="82" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder0" value="0" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth1" value="102" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder1" value="1" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth2" value="109" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder2" value="2" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth3" value="1007" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder3" value="3" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth0" value="82" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder0" value="0" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth1" value="102" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder1" value="1" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth2" value="109" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder2" value="2" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth3" value="1007" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder3" value="3" />
+    <property name="settings.editor.selected.configurable" value="editor.preferences.appearance" />
+    <property name="settings.editor.splitter.proportion" value="0.2" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/rzl/packaging" />
+      <recent name="$PROJECT_DIR$/rzl/models" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="PythonConfigurationType" factoryName="Python">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="smc" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <method />
+    </configuration>
+    <configuration default="true" type="tests" factoryName="Attests">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="smc" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="FOLDER_NAME" value="" />
+      <option name="TEST_TYPE" value="TEST_SCRIPT" />
+      <option name="PATTERN" value="" />
+      <option name="USE_PATTERN" value="false" />
+      <method />
+    </configuration>
+    <configuration default="true" type="tests" factoryName="Doctests">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="smc" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="FOLDER_NAME" value="" />
+      <option name="TEST_TYPE" value="TEST_SCRIPT" />
+      <option name="PATTERN" value="" />
+      <option name="USE_PATTERN" value="false" />
+      <method />
+    </configuration>
+    <configuration default="true" type="tests" factoryName="Nosetests">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="smc" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="FOLDER_NAME" value="" />
+      <option name="TEST_TYPE" value="TEST_SCRIPT" />
+      <option name="PATTERN" value="" />
+      <option name="USE_PATTERN" value="false" />
+      <option name="PARAMS" value="" />
+      <option name="USE_PARAM" value="false" />
+      <method />
+    </configuration>
+    <configuration default="true" type="tests" factoryName="Unittests">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="smc" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="FOLDER_NAME" value="" />
+      <option name="TEST_TYPE" value="TEST_SCRIPT" />
+      <option name="PATTERN" value="" />
+      <option name="USE_PATTERN" value="false" />
+      <option name="PUREUNITTEST" value="true" />
+      <option name="PARAMS" value="" />
+      <option name="USE_PARAM" value="false" />
+      <method />
+    </configuration>
+    <configuration default="true" type="tests" factoryName="py.test">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="smc" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="FOLDER_NAME" value="" />
+      <option name="TEST_TYPE" value="TEST_SCRIPT" />
+      <option name="PATTERN" value="" />
+      <option name="USE_PATTERN" value="false" />
+      <option name="testToRun" value="" />
+      <option name="keywords" value="" />
+      <option name="params" value="" />
+      <option name="USE_PARAM" value="false" />
+      <option name="USE_KEYWORD" value="false" />
+      <method />
+    </configuration>
+  </component>
+  <component name="ShelveChangesManager" show_recycled="false" />
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="faa985c3-8750-4697-9946-bb3e9569c8f3" name="Default" comment="" />
+      <created>1455693493822</created>
+      <option name="number" value="Default" />
+      <updated>1455693493822</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="0" y="24" width="1366" height="615" extended-state="0" />
+    <editor active="true" />
+    <layout>
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32924336" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2207308" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.0" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4417178" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+    </layout>
+  </component>
+  <component name="Vcs.Log.UiProperties">
+    <option name="RECENTLY_FILTERED_USER_GROUPS">
+      <collection />
+    </option>
+    <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+      <collection />
+    </option>
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <option name="time" value="5" />
+    </breakpoint-manager>
+    <watches-manager />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/l10n_mx_import_info/label_report.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/l10n_mx_import_info/stock.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-4.6135592">
+          <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/l10n_mx_facturae_seq/wizard/installer.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/l10n_mx_facturae_seq/wizard/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/l10n_mx_facturae_seq/invoice.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-2.8440678">
+          <caret line="26" column="0" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/l10n_mx_facturae_seq/ir_sequence.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-6.2305083">
+          <caret line="27" column="35" selection-start-line="27" selection-start-column="35" selection-end-line="27" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/l10n_mx_facturae_pac_sf/wizard/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/l10n_mx_facturae_pac_sf/wizard/wizard_cancel_invoice_pac_sf_v6.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="1.0677966">
+          <caret line="35" column="0" selection-start-line="35" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/l10n_mx_facturae_pac_sf/wizard/wizard_export_invoice_pac_sf_v6.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.5254237">
+          <caret line="32" column="0" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/l10n_mx_facturae_pac_sf/invoice.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.3327032">
+          <caret line="279" column="40" selection-start-line="279" selection-start-column="38" selection-end-line="279" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/l10n_mx_facturae_pac_sf/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/l10n_mx_facturae_pac_sf/params_pac.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.60338986">
+          <caret line="26" column="78" selection-start-line="26" selection-start-column="78" selection-end-line="26" selection-end-column="78" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/l10n_mx_facturae_pac_sf/ir_sequence_approval.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.6779661">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/l10n_mx_facturae_pac_sf/ir_attachment_facturae.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.45762712">
+          <caret line="36" column="40" selection-start-line="36" selection-start-column="40" selection-end-line="36" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/l10n_mx_facturae_pac/invoice.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-6.1084747">
+          <caret line="30" column="13" selection-start-line="30" selection-start-column="13" selection-end-line="30" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/l10n_mx_facturae_lib/facturae_lib.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-1.8355932">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/l10n_mx_facturae_groups/__openerp__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.5254237">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/l10n_mx_facturae_cer/invoice.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.062711865">
+          <caret line="25" column="78" selection-start-line="25" selection-start-column="78" selection-end-line="25" selection-end-column="78" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/l10n_mx_facturae_cer/res_company.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-7.8474574">
+          <caret line="29" column="42" selection-start-line="29" selection-start-column="42" selection-end-line="29" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/l10n_mx_facturae_cbb/invoice.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-3.0576272">
+          <caret line="28" column="26" selection-start-line="28" selection-start-column="26" selection-end-line="28" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/l10n_mx_facturae_cbb/ir_attachment_facturae.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.6474576">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/l10n_mx_facturae_cbb/ir_sequence_approval.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.8305085">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/l10n_mx_facturae_cbb/ir_sequence_view_v6.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/l10n_mx_facturae/ir_sequence_approval.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.18305084">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/l10n_mx_eaccounting/report/account_chart_xml.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/l10n_mx_diot_report/partner.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/account_move_report/account_move.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/account_move_report/account_move_view.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bista_account_domain/smc_view.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bista_account_domain/__openerp__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="24" column="24" selection-start-line="24" selection-start-column="24" selection-end-line="24" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bista_intercompany_account/account.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bista_intercompany_account/sale.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="2.428884">
+          <caret line="75" column="53" selection-start-line="75" selection-start-column="53" selection-end-line="75" selection-end-column="53" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bista_inter_company/purchase_order.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bista_mrp_smc/master_mrp_view.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="6" column="79" selection-start-line="6" selection-start-column="37" selection-end-line="6" selection-end-column="79" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/inter_company_rules/models/sale_order.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="97" column="31" selection-start-line="97" selection-start-column="13" selection-end-line="97" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/rzl/views/product.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/rzl/models/product.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/rzl/models/partner.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/rzl/packaging/sale_view.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/inter_company_rules/models/inter_company_so_po.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/rzl/views/partner_view.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="11" column="28" selection-start-line="11" selection-start-column="28" selection-end-line="11" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/inter_company_rules/models/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#270#294#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/inter_company_rules/models/purchase_order.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="105" column="37" selection-start-line="105" selection-start-column="8" selection-end-line="105" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/rzl/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#12#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/rzl/models/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#14#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/rzl/packaging/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="3" column="26" selection-start-line="3" selection-start-column="26" selection-end-line="3" selection-end-column="26" />
+          <folding>
+            <element signature="e#0#18#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/rzl/__openerp__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="29" column="49" selection-start-line="29" selection-start-column="49" selection-end-line="29" selection-end-column="49" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/rzl/packaging/purchase.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="6" column="17" selection-start-line="6" selection-start-column="4" selection-end-line="6" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/rzl/packaging/sale_order.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="6" column="17" selection-start-line="6" selection-start-column="4" selection-end-line="6" selection-end-column="17" />
+          <folding>
+            <element signature="e#0#39#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/rzl/packaging/inter_company_so_po.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/rzl/packaging/procurement.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.19607843">
+          <caret line="6" column="78" selection-start-line="6" selection-start-column="78" selection-end-line="6" selection-end-column="78" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>

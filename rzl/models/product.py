@@ -36,6 +36,9 @@ class product_product(models.Model):
     height = fields.Float('Altura(mm)', help='Height Of bottle')
     partner_id = fields.Many2one('res.partner', 'Product Partner')
 
+    #For MRP
+    bottles_per_hour = fields.Float('Bottelas Por Hora')
+
     @api.multi
     def generate_reference(self):
         if not self.partner_id:

@@ -33,6 +33,7 @@
         'packaging/sale_view.xml',
         'views/product.xml',
         'views/partner_view.xml',
+        'mrp/mrp_view.xml',
     ],
     'demo': [],
 

@@ -32,6 +32,7 @@
                             <field name="resina"/>
                             <field name="height"/>
                             <field name="partner_id" string="Product Customer"/>
+                            <field name="bottles_per_hour" string="Bottelas Por Hora"/>
 
                         </group>
                         <!--</page>-->

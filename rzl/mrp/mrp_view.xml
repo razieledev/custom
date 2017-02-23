@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+    <data>
+        <record id="mrp_view_form_rzl" model="ir.ui.view">
+            <field name="name">mrp.form.rzl</field>
+            <field name="model">mrp.production</field>
+            <field name="inherit_id" ref="mrp.mrp_production_form_view"/>
+            <field name="arch" type="xml">
+                <xpath expr="/form/sheet/group" position="after">
+<!--                    <field name = 'machine'/>-->
+                        <group col='6'>
+
+                            <group>
+                                <field name = 'preform_id'/>
+                                <field name = 'product_color'/>
+                                <field name = 'product_cuello'/>
+                                <field name = 'product_peso_gr'/>
+                                <field name = 'product_resina'/>
+                                <field name = 'product_height'/>
+                                <field name = 'product_volume'/>
+                            </group>
+                            <group>
+
+                            </group>
+                            <group>
+                                <field name = 'bottles_per_hour'/>
+                                <field name = 'total_hours'/>
+                                <field name = 'total_shifts'/>
+                                <field name = 'total_days'/>
+
+                            </group>
+                        </group>
+                </xpath>
+            </field>
+        </record>
+
+
+
+    </data>
+</openerp>
